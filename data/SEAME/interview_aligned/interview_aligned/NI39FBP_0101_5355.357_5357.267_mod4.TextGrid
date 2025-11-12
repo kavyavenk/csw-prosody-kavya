@@ -1,0 +1,110 @@
+File type = "ooTextFile"
+Object class = "TextGrid"
+
+xmin = 0 
+xmax = 1.909938 
+tiers? <exists> 
+size = 6 
+item []: 
+    item [1]:
+        class = "IntervalTier" 
+        name = "utterance(L1)" 
+        xmin = 0 
+        xmax = 1.9099375 
+        intervals: size = 1 
+        intervals [1]:
+            xmin = 0 
+            xmax = 1.9099375 
+            text = "{int(dB)=38,stdint(dB)=9.18,minInt(dB)=22,minIntT(norm)=0.11,maxInt(dB)=54,maxIntT(norm)=0.72,rangeInt(dB)=32,f0(Hz)=293,stdf0(Hz)=116.92,minF0(Hz)=56,minF0T(norm)=0.8,maxF0(Hz)=499,maxF0T(norm)=0.09,rangeF0(Hz)=443,dur(sec)=1.91}" 
+    item [2]:
+        class = "IntervalTier" 
+        name = "IP" 
+        xmin = 0 
+        xmax = 1.909938 
+        intervals: size = 2 
+        intervals [1]:
+            xmin = 0 
+            xmax = 1.79 
+            text = "" 
+        intervals [2]:
+            xmin = 1.79 
+            xmax = 1.909938 
+            text = "SIL" 
+    item [3]:
+        class = "TextTier" 
+        name = "peaks" 
+        xmin = 0 
+        xmax = 1.9099375 
+        points: size = 8 
+        points [1]:
+            number = 0.16090178041082173 
+            mark = "1{int=33,t_maxInt=0.16,f0=495,int=33,f0=495,z_int=0.69,z_f0=1.04,t_point=0.28,dist_p=0.16}" 
+        points [2]:
+            number = 0.4782544093595972 
+            mark = "1{int=38,t_maxInt=0.48,f0=431,int=38,f0=431,z_int=2.24,z_f0=0.42,t_point=0.83,dist_p=0.32}" 
+        points [3]:
+            number = 0.6605041476516202 
+            mark = "2{int=54,t_maxInt=0.10,f0=234,int=54,f0=234,z_int=1.28,z_f0=-0.22,t_point=0.08,dist_p=0.18}" 
+        points [4]:
+            number = 0.84552872948563 
+            mark = "2{int=51,t_maxInt=0.28,f0=231,int=51,f0=231,z_int=0.83,z_f0=-0.26,t_point=0.26,dist_p=0.19}" 
+        points [5]:
+            number = 0.9203304819001128 
+            mark = "2{int=48,t_maxInt=0.36,f0=237,int=48,f0=237,z_int=0.53,z_f0=-0.18,t_point=0.33,dist_p=0.07}" 
+        points [6]:
+            number = 1.045671396913039 
+            mark = "2{int=53,t_maxInt=0.48,f0=257,int=53,f0=257,z_int=1.09,z_f0=0.08,t_point=0.45,dist_p=0.13}" 
+        points [7]:
+            number = 1.145770873909572 
+            mark = "2{int=51,t_maxInt=0.58,f0=238,int=51,f0=238,z_int=0.87,z_f0=-0.17,t_point=0.55,dist_p=0.10}" 
+        points [8]:
+            number = 1.3760250483360907 
+            mark = "2{int=54,t_maxInt=0.82,f0=228,int=54,f0=228,z_int=1.28,z_f0=-0.29,t_point=0.77,dist_p=0.23}" 
+    item [4]:
+        class = "TextTier" 
+        name = "valleys" 
+        xmin = 0 
+        xmax = 1.9099375 
+        points: size = 2 
+        points [1]:
+            number = 0.7541022301404151 
+            mark = "2{z_int=-1.75,z_all=-0.93{t_point=0.17,z_f0=--undefined--,dist_p=0.18}" 
+        points [2]:
+            number = 1.5245355579841549 
+            mark = "2{z_int=-2.46,z_all=-1.57{t_point=0.92,z_f0=2.69,dist_p=0.77}" 
+    item [5]:
+        class = "IntervalTier" 
+        name = "words" 
+        xmin = 0 
+        xmax = 1.909938 
+        intervals: size = 3 
+        intervals [1]:
+            xmin = 0 
+            xmax = 1.01 
+            text = "[bracketed]{t_maxf0=0.17,z_f0=0.26,rangeF0=285,slope=-196.81,t_min=0.22,z_int=-0.18,dur=1.01,n_Phones=1}" 
+        intervals [2]:
+            xmin = 1.01 
+            xmax = 1.79 
+            text = "internship{t_maxf0=0.65,z_f0=-0.37,rangeF0=411,slope=-190.25,t_min=0.66,z_int=0.22,dur=0.78,n_Phones=1}" 
+        intervals [3]:
+            xmin = 1.79 
+            xmax = 1.909938 
+            text = "" 
+    item [6]:
+        class = "IntervalTier" 
+        name = "phones" 
+        xmin = 0 
+        xmax = 1.909938 
+        intervals: size = 3 
+        intervals [1]:
+            xmin = 0 
+            xmax = 1.01 
+            text = "spn" 
+        intervals [2]:
+            xmin = 1.01 
+            xmax = 1.79 
+            text = "spn" 
+        intervals [3]:
+            xmin = 1.79 
+            xmax = 1.909938 
+            text = "" 

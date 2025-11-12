@@ -1,0 +1,66 @@
+File type = "ooTextFile"
+Object class = "TextGrid"
+
+xmin = 0 
+xmax = 0.359938 
+tiers? <exists> 
+size = 6 
+item []: 
+    item [1]:
+        class = "IntervalTier" 
+        name = "utterance(L1)" 
+        xmin = 0 
+        xmax = 0.3599375 
+        intervals: size = 1 
+        intervals [1]:
+            xmin = 0 
+            xmax = 0.3599375 
+            text = "{int(dB)=54,stdint(dB)=14.17,minInt(dB)=33,minIntT(norm)=0.27,maxInt(dB)=73,maxIntT(norm)=0.57,rangeInt(dB)=41,f0(Hz)=152,stdf0(Hz)=5.40,minF0(Hz)=147,minF0T(norm)=0.7,maxF0(Hz)=157,maxF0T(norm)=0.4,rangeF0(Hz)=11,dur(sec)=0.36}" 
+    item [2]:
+        class = "IntervalTier" 
+        name = "IP" 
+        xmin = 0 
+        xmax = 0.359938 
+        intervals: size = 1 
+        intervals [1]:
+            xmin = 0 
+            xmax = 0.359938 
+            text = "" 
+    item [3]:
+        class = "TextTier" 
+        name = "peaks" 
+        xmin = 0 
+        xmax = 0.3599375 
+        points: size = 1 
+        points [1]:
+            number = 0.20523539064052204 
+            mark = "2{int=73,t_maxInt=-0.37,f0=151,int=73,f0=151,z_int=1.30,z_f0=-0.14,t_point=0.32,dist_p=0.07}" 
+    item [4]:
+        class = "TextTier" 
+        name = "valleys" 
+        xmin = 0 
+        xmax = 0.3599375 
+        points: size = 1 
+        points [1]:
+            number = 0.31064563607104345 
+            mark = "2{z_int=-1.11,z_all=-0.03{t_point=0.78,z_f0=--undefined--,dist_p=0.18}" 
+    item [5]:
+        class = "IntervalTier" 
+        name = "words" 
+        xmin = 0 
+        xmax = 0.359938 
+        intervals: size = 1 
+        intervals [1]:
+            xmin = 0 
+            xmax = 0.359938 
+            text = "[bracketed]{t_maxf0=0.45,z_f0=0,rangeF0=11,slope=-6.95,t_min=0.27,z_int=0,dur=0.36,n_Phones=1}" 
+    item [6]:
+        class = "IntervalTier" 
+        name = "phones" 
+        xmin = 0 
+        xmax = 0.359938 
+        intervals: size = 1 
+        intervals [1]:
+            xmin = 0 
+            xmax = 0.359938 
+            text = "spn" 

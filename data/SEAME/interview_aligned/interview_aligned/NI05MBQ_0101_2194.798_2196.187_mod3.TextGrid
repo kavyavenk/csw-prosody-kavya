@@ -1,0 +1,60 @@
+File type = "ooTextFile"
+Object class = "TextGrid"
+
+xmin = 0 
+xmax = 1.389 
+tiers? <exists> 
+size = 4 
+item []: 
+    item [1]:
+        class = "IntervalTier" 
+        name = "utterance(L1)" 
+        xmin = 0 
+        xmax = 1.389 
+        intervals: size = 1 
+        intervals [1]:
+            xmin = 0 
+            xmax = 1.389 
+            text = "{int(dB)=53,stdint(dB)=12.53,minInt(dB)=35,minIntT(norm)=0.92,maxInt(dB)=68,maxIntT(norm)=0.24,rangeInt(dB)=33,f0(Hz)=140,stdf0(Hz)=76.85,minF0(Hz)=109,minF0T(norm)=0.2,maxF0(Hz)=483,maxF0T(norm)=0.8,rangeF0(Hz)=374,dur(sec)=1.39}" 
+    item [2]:
+        class = "IntervalTier" 
+        name = "silences" 
+        xmin = 0 
+        xmax = 1.389 
+        intervals: size = 3 
+        intervals [1]:
+            xmin = 0 
+            xmax = 0.26649999999999996 
+            text = "SIL" 
+        intervals [2]:
+            xmin = 0.26649999999999996 
+            xmax = 1.0265 
+            text = "{z_intpph=0.82,f0pph=123.89,stdf0pph=5.10,z_f0pph=-0.21,dur=0.76,rel_dur=0.55,pph_sil=1," 
+        intervals [3]:
+            xmin = 1.0265 
+            xmax = 1.389 
+            text = "SIL" 
+    item [3]:
+        class = "TextTier" 
+        name = "peaks" 
+        xmin = 0 
+        xmax = 1.389 
+        points: size = 4 
+        points [1]:
+            number = 0.36566464403363186 
+            mark = "2{int=68,t_maxInt=0.02,f0=116,int=68,f0=116,z_int=0.84,z_f0=-1.62,t_point=0.13,dist_p=0.10}" 
+        points [2]:
+            number = 0.5021681661662794 
+            mark = "2{int=66,t_maxInt=0.15,f0=126,int=66,f0=126,z_int=0.54,z_f0=0.39,t_point=0.31,dist_p=0.14}" 
+        points [3]:
+            number = 0.7209885284085088 
+            mark = "2{int=65,t_maxInt=0.37,f0=126,int=65,f0=126,z_int=0.38,z_f0=0.46,t_point=0.60,dist_p=0.22}" 
+        points [4]:
+            number = 0.8803873978128997 
+            mark = "2{int=64,t_maxInt=0.53,f0=125,int=64,f0=125,z_int=0.22,z_f0=0.21,t_point=0.81,dist_p=0.16}" 
+    item [4]:
+        class = "TextTier" 
+        name = "valleys" 
+        xmin = 0 
+        xmax = 1.389 
+        points: size = 0 

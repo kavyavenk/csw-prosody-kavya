@@ -1,0 +1,204 @@
+File type = "ooTextFile"
+Object class = "TextGrid"
+
+xmin = 0 
+xmax = 32.995 
+tiers? <exists> 
+size = 2 
+item []: 
+    item [1]:
+        class = "IntervalTier" 
+        name = "words" 
+        xmin = 0 
+        xmax = 32.995 
+        intervals: size = 23 
+        intervals [1]:
+            xmin = 0.0 
+            xmax = 0.76 
+            text = "" 
+        intervals [2]:
+            xmin = 0.76 
+            xmax = 0.83 
+            text = "[bracketed]" 
+        intervals [3]:
+            xmin = 0.83 
+            xmax = 7.67 
+            text = "" 
+        intervals [4]:
+            xmin = 7.67 
+            xmax = 7.89 
+            text = "[bracketed]" 
+        intervals [5]:
+            xmin = 7.89 
+            xmax = 8.11 
+            text = "[bracketed]" 
+        intervals [6]:
+            xmin = 8.11 
+            xmax = 13.83 
+            text = "" 
+        intervals [7]:
+            xmin = 13.83 
+            xmax = 13.97 
+            text = "[bracketed]" 
+        intervals [8]:
+            xmin = 13.97 
+            xmax = 14.15 
+            text = "[bracketed]" 
+        intervals [9]:
+            xmin = 14.15 
+            xmax = 14.89 
+            text = "" 
+        intervals [10]:
+            xmin = 14.89 
+            xmax = 14.94 
+            text = "[bracketed]" 
+        intervals [11]:
+            xmin = 14.94 
+            xmax = 16.98 
+            text = "" 
+        intervals [12]:
+            xmin = 16.98 
+            xmax = 17.46 
+            text = "[bracketed]" 
+        intervals [13]:
+            xmin = 17.46 
+            xmax = 19.6 
+            text = "" 
+        intervals [14]:
+            xmin = 19.6 
+            xmax = 20.01 
+            text = "[bracketed]" 
+        intervals [15]:
+            xmin = 20.01 
+            xmax = 23.57 
+            text = "" 
+        intervals [16]:
+            xmin = 23.57 
+            xmax = 23.69 
+            text = "[bracketed]" 
+        intervals [17]:
+            xmin = 23.69 
+            xmax = 24.23 
+            text = "" 
+        intervals [18]:
+            xmin = 24.23 
+            xmax = 24.94 
+            text = "[bracketed]" 
+        intervals [19]:
+            xmin = 24.94 
+            xmax = 26.6 
+            text = "" 
+        intervals [20]:
+            xmin = 26.6 
+            xmax = 26.71 
+            text = "[bracketed]" 
+        intervals [21]:
+            xmin = 26.71 
+            xmax = 29.72 
+            text = "" 
+        intervals [22]:
+            xmin = 29.72 
+            xmax = 29.8 
+            text = "[bracketed]" 
+        intervals [23]:
+            xmin = 29.8 
+            xmax = 32.995 
+            text = "" 
+    item [2]:
+        class = "IntervalTier" 
+        name = "phones" 
+        xmin = 0 
+        xmax = 32.995 
+        intervals: size = 23 
+        intervals [1]:
+            xmin = 0.0 
+            xmax = 0.76 
+            text = "" 
+        intervals [2]:
+            xmin = 0.76 
+            xmax = 0.83 
+            text = "spn" 
+        intervals [3]:
+            xmin = 0.83 
+            xmax = 7.67 
+            text = "" 
+        intervals [4]:
+            xmin = 7.67 
+            xmax = 7.89 
+            text = "spn" 
+        intervals [5]:
+            xmin = 7.89 
+            xmax = 8.11 
+            text = "spn" 
+        intervals [6]:
+            xmin = 8.11 
+            xmax = 13.83 
+            text = "" 
+        intervals [7]:
+            xmin = 13.83 
+            xmax = 13.97 
+            text = "spn" 
+        intervals [8]:
+            xmin = 13.97 
+            xmax = 14.15 
+            text = "spn" 
+        intervals [9]:
+            xmin = 14.15 
+            xmax = 14.89 
+            text = "" 
+        intervals [10]:
+            xmin = 14.89 
+            xmax = 14.94 
+            text = "spn" 
+        intervals [11]:
+            xmin = 14.94 
+            xmax = 16.98 
+            text = "" 
+        intervals [12]:
+            xmin = 16.98 
+            xmax = 17.46 
+            text = "spn" 
+        intervals [13]:
+            xmin = 17.46 
+            xmax = 19.6 
+            text = "" 
+        intervals [14]:
+            xmin = 19.6 
+            xmax = 20.01 
+            text = "spn" 
+        intervals [15]:
+            xmin = 20.01 
+            xmax = 23.57 
+            text = "" 
+        intervals [16]:
+            xmin = 23.57 
+            xmax = 23.69 
+            text = "spn" 
+        intervals [17]:
+            xmin = 23.69 
+            xmax = 24.23 
+            text = "" 
+        intervals [18]:
+            xmin = 24.23 
+            xmax = 24.94 
+            text = "spn" 
+        intervals [19]:
+            xmin = 24.94 
+            xmax = 26.6 
+            text = "" 
+        intervals [20]:
+            xmin = 26.6 
+            xmax = 26.71 
+            text = "spn" 
+        intervals [21]:
+            xmin = 26.71 
+            xmax = 29.72 
+            text = "" 
+        intervals [22]:
+            xmin = 29.72 
+            xmax = 29.8 
+            text = "spn" 
+        intervals [23]:
+            xmin = 29.8 
+            xmax = 32.995 
+            text = "" 

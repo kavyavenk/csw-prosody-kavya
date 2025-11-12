@@ -1,0 +1,68 @@
+File type = "ooTextFile"
+Object class = "TextGrid"
+
+xmin = 0 
+xmax = 0.2309375 
+tiers? <exists> 
+size = 6 
+item []: 
+    item [1]:
+        class = "IntervalTier" 
+        name = "utterance(L1)" 
+        xmin = 0 
+        xmax = 0.2309375 
+        intervals: size = 1 
+        intervals [1]:
+            xmin = 0 
+            xmax = 0.2309375 
+            text = "{int(dB)=54,stdint(dB)=6.38,minInt(dB)=42,minIntT(norm)=0.85,maxInt(dB)=60,maxIntT(norm)=0.20,rangeInt(dB)=19,f0(Hz)=156,stdf0(Hz)=9.13,minF0(Hz)=146,minF0T(norm)=0.3,maxF0(Hz)=163,maxF0T(norm)=0.7,rangeF0(Hz)=18,dur(sec)=0.23}" 
+    item [2]:
+        class = "IntervalTier" 
+        name = "IP" 
+        xmin = 0 
+        xmax = 0.2309375 
+        intervals: size = 1 
+        intervals [1]:
+            xmin = 0 
+            xmax = 0.2309375 
+            text = "" 
+    item [3]:
+        class = "TextTier" 
+        name = "peaks" 
+        xmin = 0 
+        xmax = 0.2309375 
+        points: size = 0 
+    item [4]:
+        class = "TextTier" 
+        name = "valleys" 
+        xmin = 0 
+        xmax = 0.2309375 
+        points: size = 0 
+    item [5]:
+        class = "IntervalTier" 
+        name = "words" 
+        xmin = 0 
+        xmax = 0.230937 
+        intervals: size = 1 
+        intervals [1]:
+            xmin = 0 
+            xmax = 0.230937 
+            text = "then{t_maxf0=0.66,z_f0=0,rangeF0=18,slope=11.76,t_min=0.85,z_int=0,dur=0.23,n_Phones=3}" 
+    item [6]:
+        class = "IntervalTier" 
+        name = "phones" 
+        xmin = 0 
+        xmax = 0.230937 
+        intervals: size = 3 
+        intervals [1]:
+            xmin = 0 
+            xmax = 0.03 
+            text = "DH{z_dur=-1.41}" 
+        intervals [2]:
+            xmin = 0.03 
+            xmax = 0.13 
+            text = "EH1{z_dur=0.69}" 
+        intervals [3]:
+            xmin = 0.13 
+            xmax = 0.230937 
+            text = "N{z_dur=0.72}" 

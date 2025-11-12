@@ -1,0 +1,62 @@
+File type = "ooTextFile"
+Object class = "TextGrid"
+
+xmin = 0 
+xmax = 3.1469375 
+tiers? <exists> 
+size = 4 
+item []: 
+    item [1]:
+        class = "IntervalTier" 
+        name = "utterance(L1)" 
+        xmin = 0 
+        xmax = 3.1469375 
+        intervals: size = 1 
+        intervals [1]:
+            xmin = 0 
+            xmax = 3.1469375 
+            text = "{int(dB)=29,stdint(dB)=13.22,minInt(dB)=6,minIntT(norm)=0.07,maxInt(dB)=56,maxIntT(norm)=0.21,rangeInt(dB)=50,f0(Hz)=109,stdf0(Hz)=8.92,minF0(Hz)=98,minF0T(norm)=0.3,maxF0(Hz)=122,maxF0T(norm)=0.2,rangeF0(Hz)=24,dur(sec)=3.15}" 
+    item [2]:
+        class = "IntervalTier" 
+        name = "silences" 
+        xmin = 0 
+        xmax = 3.1469375 
+        intervals: size = 5 
+        intervals [1]:
+            xmin = 0 
+            xmax = 0.59346875 
+            text = "SIL" 
+        intervals [2]:
+            xmin = 0.59346875 
+            xmax = 0.8814687499999999 
+            text = "{z_intpph=1.22,f0pph=106.80,stdf0pph=7.82,z_f0pph=-0.20,dur=0.29,rel_dur=0.09,pph_sil=1," 
+        intervals [3]:
+            xmin = 0.8814687499999999 
+            xmax = 1.85746875 
+            text = "SIL" 
+        intervals [4]:
+            xmin = 1.85746875 
+            xmax = 2.76946875 
+            text = "{z_intpph=1.03,f0pph=--undefined--,stdf0pph=--undefined--,z_f0pph=--undefined--,dur=0.91,rel_dur=0.29,pph_sil=2," 
+        intervals [5]:
+            xmin = 2.76946875 
+            xmax = 3.1469375 
+            text = "SIL" 
+    item [3]:
+        class = "TextTier" 
+        name = "peaks" 
+        xmin = 0 
+        xmax = 3.1469375 
+        points: size = 1 
+        points [1]:
+            number = 0.6619161208855744 
+            mark = "2{int=56,t_maxInt=-1.40,f0=112,int=56,f0=112,z_int=1.07,z_f0=0.65,t_point=0.24,dist_p=0.07}" 
+    item [4]:
+        class = "TextTier" 
+        name = "valleys" 
+        xmin = 0 
+        xmax = 3.1469375 
+        points: size = 1 
+        points [1]:
+            number = 0.8215873033671629 
+            mark = "2{z_int=-2.11,z_all=-0.43{t_point=0.79,z_f0=-1.17,dist_p=0.23}" 

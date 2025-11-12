@@ -1,0 +1,91 @@
+File type = "ooTextFile"
+Object class = "TextGrid"
+
+xmin = 0 
+xmax = 0.855938 
+tiers? <exists> 
+size = 6 
+item []: 
+    item [1]:
+        class = "IntervalTier" 
+        name = "utterance(L1)" 
+        xmin = 0 
+        xmax = 0.8559375 
+        intervals: size = 1 
+        intervals [1]:
+            xmin = 0 
+            xmax = 0.8559375 
+            text = "{int(dB)=53,stdint(dB)=15.01,minInt(dB)=34,minIntT(norm)=0.16,maxInt(dB)=75,maxIntT(norm)=0.39,rangeInt(dB)=41,f0(Hz)=128,stdf0(Hz)=7.42,minF0(Hz)=118,minF0T(norm)=0.5,maxF0(Hz)=136,maxF0T(norm)=0.4,rangeF0(Hz)=18,dur(sec)=0.86}" 
+    item [2]:
+        class = "IntervalTier" 
+        name = "IP" 
+        xmin = 0 
+        xmax = 0.855938 
+        intervals: size = 3 
+        intervals [1]:
+            xmin = 0 
+            xmax = 0.16 
+            text = "SIL" 
+        intervals [2]:
+            xmin = 0.16 
+            xmax = 0.71 
+            text = "" 
+        intervals [3]:
+            xmin = 0.71 
+            xmax = 0.855938 
+            text = "SIL" 
+    item [3]:
+        class = "TextTier" 
+        name = "peaks" 
+        xmin = 0 
+        xmax = 0.8559375 
+        points: size = 1 
+        points [1]:
+            number = 0.33799024271870587 
+            mark = "2{int=75,t_maxInt=-0.11,f0=135,int=75,f0=135,z_int=1.17,z_f0=0.87,t_point=0.36,dist_p=0.15}" 
+    item [4]:
+        class = "TextTier" 
+        name = "valleys" 
+        xmin = 0 
+        xmax = 0.8559375 
+        points: size = 0 
+    item [5]:
+        class = "IntervalTier" 
+        name = "words" 
+        xmin = 0 
+        xmax = 0.855938 
+        intervals: size = 3 
+        intervals [1]:
+            xmin = 0 
+            xmax = 0.16 
+            text = "" 
+        intervals [2]:
+            xmin = 0.16 
+            xmax = 0.71 
+            text = "so{t_maxf0=0.28,z_f0=0,rangeF0=18,slope=-16.72,t_min=0.005,z_int=0,dur=0.55,n_Phones=2}" 
+        intervals [3]:
+            xmin = 0.71 
+            xmax = 0.855938 
+            text = "" 
+    item [6]:
+        class = "IntervalTier" 
+        name = "phones" 
+        xmin = 0 
+        xmax = 0.855938 
+        intervals: size = 4 
+        intervals [1]:
+            xmin = 0 
+            xmax = 0.16 
+            text = "" 
+        intervals [2]:
+            xmin = 0.16 
+            xmax = 0.3 
+            text = "S{z_dur=-1.00}" 
+        intervals [3]:
+            xmin = 0.3 
+            xmax = 0.71 
+            text = "OW1{z_dur=1.00}" 
+        intervals [4]:
+            xmin = 0.71 
+            xmax = 0.855938 
+            text = "" 

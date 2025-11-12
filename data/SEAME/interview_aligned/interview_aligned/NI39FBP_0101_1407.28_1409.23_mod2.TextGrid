@@ -1,0 +1,70 @@
+File type = "ooTextFile"
+Object class = "TextGrid"
+
+xmin = 0 
+xmax = 1.95 
+tiers? <exists> 
+size = 3 
+item []: 
+    item [1]:
+        class = "IntervalTier" 
+        name = "silences" 
+        xmin = 0 
+        xmax = 1.95 
+        intervals: size = 5 
+        intervals [1]:
+            xmin = 0 
+            xmax = 0.37899999999999995 
+            text = "SIL" 
+        intervals [2]:
+            xmin = 0.37899999999999995 
+            xmax = 0.48299999999999993 
+            text = "" 
+        intervals [3]:
+            xmin = 0.48299999999999993 
+            xmax = 0.6189999999999999 
+            text = "SIL" 
+        intervals [4]:
+            xmin = 0.6189999999999999 
+            xmax = 1.507 
+            text = "" 
+        intervals [5]:
+            xmin = 1.507 
+            xmax = 1.95 
+            text = "SIL" 
+    item [2]:
+        class = "TextTier" 
+        name = "peaks" 
+        xmin = 0 
+        xmax = 1.95 
+        points: size = 6 
+        points [1]:
+            number = 0.7062577465046783 
+            mark = "4{int=72,t_maxInt=0.009,f0=377," 
+        points [2]:
+            number = 0.8641755964703903 
+            mark = "4{int=79,t_maxInt=0.17,f0=255," 
+        points [3]:
+            number = 1.1587878081421614 
+            mark = "4{int=75,t_maxInt=0.46,f0=486," 
+        points [4]:
+            number = 1.3199391645823955 
+            mark = "4{int=73,t_maxInt=0.62,f0=256," 
+        points [5]:
+            number = 1.440642255507358 
+            mark = "4{int=66,t_maxInt=0.74,f0=411," 
+        points [6]:
+            number = 1.7489393562023696 
+            mark = "5{int=51,t_maxInt=-1.65,f0=405," 
+    item [3]:
+        class = "TextTier" 
+        name = "valleys" 
+        xmin = 0 
+        xmax = 1.95 
+        points: size = 2 
+        points [1]:
+            number = 0.9850501982897476 
+            mark = "4{z_int=-2.67,z_all=-1.03" 
+        points [2]:
+            number = 1.3793757535455191 
+            mark = "4{z_int=-1.79,z_all=-0.45" 

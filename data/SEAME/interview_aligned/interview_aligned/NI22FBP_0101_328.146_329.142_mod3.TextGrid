@@ -1,0 +1,58 @@
+File type = "ooTextFile"
+Object class = "TextGrid"
+
+xmin = 0 
+xmax = 0.9959375 
+tiers? <exists> 
+size = 4 
+item []: 
+    item [1]:
+        class = "IntervalTier" 
+        name = "utterance(L1)" 
+        xmin = 0 
+        xmax = 0.9959375 
+        intervals: size = 1 
+        intervals [1]:
+            xmin = 0 
+            xmax = 0.9959375 
+            text = "{int(dB)=48,stdint(dB)=8.07,minInt(dB)=24,minIntT(norm)=0.94,maxInt(dB)=55,maxIntT(norm)=0.61,rangeInt(dB)=31,f0(Hz)=223,stdf0(Hz)=21.62,minF0(Hz)=202,minF0T(norm)=0.09,maxF0(Hz)=286,maxF0T(norm)=0.9,rangeF0(Hz)=85,dur(sec)=1.00}" 
+    item [2]:
+        class = "IntervalTier" 
+        name = "silences" 
+        xmin = 0 
+        xmax = 0.9959375 
+        intervals: size = 1 
+        intervals [1]:
+            xmin = 0 
+            xmax = 0.9959375 
+            text = "{z_intpph=0,f0pph=222.82,stdf0pph=21.62,z_f0pph=0,dur=1.00,rel_dur=1.00,pph_sil=1," 
+    item [3]:
+        class = "TextTier" 
+        name = "peaks" 
+        xmin = 0 
+        xmax = 0.9959375 
+        points: size = 4 
+        points [1]:
+            number = 0.1077458280793719 
+            mark = "1{int=54,t_maxInt=0.11,f0=203,int=54,f0=203,z_int=0.70,z_f0=-0.91,t_point=0.11,dist_p=0.11}" 
+        points [2]:
+            number = 0.29203765267493736 
+            mark = "1{int=53,t_maxInt=0.29,f0=211,int=53,f0=211,z_int=0.61,z_f0=-0.56,t_point=0.29,dist_p=0.18}" 
+        points [3]:
+            number = 0.6091789764124779 
+            mark = "1{int=55,t_maxInt=0.61,f0=212,int=55,f0=212,z_int=0.92,z_f0=-0.52,t_point=0.61,dist_p=0.32}" 
+        points [4]:
+            number = 0.7786288042164708 
+            mark = "1{int=55,t_maxInt=0.78,f0=219,int=55,f0=219,z_int=0.83,z_f0=-0.19,t_point=0.78,dist_p=0.17}" 
+    item [4]:
+        class = "TextTier" 
+        name = "valleys" 
+        xmin = 0 
+        xmax = 0.9959375 
+        points: size = 2 
+        points [1]:
+            number = 0.4466152082963907 
+            mark = "1{z_int=-1.34,z_all=-1.34{t_point=0.45,z_f0=1.33,dist_p=0.45}" 
+        points [2]:
+            number = 0.9389927185812421 
+            mark = "1{z_int=-2.94,z_all=-2.94{t_point=0.94,z_f0=--undefined--,dist_p=0.49}" 

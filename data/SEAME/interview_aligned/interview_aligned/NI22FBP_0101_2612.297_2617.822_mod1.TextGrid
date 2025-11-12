@@ -1,0 +1,77 @@
+File type = "ooTextFile"
+Object class = "TextGrid"
+
+xmin = 0 
+xmax = 5.525 
+tiers? <exists> 
+size = 2 
+item []: 
+    item [1]:
+        class = "IntervalTier" 
+        name = "silences" 
+        xmin = 0 
+        xmax = 5.525 
+        intervals: size = 9 
+        intervals [1]:
+            xmin = 0 
+            xmax = 0.8425 
+            text = "SIL" 
+        intervals [2]:
+            xmin = 0.8425 
+            xmax = 1.2105 
+            text = "" 
+        intervals [3]:
+            xmin = 1.2105 
+            xmax = 2.3785 
+            text = "SIL" 
+        intervals [4]:
+            xmin = 2.3785 
+            xmax = 2.7065 
+            text = "" 
+        intervals [5]:
+            xmin = 2.7065 
+            xmax = 2.8825 
+            text = "SIL" 
+        intervals [6]:
+            xmin = 2.8825 
+            xmax = 3.1145 
+            text = "" 
+        intervals [7]:
+            xmin = 3.1145 
+            xmax = 4.5465 
+            text = "SIL" 
+        intervals [8]:
+            xmin = 4.5465 
+            xmax = 5.0105 
+            text = "" 
+        intervals [9]:
+            xmin = 5.0105 
+            xmax = 5.525 
+            text = "SIL" 
+    item [2]:
+        class = "TextTier" 
+        name = "peaks" 
+        xmin = 0 
+        xmax = 5.525 
+        points: size = 7 
+        points [1]:
+            number = 0.8766377942749242 
+            mark = "2{int=54,t_maxInt=-1.41,f0=206," 
+        points [2]:
+            number = 1.0196235082387453 
+            mark = "2{int=51,t_maxInt=-1.27,f0=185," 
+        points [3]:
+            number = 1.163750937346187 
+            mark = "2{int=50,t_maxInt=-1.13,f0=194," 
+        points [4]:
+            number = 2.501797845408977 
+            mark = "4{int=72,t_maxInt=-4.75,f0=422," 
+        points [5]:
+            number = 2.6492051916092807 
+            mark = "4{int=65,t_maxInt=-4.60,f0=283," 
+        points [6]:
+            number = 3.010568431680291 
+            mark = "6{int=63,t_maxInt=-9.41,f0=308," 
+        points [7]:
+            number = 4.760317710329842 
+            mark = "8{int=59,t_maxInt=-5.04,f0=273," 

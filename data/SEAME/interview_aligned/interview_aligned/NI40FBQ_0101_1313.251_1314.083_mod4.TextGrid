@@ -1,0 +1,112 @@
+File type = "ooTextFile"
+Object class = "TextGrid"
+
+xmin = 0 
+xmax = 0.832 
+tiers? <exists> 
+size = 6 
+item []: 
+    item [1]:
+        class = "IntervalTier" 
+        name = "utterance(L1)" 
+        xmin = 0 
+        xmax = 0.832 
+        intervals: size = 1 
+        intervals [1]:
+            xmin = 0 
+            xmax = 0.832 
+            text = "{int(dB)=45,stdint(dB)=6.70,minInt(dB)=24,minIntT(norm)=0.04,maxInt(dB)=53,maxIntT(norm)=0.76,rangeInt(dB)=29,f0(Hz)=236,stdf0(Hz)=31.54,minF0(Hz)=182,minF0T(norm)=0.3,maxF0(Hz)=308,maxF0T(norm)=0.09,rangeF0(Hz)=126,dur(sec)=0.83}" 
+    item [2]:
+        class = "IntervalTier" 
+        name = "IP" 
+        xmin = 0 
+        xmax = 0.832 
+        intervals: size = 3 
+        intervals [1]:
+            xmin = 0 
+            xmax = 0.05 
+            text = "SIL" 
+        intervals [2]:
+            xmin = 0.05 
+            xmax = 0.78 
+            text = "{phone_mean=0.18,phone_std=0.15,n_phones=4}" 
+        intervals [3]:
+            xmin = 0.78 
+            xmax = 0.832 
+            text = "SIL" 
+    item [3]:
+        class = "TextTier" 
+        name = "peaks" 
+        xmin = 0 
+        xmax = 0.832 
+        points: size = 2 
+        points [1]:
+            number = 0.20632399519428318 
+            mark = "1{int=52,t_maxInt=0.21,f0=244,int=52,f0=244,z_int=1.08,z_f0=0.26,t_point=0.25,dist_p=0.21}" 
+        points [2]:
+            number = 0.48180213857808846 
+            mark = "1{int=50,t_maxInt=0.48,f0=243,int=50,f0=243,z_int=0.67,z_f0=0.20,t_point=0.58,dist_p=0.28}" 
+    item [4]:
+        class = "TextTier" 
+        name = "valleys" 
+        xmin = 0 
+        xmax = 0.832 
+        points: size = 2 
+        points [1]:
+            number = 0.051224247614553575 
+            mark = "1{z_int=-3.05,z_all=-3.05{t_point=0.06,z_f0=--undefined--,dist_p=0.05}" 
+        points [2]:
+            number = 0.5578165328663992 
+            mark = "1{z_int=-1.68,z_all=-1.68{t_point=0.67,z_f0=0.13,dist_p=0.51}" 
+    item [5]:
+        class = "IntervalTier" 
+        name = "words" 
+        xmin = 0 
+        xmax = 0.832 
+        intervals: size = 4 
+        intervals [1]:
+            xmin = 0 
+            xmax = 0.05 
+            text = "" 
+        intervals [2]:
+            xmin = 0.05 
+            xmax = 0.47 
+            text = "[bracketed]{t_maxf0=0.07,z_f0=0.19,rangeF0=126,slope=-59.52,t_min=0.01,z_int=-0.19,dur=0.42,n_Phones=1}" 
+        intervals [3]:
+            xmin = 0.47 
+            xmax = 0.78 
+            text = "okay{t_maxf0=0.06,z_f0=-0.25,rangeF0=33,slope=-20.23,t_min=0.28,z_int=0.26,dur=0.31,n_Phones=3}" 
+        intervals [4]:
+            xmin = 0.78 
+            xmax = 0.832 
+            text = "" 
+    item [6]:
+        class = "IntervalTier" 
+        name = "phones" 
+        xmin = 0 
+        xmax = 0.832 
+        intervals: size = 6 
+        intervals [1]:
+            xmin = 0 
+            xmax = 0.05 
+            text = "" 
+        intervals [2]:
+            xmin = 0.05 
+            xmax = 0.47 
+            text = "spn" 
+        intervals [3]:
+            xmin = 0.47 
+            xmax = 0.5 
+            text = "OW2{z_dur=-1.03}" 
+        intervals [4]:
+            xmin = 0.5 
+            xmax = 0.58 
+            text = "K{z_dur=-0.33}" 
+        intervals [5]:
+            xmin = 0.58 
+            xmax = 0.78 
+            text = "EY1{z_dur=1.36}" 
+        intervals [6]:
+            xmin = 0.78 
+            xmax = 0.832 
+            text = "" 

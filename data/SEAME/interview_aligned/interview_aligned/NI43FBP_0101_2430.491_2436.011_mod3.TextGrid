@@ -1,0 +1,98 @@
+File type = "ooTextFile"
+Object class = "TextGrid"
+
+xmin = 0 
+xmax = 5.5199375 
+tiers? <exists> 
+size = 4 
+item []: 
+    item [1]:
+        class = "IntervalTier" 
+        name = "utterance(L1)" 
+        xmin = 0 
+        xmax = 5.5199375 
+        intervals: size = 1 
+        intervals [1]:
+            xmin = 0 
+            xmax = 5.5199375 
+            text = "{int(dB)=25,stdint(dB)=9.17,minInt(dB)=10,minIntT(norm)=0.33,maxInt(dB)=51,maxIntT(norm)=0.09,rangeInt(dB)=40,f0(Hz)=206,stdf0(Hz)=132.04,minF0(Hz)=112,minF0T(norm)=0.7,maxF0(Hz)=534,maxF0T(norm)=0.6,rangeF0(Hz)=422,dur(sec)=5.52}" 
+    item [2]:
+        class = "IntervalTier" 
+        name = "silences" 
+        xmin = 0 
+        xmax = 5.5199375 
+        intervals: size = 11 
+        intervals [1]:
+            xmin = 0 
+            xmax = 0.2359687499999999 
+            text = "SIL" 
+        intervals [2]:
+            xmin = 0.2359687499999999 
+            xmax = 1.0359687499999999 
+            text = "{z_intpph=1.89,f0pph=205.06,stdf0pph=23.91,z_f0pph=-0.005,dur=0.80,rel_dur=0.14,pph_sil=1," 
+        intervals [3]:
+            xmin = 1.0359687499999999 
+            xmax = 2.46796875 
+            text = "SIL" 
+        intervals [4]:
+            xmin = 2.46796875 
+            xmax = 2.58796875 
+            text = "{z_intpph=0.51,f0pph=115.89,stdf0pph=1.07,z_f0pph=-0.68,dur=0.12,rel_dur=0.02,pph_sil=2," 
+        intervals [5]:
+            xmin = 2.58796875 
+            xmax = 2.81196875 
+            text = "SIL" 
+        intervals [6]:
+            xmin = 2.81196875 
+            xmax = 2.93196875 
+            text = "{z_intpph=0.84,f0pph=--undefined--,stdf0pph=--undefined--,z_f0pph=--undefined--,dur=0.12,rel_dur=0.02,pph_sil=3," 
+        intervals [7]:
+            xmin = 2.93196875 
+            xmax = 3.05196875 
+            text = "SIL" 
+        intervals [8]:
+            xmin = 3.05196875 
+            xmax = 3.32396875 
+            text = "{z_intpph=0.57,f0pph=313.00,stdf0pph=254.24,z_f0pph=0.81,dur=0.27,rel_dur=0.05,pph_sil=4," 
+        intervals [9]:
+            xmin = 3.32396875 
+            xmax = 3.69196875 
+            text = "SIL" 
+        intervals [10]:
+            xmin = 3.69196875 
+            xmax = 3.93196875 
+            text = "{z_intpph=0.34,f0pph=119.83,stdf0pph=4.50,z_f0pph=-0.65,dur=0.24,rel_dur=0.04,pph_sil=5," 
+        intervals [11]:
+            xmin = 3.93196875 
+            xmax = 5.5199375 
+            text = "SIL" 
+    item [3]:
+        class = "TextTier" 
+        name = "peaks" 
+        xmin = 0 
+        xmax = 5.5199375 
+        points: size = 5 
+        points [1]:
+            number = 0.5183658587278164 
+            mark = "2{int=51,t_maxInt=0.22,f0=186,int=51,f0=186,z_int=1.53,z_f0=-0.80,t_point=0.35,dist_p=0.28}" 
+        points [2]:
+            number = 2.548658109364646 
+            mark = "4{int=30,t_maxInt=-18.02,f0=115,int=30,f0=115,z_int=0.26,z_f0=-0.53,t_point=0.67,dist_p=2.03}" 
+        points [3]:
+            number = 3.711239817952132 
+            mark = "10{int=32,t_maxInt=-11.67,f0=126,int=32,f0=126,z_int=1.71,z_f0=1.27,t_point=0.08,dist_p=1.16}" 
+        points [4]:
+            number = 3.88638260419126 
+            mark = "10{int=31,t_maxInt=-11.50,f0=115,int=31,f0=115,z_int=1.33,z_f0=-0.98,t_point=0.81,dist_p=0.18}" 
+        points [5]:
+            number = 3.9561016126193462 
+            mark = "11{int=26,t_maxInt=1.48,f0=113,int=26,f0=113,z_int=1.01,z_f0=-1.01,t_point=0.02,dist_p=0.07}" 
+    item [4]:
+        class = "TextTier" 
+        name = "valleys" 
+        xmin = 0 
+        xmax = 5.5199375 
+        points: size = 1 
+        points [1]:
+            number = 3.783498165308141 
+            mark = "10{z_int=-2.07,z_all=-0.25{t_point=0.38,z_f0=-0.96,dist_p=0.09}" 

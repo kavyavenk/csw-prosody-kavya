@@ -1,0 +1,70 @@
+File type = "ooTextFile"
+Object class = "TextGrid"
+
+xmin = 0 
+xmax = 2.7429375 
+tiers? <exists> 
+size = 3 
+item []: 
+    item [1]:
+        class = "IntervalTier" 
+        name = "silences" 
+        xmin = 0 
+        xmax = 2.7429375 
+        intervals: size = 5 
+        intervals [1]:
+            xmin = 0 
+            xmax = 0.3314687499999999 
+            text = "SIL" 
+        intervals [2]:
+            xmin = 0.3314687499999999 
+            xmax = 1.18746875 
+            text = "" 
+        intervals [3]:
+            xmin = 1.18746875 
+            xmax = 1.77146875 
+            text = "SIL" 
+        intervals [4]:
+            xmin = 1.77146875 
+            xmax = 2.53946875 
+            text = "" 
+        intervals [5]:
+            xmin = 2.53946875 
+            xmax = 2.7429375 
+            text = "SIL" 
+    item [2]:
+        class = "TextTier" 
+        name = "peaks" 
+        xmin = 0 
+        xmax = 2.7429375 
+        points: size = 7 
+        points [1]:
+            number = 0.49424957803303254 
+            mark = "2{int=49,t_maxInt=0.11,f0=159," 
+        points [2]:
+            number = 0.67786044152832 
+            mark = "2{int=50,t_maxInt=0.29,f0=158," 
+        points [3]:
+            number = 1.0891893925353595 
+            mark = "2{int=50,t_maxInt=0.70,f0=227," 
+        points [4]:
+            number = 1.9557740183041508 
+            mark = "4{int=52,t_maxInt=-0.35,f0=162," 
+        points [5]:
+            number = 2.134582008806481 
+            mark = "4{int=53,t_maxInt=-0.17,f0=169," 
+        points [6]:
+            number = 2.2080418839819664 
+            mark = "4{int=53,t_maxInt=-0.10,f0=184," 
+        points [7]:
+            number = 2.32861144136393 
+            mark = "4{int=43,t_maxInt=0.02,f0=181," 
+    item [3]:
+        class = "TextTier" 
+        name = "valleys" 
+        xmin = 0 
+        xmax = 2.7429375 
+        points: size = 1 
+        points [1]:
+            number = 2.5066371159667256 
+            mark = "4{z_int=-1.25,z_all=-0.002" 

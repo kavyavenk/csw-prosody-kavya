@@ -1,0 +1,72 @@
+File type = "ooTextFile"
+Object class = "TextGrid"
+
+xmin = 0 
+xmax = 2.0829375 
+tiers? <exists> 
+size = 3 
+item []: 
+    item [1]:
+        class = "IntervalTier" 
+        name = "silences" 
+        xmin = 0 
+        xmax = 2.0829375 
+        intervals: size = 7 
+        intervals [1]:
+            xmin = 0 
+            xmax = 0.31346874999999996 
+            text = "SIL" 
+        intervals [2]:
+            xmin = 0.31346874999999996 
+            xmax = 0.36946874999999996 
+            text = "" 
+        intervals [3]:
+            xmin = 0.36946874999999996 
+            xmax = 0.48146874999999995 
+            text = "SIL" 
+        intervals [4]:
+            xmin = 0.48146874999999995 
+            xmax = 0.7854687499999999 
+            text = "" 
+        intervals [5]:
+            xmin = 0.7854687499999999 
+            xmax = 1.06546875 
+            text = "SIL" 
+        intervals [6]:
+            xmin = 1.06546875 
+            xmax = 1.90546875 
+            text = "" 
+        intervals [7]:
+            xmin = 1.90546875 
+            xmax = 2.0829375 
+            text = "SIL" 
+    item [2]:
+        class = "TextTier" 
+        name = "peaks" 
+        xmin = 0 
+        xmax = 2.0829375 
+        points: size = 3 
+        points [1]:
+            number = 0.6529254628835603 
+            mark = "4{int=49,t_maxInt=-0.93,f0=23," 
+        points [2]:
+            number = 1.4635352746103016 
+            mark = "6{int=55,t_maxInt=0.20,f0=140," 
+        points [3]:
+            number = 1.5168740965027445 
+            mark = "6{int=51,t_maxInt=0.25,f0=142," 
+    item [3]:
+        class = "TextTier" 
+        name = "valleys" 
+        xmin = 0 
+        xmax = 2.0829375 
+        points: size = 3 
+        points [1]:
+            number = 0.7030010800638482 
+            mark = "4{z_int=-1.84,z_all=-1.13" 
+        points [2]:
+            number = 1.3615700940348865 
+            mark = "6{z_int=-1.75,z_all=-0.13" 
+        points [3]:
+            number = 1.8212534729604632 
+            mark = "6{z_int=-1.60,z_all=-0.06" 

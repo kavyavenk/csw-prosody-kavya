@@ -1,0 +1,92 @@
+File type = "ooTextFile"
+Object class = "TextGrid"
+
+xmin = 0 
+xmax = 0.45 
+tiers? <exists> 
+size = 6 
+item []: 
+    item [1]:
+        class = "IntervalTier" 
+        name = "utterance(L1)" 
+        xmin = 0 
+        xmax = 0.45 
+        intervals: size = 1 
+        intervals [1]:
+            xmin = 0 
+            xmax = 0.45 
+            text = "{int(dB)=45,stdint(dB)=14.24,minInt(dB)=28,minIntT(norm)=0.21,maxInt(dB)=70,maxIntT(norm)=0.47,rangeInt(dB)=42,f0(Hz)=--undefined--,stdf0(Hz)=--undefined--,minF0(Hz)=--undefined--,minF0T(norm)=--undefined--,maxF0(Hz)=--undefined--,maxF0T(norm)=--undefined--,rangeF0(Hz)=--undefined--,dur(sec)=0.45}" 
+    item [2]:
+        class = "IntervalTier" 
+        name = "IP" 
+        xmin = 0 
+        xmax = 0.45 
+        intervals: size = 3 
+        intervals [1]:
+            xmin = 0 
+            xmax = 0.14 
+            text = "SIL" 
+        intervals [2]:
+            xmin = 0.14 
+            xmax = 0.35 
+            text = "" 
+        intervals [3]:
+            xmin = 0.35 
+            xmax = 0.45 
+            text = "SIL" 
+    item [3]:
+        class = "TextTier" 
+        name = "peaks" 
+        xmin = 0 
+        xmax = 0.45 
+        points: size = 0 
+    item [4]:
+        class = "TextTier" 
+        name = "valleys" 
+        xmin = 0 
+        xmax = 0.45 
+        points: size = 0 
+    item [5]:
+        class = "IntervalTier" 
+        name = "words" 
+        xmin = 0 
+        xmax = 0.45 
+        intervals: size = 3 
+        intervals [1]:
+            xmin = 0 
+            xmax = 0.14 
+            text = "" 
+        intervals [2]:
+            xmin = 0.14 
+            xmax = 0.35 
+            text = "like{t_maxf0=--undefined--,z_f0=--undefined--,rangeF0=--undefined--,slope=0,t_min=0.96,z_int=0,dur=0.21,n_Phones=3}" 
+        intervals [3]:
+            xmin = 0.35 
+            xmax = 0.45 
+            text = "" 
+    item [6]:
+        class = "IntervalTier" 
+        name = "phones" 
+        xmin = 0 
+        xmax = 0.45 
+        intervals: size = 5 
+        intervals [1]:
+            xmin = 0 
+            xmax = 0.14 
+            text = "" 
+        intervals [2]:
+            xmin = 0.14 
+            xmax = 0.17 
+            text = "L{z_dur=-1.36}" 
+        intervals [3]:
+            xmin = 0.17 
+            xmax = 0.27 
+            text = "AY1{z_dur=1.02}" 
+        intervals [4]:
+            xmin = 0.27 
+            xmax = 0.35 
+            text = "K{z_dur=0.34}" 
+        intervals [5]:
+            xmin = 0.35 
+            xmax = 0.45 
+            text = "" 

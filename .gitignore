@@ -1,0 +1,58 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+.venv
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Jupyter Notebook
+.ipynb_checkpoints
+*.ipynb
+
+# Data files (large)
+*.wav
+*.mp3
+*.mp4
+*.zip
+data/*/wav16k/
+data/*/wav16k_clips/
+data/*/interview_aligned/
+data/*/interview_mfa_files/
+data/*/PyToBI/__pycache__/
+
+# Features and manifests (generated)
+features/
+manifests/
+reports/*.csv
+reports/*.txt
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Temporary files
+*.log
+*.tmp
+paper_methodology.txt
+
+# Keep structure but ignore large files
+!data/
+!data/**/
+!data/**/*.csv
+!data/**/*.json
+!data/**/*.xlsx
+!data/**/*.ipynb
+

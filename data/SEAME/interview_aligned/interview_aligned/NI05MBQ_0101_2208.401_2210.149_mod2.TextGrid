@@ -1,0 +1,71 @@
+File type = "ooTextFile"
+Object class = "TextGrid"
+
+xmin = 0 
+xmax = 1.748 
+tiers? <exists> 
+size = 3 
+item []: 
+    item [1]:
+        class = "IntervalTier" 
+        name = "silences" 
+        xmin = 0 
+        xmax = 1.748 
+        intervals: size = 6 
+        intervals [1]:
+            xmin = 0 
+            xmax = 0.21000000000000002 
+            text = "SIL" 
+        intervals [2]:
+            xmin = 0.21000000000000002 
+            xmax = 0.666 
+            text = "" 
+        intervals [3]:
+            xmin = 0.666 
+            xmax = 0.9620000000000001 
+            text = "SIL" 
+        intervals [4]:
+            xmin = 0.9620000000000001 
+            xmax = 1.282 
+            text = "" 
+        intervals [5]:
+            xmin = 1.282 
+            xmax = 1.3940000000000001 
+            text = "SIL" 
+        intervals [6]:
+            xmin = 1.3940000000000001 
+            xmax = 1.748 
+            text = "" 
+    item [2]:
+        class = "TextTier" 
+        name = "peaks" 
+        xmin = 0 
+        xmax = 1.748 
+        points: size = 3 
+        points [1]:
+            number = 0.2784426646960138 
+            mark = "2{int=64,t_maxInt=-0.18,f0=89," 
+        points [2]:
+            number = 1.454866531409294 
+            mark = "6{int=70,t_maxInt=-2.48,f0=87," 
+        points [3]:
+            number = 1.5906282557719966 
+            mark = "6{int=66,t_maxInt=-2.35,f0=88," 
+    item [3]:
+        class = "TextTier" 
+        name = "valleys" 
+        xmin = 0 
+        xmax = 1.748 
+        points: size = 4 
+        points [1]:
+            number = 0.22350100826058542 
+            mark = "2{z_int=-1.02,z_all=-0.39" 
+        points [2]:
+            number = 0.548189256568133 
+            mark = "2{z_int=-1.98,z_all=-1.00" 
+        points [3]:
+            number = 1.2206376975251856 
+            mark = "4{z_int=-0.47,z_all=-0.02" 
+        points [4]:
+            number = 1.6680341341967235 
+            mark = "6{z_int=-1.92,z_all=-1.47" 

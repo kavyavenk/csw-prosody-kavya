@@ -1,0 +1,56 @@
+File type = "ooTextFile"
+Object class = "TextGrid"
+
+xmin = 0 
+xmax = 0.7999375 
+tiers? <exists> 
+size = 4 
+item []: 
+    item [1]:
+        class = "IntervalTier" 
+        name = "utterance(L1)" 
+        xmin = 0 
+        xmax = 0.7999375 
+        intervals: size = 1 
+        intervals [1]:
+            xmin = 0 
+            xmax = 0.7999375 
+            text = "{int(dB)=37,stdint(dB)=8.60,minInt(dB)=23,minIntT(norm)=0.96,maxInt(dB)=52,maxIntT(norm)=0.39,rangeInt(dB)=29,f0(Hz)=243,stdf0(Hz)=126.57,minF0(Hz)=157,minF0T(norm)=0.9,maxF0(Hz)=486,maxF0T(norm)=0.1,rangeF0(Hz)=329,dur(sec)=0.80}" 
+    item [2]:
+        class = "IntervalTier" 
+        name = "silences" 
+        xmin = 0 
+        xmax = 0.7999375 
+        intervals: size = 2 
+        intervals [1]:
+            xmin = 0 
+            xmax = 0.25196874999999996 
+            text = "SIL" 
+        intervals [2]:
+            xmin = 0.25196874999999996 
+            xmax = 0.7999375 
+            text = "{z_intpph=0.41,f0pph=175.52,stdf0pph=15.66,z_f0pph=-0.53,dur=0.55,rel_dur=0.69,pph_sil=1," 
+    item [3]:
+        class = "TextTier" 
+        name = "peaks" 
+        xmin = 0 
+        xmax = 0.7999375 
+        points: size = 3 
+        points [1]:
+            number = 0.31449036916292034 
+            mark = "2{int=52,t_maxInt=-0.15,f0=187,int=52,f0=187,z_int=1.49,z_f0=0.74,t_point=0.11,dist_p=0.06}" 
+        points [2]:
+            number = 0.39009816454998525 
+            mark = "2{int=46,t_maxInt=-0.07,f0=171,int=46,f0=171,z_int=0.70,z_f0=-0.27,t_point=0.25,dist_p=0.08}" 
+        points [3]:
+            number = 0.604082916622806 
+            mark = "2{int=44,t_maxInt=0.14,f0=197,int=44,f0=197,z_int=0.39,z_f0=1.38,t_point=0.64,dist_p=0.21}" 
+    item [4]:
+        class = "TextTier" 
+        name = "valleys" 
+        xmin = 0 
+        xmax = 0.7999375 
+        points: size = 1 
+        points [1]:
+            number = 0.7465187381797498 
+            mark = "2{z_int=-2.15,z_all=-1.52{t_point=0.90,z_f0=--undefined--,dist_p=0.49}" 

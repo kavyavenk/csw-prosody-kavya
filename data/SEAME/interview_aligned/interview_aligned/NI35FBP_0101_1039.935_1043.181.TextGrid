@@ -1,0 +1,84 @@
+File type = "ooTextFile"
+Object class = "TextGrid"
+
+xmin = 0 
+xmax = 3.246 
+tiers? <exists> 
+size = 2 
+item []: 
+    item [1]:
+        class = "IntervalTier" 
+        name = "words" 
+        xmin = 0 
+        xmax = 3.246 
+        intervals: size = 7 
+        intervals [1]:
+            xmin = 0.0 
+            xmax = 0.05 
+            text = "" 
+        intervals [2]:
+            xmin = 0.05 
+            xmax = 0.69 
+            text = "[bracketed]" 
+        intervals [3]:
+            xmin = 0.69 
+            xmax = 2.01 
+            text = "" 
+        intervals [4]:
+            xmin = 2.01 
+            xmax = 2.41 
+            text = "[bracketed]" 
+        intervals [5]:
+            xmin = 2.41 
+            xmax = 2.81 
+            text = "ok" 
+        intervals [6]:
+            xmin = 2.81 
+            xmax = 3.05 
+            text = "" 
+        intervals [7]:
+            xmin = 3.05 
+            xmax = 3.246 
+            text = "[bracketed]" 
+    item [2]:
+        class = "IntervalTier" 
+        name = "phones" 
+        xmin = 0 
+        xmax = 3.246 
+        intervals: size = 9 
+        intervals [1]:
+            xmin = 0.0 
+            xmax = 0.05 
+            text = "" 
+        intervals [2]:
+            xmin = 0.05 
+            xmax = 0.69 
+            text = "spn" 
+        intervals [3]:
+            xmin = 0.69 
+            xmax = 2.01 
+            text = "" 
+        intervals [4]:
+            xmin = 2.01 
+            xmax = 2.41 
+            text = "spn" 
+        intervals [5]:
+            xmin = 2.41 
+            xmax = 2.46 
+            text = "OW1" 
+        intervals [6]:
+            xmin = 2.46 
+            xmax = 2.61 
+            text = "K" 
+        intervals [7]:
+            xmin = 2.61 
+            xmax = 2.81 
+            text = "EY1" 
+        intervals [8]:
+            xmin = 2.81 
+            xmax = 3.05 
+            text = "" 
+        intervals [9]:
+            xmin = 3.05 
+            xmax = 3.246 
+            text = "spn" 

@@ -1,0 +1,56 @@
+File type = "ooTextFile"
+Object class = "TextGrid"
+
+xmin = 0 
+xmax = 0.6519375 
+tiers? <exists> 
+size = 4 
+item []: 
+    item [1]:
+        class = "IntervalTier" 
+        name = "utterance(L1)" 
+        xmin = 0 
+        xmax = 0.6519375 
+        intervals: size = 1 
+        intervals [1]:
+            xmin = 0 
+            xmax = 0.6519375 
+            text = "{int(dB)=46,stdint(dB)=7.88,minInt(dB)=30,minIntT(norm)=0.16,maxInt(dB)=61,maxIntT(norm)=0.65,rangeInt(dB)=31,f0(Hz)=193,stdf0(Hz)=76.89,minF0(Hz)=55,minF0T(norm)=0.7,maxF0(Hz)=288,maxF0T(norm)=0.1,rangeF0(Hz)=233,dur(sec)=0.65}" 
+    item [2]:
+        class = "IntervalTier" 
+        name = "silences" 
+        xmin = 0 
+        xmax = 0.6519375 
+        intervals: size = 2 
+        intervals [1]:
+            xmin = 0 
+            xmax = 0.15396875000000004 
+            text = "SIL" 
+        intervals [2]:
+            xmin = 0.15396875000000004 
+            xmax = 0.6519375 
+            text = "{z_intpph=0.32,f0pph=170.28,stdf0pph=74.29,z_f0pph=-0.29,dur=0.50,rel_dur=0.76,pph_sil=1," 
+    item [3]:
+        class = "TextTier" 
+        name = "peaks" 
+        xmin = 0 
+        xmax = 0.6519375 
+        points: size = 2 
+        points [1]:
+            number = 0.21361538588750406 
+            mark = "2{int=54,t_maxInt=-0.10,f0=218,int=54,f0=218,z_int=0.89,z_f0=0.64,t_point=0.12,dist_p=0.06}" 
+        points [2]:
+            number = 0.4248252703182862 
+            mark = "2{int=61,t_maxInt=0.12,f0=57,int=61,f0=57,z_int=1.81,z_f0=-1.53,t_point=0.54,dist_p=0.21}" 
+    item [4]:
+        class = "TextTier" 
+        name = "valleys" 
+        xmin = 0 
+        xmax = 0.6519375 
+        points: size = 2 
+        points [1]:
+            number = 0.38243876504034024 
+            mark = "2{z_int=-1.95,z_all=-1.35{t_point=0.46,z_f0=--undefined--,dist_p=0.23}" 
+        points [2]:
+            number = 0.6044872005334432 
+            mark = "2{z_int=-0.56,z_all=-0.16{t_point=0.90,z_f0=--undefined--,dist_p=0.22}" 

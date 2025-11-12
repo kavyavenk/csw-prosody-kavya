@@ -1,0 +1,61 @@
+File type = "ooTextFile"
+Object class = "TextGrid"
+
+xmin = 0 
+xmax = 1.1169375 
+tiers? <exists> 
+size = 4 
+item []: 
+    item [1]:
+        class = "IntervalTier" 
+        name = "utterance(L1)" 
+        xmin = 0 
+        xmax = 1.1169375 
+        intervals: size = 1 
+        intervals [1]:
+            xmin = 0 
+            xmax = 1.1169375 
+            text = "{int(dB)=50,stdint(dB)=11.26,minInt(dB)=26,minIntT(norm)=0.34,maxInt(dB)=64,maxIntT(norm)=0.70,rangeInt(dB)=38,f0(Hz)=225,stdf0(Hz)=28.08,minF0(Hz)=129,minF0T(norm)=0.08,maxF0(Hz)=265,maxF0T(norm)=0.8,rangeF0(Hz)=135,dur(sec)=1.12}" 
+    item [2]:
+        class = "IntervalTier" 
+        name = "silences" 
+        xmin = 0 
+        xmax = 1.1169375 
+        intervals: size = 4 
+        intervals [1]:
+            xmin = 0 
+            xmax = 0.17846874999999995 
+            text = "SIL" 
+        intervals [2]:
+            xmin = 0.17846874999999995 
+            xmax = 0.3304687499999999 
+            text = "{z_intpph=0.09,f0pph=225.59,stdf0pph=6.27,z_f0pph=0.03,dur=0.15,rel_dur=0.14,pph_sil=1," 
+        intervals [3]:
+            xmin = 0.3304687499999999 
+            xmax = 0.49046874999999995 
+            text = "SIL" 
+        intervals [4]:
+            xmin = 0.49046874999999995 
+            xmax = 1.1169375 
+            text = "{z_intpph=0.66,f0pph=229.85,stdf0pph=20.28,z_f0pph=0.18,dur=0.63,rel_dur=0.56,pph_sil=2," 
+    item [3]:
+        class = "TextTier" 
+        name = "peaks" 
+        xmin = 0 
+        xmax = 1.1169375 
+        points: size = 2 
+        points [1]:
+            number = 0.24835701872672233 
+            mark = "2{int=55,t_maxInt=-0.93,f0=222,int=55,f0=222,z_int=0.62,z_f0=-0.57,t_point=0.46,dist_p=0.07}" 
+        points [2]:
+            number = 0.8565774136691465 
+            mark = "4{int=63,t_maxInt=0.07,f0=261,int=63,f0=261,z_int=0.75,z_f0=1.52,t_point=0.58,dist_p=0.61}" 
+    item [4]:
+        class = "TextTier" 
+        name = "valleys" 
+        xmin = 0 
+        xmax = 1.1169375 
+        points: size = 1 
+        points [1]:
+            number = 0.9801872509481601 
+            mark = "4{z_int=-2.28,z_all=-0.66{t_point=0.78,z_f0=--undefined--,dist_p=0.49}" 

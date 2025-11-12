@@ -1,0 +1,88 @@
+File type = "ooTextFile"
+Object class = "TextGrid"
+
+xmin = 0 
+xmax = 0.323 
+tiers? <exists> 
+size = 6 
+item []: 
+    item [1]:
+        class = "IntervalTier" 
+        name = "utterance(L1)" 
+        xmin = 0 
+        xmax = 0.323 
+        intervals: size = 1 
+        intervals [1]:
+            xmin = 0 
+            xmax = 0.323 
+            text = "{int(dB)=44,stdint(dB)=7.41,minInt(dB)=25,minIntT(norm)=0.90,maxInt(dB)=53,maxIntT(norm)=0.27,rangeInt(dB)=28,f0(Hz)=184,stdf0(Hz)=7.09,minF0(Hz)=174,minF0T(norm)=0.7,maxF0(Hz)=193,maxF0T(norm)=0.3,rangeF0(Hz)=19,dur(sec)=0.32}" 
+    item [2]:
+        class = "IntervalTier" 
+        name = "IP" 
+        xmin = 0 
+        xmax = 0.323 
+        intervals: size = 3 
+        intervals [1]:
+            xmin = 0 
+            xmax = 0.03 
+            text = "SIL" 
+        intervals [2]:
+            xmin = 0.03 
+            xmax = 0.13 
+            text = "" 
+        intervals [3]:
+            xmin = 0.13 
+            xmax = 0.323 
+            text = "SIL" 
+    item [3]:
+        class = "TextTier" 
+        name = "peaks" 
+        xmin = 0 
+        xmax = 0.323 
+        points: size = 0 
+    item [4]:
+        class = "TextTier" 
+        name = "valleys" 
+        xmin = 0 
+        xmax = 0.323 
+        points: size = 0 
+    item [5]:
+        class = "IntervalTier" 
+        name = "words" 
+        xmin = 0 
+        xmax = 0.323 
+        intervals: size = 3 
+        intervals [1]:
+            xmin = 0 
+            xmax = 0.03 
+            text = "" 
+        intervals [2]:
+            xmin = 0.03 
+            xmax = 0.13 
+            text = "yeah{t_maxf0=0.57,z_f0=--undefined--,rangeF0=7,slope=-4.98,t_min=0.04,z_int=0,dur=0.10,n_Phones=2}" 
+        intervals [3]:
+            xmin = 0.13 
+            xmax = 0.323 
+            text = "" 
+    item [6]:
+        class = "IntervalTier" 
+        name = "phones" 
+        xmin = 0 
+        xmax = 0.323 
+        intervals: size = 4 
+        intervals [1]:
+            xmin = 0 
+            xmax = 0.03 
+            text = "" 
+        intervals [2]:
+            xmin = 0.03 
+            xmax = 0.07 
+            text = "Y{z_dur=-1.00}" 
+        intervals [3]:
+            xmin = 0.07 
+            xmax = 0.13 
+            text = "AE1{z_dur=1.00}" 
+        intervals [4]:
+            xmin = 0.13 
+            xmax = 0.323 
+            text = "" 

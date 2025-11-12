@@ -1,0 +1,57 @@
+File type = "ooTextFile"
+Object class = "TextGrid"
+
+xmin = 0 
+xmax = 0.59 
+tiers? <exists> 
+size = 4 
+item []: 
+    item [1]:
+        class = "IntervalTier" 
+        name = "utterance(L1)" 
+        xmin = 0 
+        xmax = 0.59 
+        intervals: size = 1 
+        intervals [1]:
+            xmin = 0 
+            xmax = 0.59 
+            text = "{int(dB)=36,stdint(dB)=12.44,minInt(dB)=8,minIntT(norm)=0.33,maxInt(dB)=54,maxIntT(norm)=0.50,rangeInt(dB)=47,f0(Hz)=236,stdf0(Hz)=155.15,minF0(Hz)=103,minF0T(norm)=0.6,maxF0(Hz)=423,maxF0T(norm)=0.2,rangeF0(Hz)=321,dur(sec)=0.59}" 
+    item [2]:
+        class = "IntervalTier" 
+        name = "silences" 
+        xmin = 0 
+        xmax = 0.59 
+        intervals: size = 3 
+        intervals [1]:
+            xmin = 0 
+            xmax = 0.09899999999999998 
+            text = "{z_intpph=-0.14,f0pph=382.31,stdf0pph=--undefined--,z_f0pph=0.94,dur=0.10,rel_dur=0.17,pph_sil=1," 
+        intervals [2]:
+            xmin = 0.09899999999999998 
+            xmax = 0.22699999999999998 
+            text = "SIL" 
+        intervals [3]:
+            xmin = 0.22699999999999998 
+            xmax = 0.59 
+            text = "{z_intpph=0.56,f0pph=111.59,stdf0pph=8.16,z_f0pph=-0.80,dur=0.36,rel_dur=0.62,pph_sil=2," 
+    item [3]:
+        class = "TextTier" 
+        name = "peaks" 
+        xmin = 0 
+        xmax = 0.59 
+        points: size = 2 
+        points [1]:
+            number = 0.07190832762705948 
+            mark = "1{int=37,t_maxInt=0.07,f0=380,int=37,f0=380,z_int=0.73,z_f0=--undefined--,t_point=0.73,dist_p=0.07}" 
+        points [2]:
+            number = 0.29417278794620905 
+            mark = "3{int=54,t_maxInt=-0.33,f0=112,int=54,f0=112,z_int=1.45,z_f0=0.04,t_point=0.19,dist_p=0.22}" 
+    item [4]:
+        class = "TextTier" 
+        name = "valleys" 
+        xmin = 0 
+        xmax = 0.59 
+        points: size = 1 
+        points [1]:
+            number = 0.4396431079548041 
+            mark = "3{z_int=-1.95,z_all=-0.64{t_point=0.59,z_f0=--undefined--,dist_p=0.21}" 

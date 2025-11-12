@@ -1,0 +1,156 @@
+File type = "ooTextFile"
+Object class = "TextGrid"
+
+xmin = 0 
+xmax = 20.734 
+tiers? <exists> 
+size = 2 
+item []: 
+    item [1]:
+        class = "IntervalTier" 
+        name = "words" 
+        xmin = 0 
+        xmax = 20.734 
+        intervals: size = 16 
+        intervals [1]:
+            xmin = 0.0 
+            xmax = 4.67 
+            text = "" 
+        intervals [2]:
+            xmin = 4.67 
+            xmax = 5.07 
+            text = "[bracketed]" 
+        intervals [3]:
+            xmin = 5.07 
+            xmax = 6.0 
+            text = "" 
+        intervals [4]:
+            xmin = 6.0 
+            xmax = 6.03 
+            text = "[bracketed]" 
+        intervals [5]:
+            xmin = 6.03 
+            xmax = 8.66 
+            text = "" 
+        intervals [6]:
+            xmin = 8.66 
+            xmax = 9.54 
+            text = "[bracketed]" 
+        intervals [7]:
+            xmin = 9.54 
+            xmax = 9.97 
+            text = "okay" 
+        intervals [8]:
+            xmin = 9.97 
+            xmax = 11.13 
+            text = "" 
+        intervals [9]:
+            xmin = 11.13 
+            xmax = 11.21 
+            text = "[bracketed]" 
+        intervals [10]:
+            xmin = 11.21 
+            xmax = 16.2 
+            text = "" 
+        intervals [11]:
+            xmin = 16.2 
+            xmax = 16.79 
+            text = "[bracketed]" 
+        intervals [12]:
+            xmin = 16.79 
+            xmax = 16.95 
+            text = "[bracketed]" 
+        intervals [13]:
+            xmin = 16.95 
+            xmax = 17.22 
+            text = "[bracketed]" 
+        intervals [14]:
+            xmin = 17.22 
+            xmax = 20.05 
+            text = "" 
+        intervals [15]:
+            xmin = 20.05 
+            xmax = 20.08 
+            text = "[bracketed]" 
+        intervals [16]:
+            xmin = 20.08 
+            xmax = 20.734 
+            text = "" 
+    item [2]:
+        class = "IntervalTier" 
+        name = "phones" 
+        xmin = 0 
+        xmax = 20.734 
+        intervals: size = 18 
+        intervals [1]:
+            xmin = 0.0 
+            xmax = 4.67 
+            text = "" 
+        intervals [2]:
+            xmin = 4.67 
+            xmax = 5.07 
+            text = "spn" 
+        intervals [3]:
+            xmin = 5.07 
+            xmax = 6.0 
+            text = "" 
+        intervals [4]:
+            xmin = 6.0 
+            xmax = 6.03 
+            text = "spn" 
+        intervals [5]:
+            xmin = 6.03 
+            xmax = 8.66 
+            text = "" 
+        intervals [6]:
+            xmin = 8.66 
+            xmax = 9.54 
+            text = "spn" 
+        intervals [7]:
+            xmin = 9.54 
+            xmax = 9.57 
+            text = "OW2" 
+        intervals [8]:
+            xmin = 9.57 
+            xmax = 9.69 
+            text = "K" 
+        intervals [9]:
+            xmin = 9.69 
+            xmax = 9.97 
+            text = "EY1" 
+        intervals [10]:
+            xmin = 9.97 
+            xmax = 11.13 
+            text = "" 
+        intervals [11]:
+            xmin = 11.13 
+            xmax = 11.21 
+            text = "spn" 
+        intervals [12]:
+            xmin = 11.21 
+            xmax = 16.2 
+            text = "" 
+        intervals [13]:
+            xmin = 16.2 
+            xmax = 16.79 
+            text = "spn" 
+        intervals [14]:
+            xmin = 16.79 
+            xmax = 16.95 
+            text = "spn" 
+        intervals [15]:
+            xmin = 16.95 
+            xmax = 17.22 
+            text = "spn" 
+        intervals [16]:
+            xmin = 17.22 
+            xmax = 20.05 
+            text = "" 
+        intervals [17]:
+            xmin = 20.05 
+            xmax = 20.08 
+            text = "spn" 
+        intervals [18]:
+            xmin = 20.08 
+            xmax = 20.734 
+            text = "" 

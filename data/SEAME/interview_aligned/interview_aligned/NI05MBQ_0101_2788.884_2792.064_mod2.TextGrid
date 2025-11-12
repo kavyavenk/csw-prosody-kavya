@@ -1,0 +1,75 @@
+File type = "ooTextFile"
+Object class = "TextGrid"
+
+xmin = 0 
+xmax = 3.1799375 
+tiers? <exists> 
+size = 3 
+item []: 
+    item [1]:
+        class = "IntervalTier" 
+        name = "silences" 
+        xmin = 0 
+        xmax = 3.1799375 
+        intervals: size = 7 
+        intervals [1]:
+            xmin = 0 
+            xmax = 0.8419687499999999 
+            text = "SIL" 
+        intervals [2]:
+            xmin = 0.8419687499999999 
+            xmax = 1.88196875 
+            text = "" 
+        intervals [3]:
+            xmin = 1.88196875 
+            xmax = 2.46596875 
+            text = "SIL" 
+        intervals [4]:
+            xmin = 2.46596875 
+            xmax = 2.64996875 
+            text = "" 
+        intervals [5]:
+            xmin = 2.64996875 
+            xmax = 2.8099687500000003 
+            text = "SIL" 
+        intervals [6]:
+            xmin = 2.8099687500000003 
+            xmax = 2.8899687499999995 
+            text = "" 
+        intervals [7]:
+            xmin = 2.8899687499999995 
+            xmax = 3.1799375 
+            text = "SIL" 
+    item [2]:
+        class = "TextTier" 
+        name = "peaks" 
+        xmin = 0 
+        xmax = 3.1799375 
+        points: size = 4 
+        points [1]:
+            number = 1.1356426448463304 
+            mark = "2{int=70,t_maxInt=0.33,f0=88," 
+        points [2]:
+            number = 1.195808192553547 
+            mark = "2{int=68,t_maxInt=0.39,f0=87," 
+        points [3]:
+            number = 1.4834210863016646 
+            mark = "2{int=65,t_maxInt=0.67,f0=86," 
+        points [4]:
+            number = 1.7937012327631305 
+            mark = "2{int=61,t_maxInt=0.98,f0=87," 
+    item [3]:
+        class = "TextTier" 
+        name = "valleys" 
+        xmin = 0 
+        xmax = 3.1799375 
+        points: size = 3 
+        points [1]:
+            number = 1.620500574146215 
+            mark = "2{z_int=-1.99,z_all=-0.29" 
+        points [2]:
+            number = 2.5751734726022395 
+            mark = "4{z_int=-2.10,z_all=-0.59" 
+        points [3]:
+            number = 2.8660145940487807 
+            mark = "6{z_int=-0.71,z_all=-0.12" 

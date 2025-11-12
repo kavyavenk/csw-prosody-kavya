@@ -1,0 +1,54 @@
+File type = "ooTextFile"
+Object class = "TextGrid"
+
+xmin = 0 
+xmax = 1.0389375 
+tiers? <exists> 
+size = 3 
+item []: 
+    item [1]:
+        class = "IntervalTier" 
+        name = "silences" 
+        xmin = 0 
+        xmax = 1.0389375 
+        intervals: size = 1 
+        intervals [1]:
+            xmin = 0 
+            xmax = 1.0389375 
+            text = "" 
+    item [2]:
+        class = "TextTier" 
+        name = "peaks" 
+        xmin = 0 
+        xmax = 1.0389375 
+        points: size = 5 
+        points [1]:
+            number = 0.30447238241929137 
+            mark = "1{int=53,t_maxInt=0.30,f0=110," 
+        points [2]:
+            number = 0.37302645247878746 
+            mark = "1{int=53,t_maxInt=0.37,f0=108," 
+        points [3]:
+            number = 0.6600165669622172 
+            mark = "1{int=50,t_maxInt=0.66,f0=119," 
+        points [4]:
+            number = 0.7555173618294153 
+            mark = "1{int=47,t_maxInt=0.76,f0=119," 
+        points [5]:
+            number = 0.8378246483542302 
+            mark = "1{int=47,t_maxInt=0.84,f0=124," 
+    item [3]:
+        class = "TextTier" 
+        name = "valleys" 
+        xmin = 0 
+        xmax = 1.0389375 
+        points: size = 3 
+        points [1]:
+            number = 0.06326104784663256 
+            mark = "1{z_int=-2.51,z_all=-2.51" 
+        points [2]:
+            number = 0.5645146865658212 
+            mark = "1{z_int=-1.25,z_all=-1.25" 
+        points [3]:
+            number = 0.9801663325622743 
+            mark = "1{z_int=-2.05,z_all=-2.05" 

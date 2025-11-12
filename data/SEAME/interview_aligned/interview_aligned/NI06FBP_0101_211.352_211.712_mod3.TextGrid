@@ -1,0 +1,50 @@
+File type = "ooTextFile"
+Object class = "TextGrid"
+
+xmin = 0 
+xmax = 0.3599375 
+tiers? <exists> 
+size = 4 
+item []: 
+    item [1]:
+        class = "IntervalTier" 
+        name = "utterance(L1)" 
+        xmin = 0 
+        xmax = 0.3599375 
+        intervals: size = 1 
+        intervals [1]:
+            xmin = 0 
+            xmax = 0.3599375 
+            text = "{int(dB)=54,stdint(dB)=14.17,minInt(dB)=33,minIntT(norm)=0.27,maxInt(dB)=73,maxIntT(norm)=0.57,rangeInt(dB)=41,f0(Hz)=152,stdf0(Hz)=5.40,minF0(Hz)=147,minF0T(norm)=0.7,maxF0(Hz)=157,maxF0T(norm)=0.4,rangeF0(Hz)=11,dur(sec)=0.36}" 
+    item [2]:
+        class = "IntervalTier" 
+        name = "silences" 
+        xmin = 0 
+        xmax = 0.3599375 
+        intervals: size = 2 
+        intervals [1]:
+            xmin = 0 
+            xmax = 0.13196875000000002 
+            text = "SIL" 
+        intervals [2]:
+            xmin = 0.13196875000000002 
+            xmax = 0.3599375 
+            text = "{z_intpph=0.61,f0pph=152.22,stdf0pph=5.40,z_f0pph=0,dur=0.23,rel_dur=0.63,pph_sil=1," 
+    item [3]:
+        class = "TextTier" 
+        name = "peaks" 
+        xmin = 0 
+        xmax = 0.3599375 
+        points: size = 1 
+        points [1]:
+            number = 0.20523539064052204 
+            mark = "2{int=73,t_maxInt=-0.37,f0=151,int=73,f0=151,z_int=1.30,z_f0=-0.14,t_point=0.32,dist_p=0.07}" 
+    item [4]:
+        class = "TextTier" 
+        name = "valleys" 
+        xmin = 0 
+        xmax = 0.3599375 
+        points: size = 1 
+        points [1]:
+            number = 0.31064563607104345 
+            mark = "2{z_int=-1.11,z_all=-0.03{t_point=0.78,z_f0=--undefined--,dist_p=0.18}" 

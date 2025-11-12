@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Studyful Mockups — Light & Pastel</title>
+<style>
+  :root{
+    --w:1280px; --h:832px; --nav-h:72px; --pad:24px;
+    --radius:12px; --radius-btn:8px; --shadow:0 4px 16px rgba(0,0,0,.10);
+    --font: "Inter", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  }
+  body{font-family:var(--font); background:#eef2f7; margin:0; padding:20px}
+  .toolbar{display:flex; gap:8px; align-items:center; margin:0 auto 14px; max-width:var(--w)}
+  .toolbar button{padding:10px 14px; border:none; border-radius:8px; cursor:pointer; font-weight:600}
+  .toolbar .primary{background:#0b74ff;color:#fff}
+  .toolbar .muted{background:#e5e7eb}
+  .canvas{width:var(--w); height:var(--h); margin:0 auto; background:var(--bg); border-radius:14px; box-shadow:var(--shadow); overflow:hidden; position:relative}
+  /* THEME: Academic Light */
+  .theme-light{ --bg:#ffffff; --surface:#ffffff; --subsurface:#f9fafb; --text:#1f2937; --muted:#4b5563; --border:#e5e7eb; --primary:#007bff; --primary-2:#0056b3; --success:#64d05e; --accent:#bfdbfe; }
+  /* THEME: Warm Pastel */
+  .theme-pastel{ --bg:#faf8f3; --surface:#ffffff; --subsurface:#fcfaf6; --text:#374151; --muted:#6b7280; --border:#e5e7eb; --primary:#b3c7e6; --primary-2:#99b3d9; --success:#cde5d3; --accent:#cde5d3; }
+
+  /* NAV */
+  .nav{height:var(--nav-h); border-bottom:1px solid var(--border); background:var(--surface); display:flex; align-items:center; justify-content:space-between; padding:0 var(--pad)}
+  .brand{display:flex; align-items:center; gap:10px; font-weight:700; font-size:28px; color:var(--text)}
+  .cal{width:40px; height:40px; border-radius:8px; background:var(--primary); position:relative}
+  .cal:after, .cal:before{content:""; position:absolute; background:#fff; height:3px; transform-origin: left center}
+  .cal:after{width:14px; left:12px; top:24px; transform:rotate(45deg)}
+  .cal:before{width:22px; left:18px; top:28px; transform:rotate(-45deg)}
+  .nav-title{font-size:20px; color:var(--muted)}
+  .nav-right{display:flex; align-items:center; gap:10px}
+  .avatar{width:36px;height:36px;border-radius:50%;background:var(--primary)}
+
+  /* SCREEN shells */
+  .screen{position:absolute; inset:var(--nav-h) 0 0 0; padding:16px var(--pad) var(--pad); display:none}
+  .screen.active{display:block}
+
+  /* Cards / buttons / chips */
+  .card{background:var(--surface); border:1px solid var(--border); border-radius:14px; box-shadow:var(--shadow)}
+  .btn{border:0; border-radius:var(--radius-btn); padding:12px 16px; font-weight:700; cursor:pointer}
+  .btn.primary{background:var(--primary); color:#fff}
+  .btn.secondary{background:#e5e7eb}
+  .chip{display:inline-block; border-radius:100px; padding:10px 16px; border:1px solid #c7d2fe; background:#e0e7ff; margin-right:10px; font-weight:600}
+  .chip.selected{background:var(--primary); color:#fff; border-color:var(--primary)}
+
+  /* Splash */
+  .splash-center{width:520px; height:320px; margin:100px auto 0; padding:28px; text-align:left}
+  h1{margin:0 0 10px; font-size:32px; color:var(--text)}
+  p{margin:0; color:var(--muted); font-size:18px}
+
+  /* Connect */
+  .connect-card{margin-top:20px; padding:24px}
+  .row{display:flex; gap:14px; align-items:center}
+  .spacer{height:16px}
+  .right{margin-left:auto}
+
+  /* Dashboard layout */
+  .cols{display:grid; grid-template-columns:220px 1fr 300px; gap:16px; height:calc(100% - 8px)}
+  .friends{padding:16px}
+  .friends .person{display:flex; align-items:center; gap:12px; margin:12px 0}
+  .friends .dot{width:36px;height:36px;border-radius:50%; background:var(--primary)}
+  .calendar{padding:0; overflow:hidden}
+  .calwrap{background:var(--subsurface); border-top-left-radius:14px; border-top-right-radius:14px; border:1px solid var(--border); height:100%}
+  .calhead{display:grid; grid-template-columns:repeat(5,1fr); gap:0; padding:6px 8px 6px 8px; border-bottom:1px solid var(--border)}
+  .calhead span{color:var(--muted); font-weight:700}
+  .calgrid{position:relative; height:calc(100% - 32px); background:linear-gradient(to bottom, transparent 27px, transparent 27px), var(--subsurface)}
+  .column{position:absolute; top:0; bottom:0; border-left:1px solid var(--border)}
+  .slot{position:absolute; left:10px; right:10px; border-radius:8px; background:var(--accent)}
+  .slot.overlap{background:var(--primary)}
+  .suggest{padding:16px}
+  .suggest .item{border:1px solid var(--border); background:#f5f7fa; border-radius:10px; padding:10px 12px; margin-bottom:10px}
+
+  /* Modal */
+  .backdrop{position:absolute; inset:0; background:rgba(0,0,0,.12)}
+  .modal{position:absolute; width:640px; height:420px; left:50%; top:50%; transform:translate(-50%,-50%); background:var(--surface); border:1px solid var(--border); border-radius:14px; padding:20px}
+  .field{margin:16px 0}
+  .field label{display:block; font-size:14px; color:var(--muted); margin-bottom:6px}
+  .field .input{border:1px solid var(--border); border-radius:10px; padding:12px; background:#fff}
+
+  /* Confirmation */
+  .confirm{margin:24px; border-radius:14px; border:1px solid var(--border); background:#e0ffe0; padding:28px; text-align:center}
+  .bigcheck{width:100px;height:100px; border:8px solid #4ea649; border-radius:50%; margin:10px auto 18px; position:relative}
+  .bigcheck:after, .bigcheck:before{content:""; position:absolute; background:#4ea649; height:8px}
+  .bigcheck:after{width:28px; left:22px; top:48px; transform:rotate(45deg)}
+  .bigcheck:before{width:44px; left:36px; top:38px; transform:rotate(-45deg)}
+
+  /* Chat */
+  .chat-title{margin-bottom:10px}
+  .chatcols{display:grid; grid-template-columns:1fr 300px; gap:16px; height:calc(100% - 50px)}
+  .chatpanel, .listpanel{border:1px solid var(--border); background:var(--surface); border-radius:14px; padding:16px}
+  .bubble{max-width:520px; padding:14px 16px; border:1px solid var(--border); border-radius:16px; margin:12px 0; background:#fff}
+  .bubble.me{background:#ddeeff; margin-left:auto}
+  .inputrow{display:flex; gap:10px; margin-top:auto}
+  .inputflex{flex:1; border:1px solid var(--border); border-radius:10px; background:#fff; padding:12px}
+
+  /* Visibility helpers */
+  .hide{display:none}
+</style>
+</head>
+<body>
+
+<div class="toolbar">
+  <strong>Theme:</strong>
+  <button class="muted" onclick="setTheme('theme-light')">Academic Light</button>
+  <button class="muted" onclick="setTheme('theme-pastel')">Warm Pastel</button>
+  <span style="margin-left:16px"></span>
+  <strong>Screen:</strong>
+  <button class="primary" onclick="show('splash')">Splash</button>
+  <button class="muted" onclick="show('connect')">Connect</button>
+  <button class="muted" onclick="show('dashboard')">Dashboard</button>
+  <button class="muted" onclick="show('modal')">Modal</button>
+  <button class="muted" onclick="show('confirm')">Confirm</button>
+  <button class="muted" onclick="show('chat')">Chat</button>
+</div>
+
+<div id="root" class="canvas theme-light">
+  <!-- NAV -->
+  <div class="nav">
+    <div class="brand"><span class="cal"></span>Studyful</div>
+    <div class="nav-title" id="navTitle">Welcome</div>
+    <div class="nav-right"><div class="avatar"></div></div>
+  </div>
+
+  <!-- 1) SPLASH -->
+  <section id="splash" class="screen active">
+    <div class="card splash-center">
+      <h1>Welcome to Studyful</h1>
+      <p>Find time to study together, stress-free.</p>
+      <div style="height:22px"></div>
+      <button class="btn primary" style="width:100%">Sign in with Google</button>
+      <div style="height:18px"></div>
+      <p style="font-size:14px;color:var(--muted)">© 2025 Studyful</p>
+    </div>
+  </section>
+
+  <!-- 2) CONNECT -->
+  <section id="connect" class="screen">
+    <h1>Sync your schedule</h1>
+    <p>Connect your calendar to find shared free time with friends.</p>
+    <div class="card connect-card">
+      <div class="row">
+        <button class="btn primary">Connect Google Calendar</button>
+        <div class="right" style="background:var(--success); padding:10px 14px; border-radius:10px; font-weight:700">✅ Connected</div>
+      </div>
+      <div class="spacer"></div>
+      <div>
+        <span class="chip selected">CS3203</span>
+        <span class="chip">MATH2010</span>
+        <span class="chip">ECON1101</span>
+        <span class="chip">+ Add course</span>
+      </div>
+      <div class="spacer"></div>
+      <div class="row">
+        <div class="right"><button class="btn primary">Continue →</button></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3) DASHBOARD -->
+  <section id="dashboard" class="screen">
+    <div class="cols">
+      <div class="card friends">
+        <div style="font-weight:800">Friends</div>
+        <div class="person"><span class="dot"></span>Arnavi</div>
+        <div class="person"><span class="dot"></span>Leo</div>
+        <div class="person"><span class="dot"></span>Laura</div>
+      </div>
+
+      <div class="calendar card">
+        <div class="calwrap">
+          <div class="calhead">
+            <span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span>
+          </div>
+          <div class="calgrid" id="grid" style="border-top:1px solid var(--border); position:relative">
+            <!-- columns (simple verticals via borders done) + slots -->
+            <!-- Accent slots -->
+            <div class="slot" style="top:140px; left:20%; width:16%; height:120px"></div>
+            <div class="slot" style="top:420px; left:68%; width:16%; height:100px"></div>
+            <!-- Overlap slot -->
+            <div class="slot overlap" style="top:260px; left:52%; width:16%; height:120px"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card suggest">
+        <div style="font-weight:800; margin-bottom:10px">Suggested Slots</div>
+        <div class="item">
+          <div style="font-weight:700">Tue 6–8 pm</div>
+          <div style="color:var(--muted); font-size:14px">All 3 free</div>
+        </div>
+        <div class="item">
+          <div style="font-weight:700">Wed 2–4 pm</div>
+          <div style="color:var(--muted); font-size:14px">2 free</div>
+        </div>
+        <div class="item">
+          <div style="font-weight:700">Thu 10–12 pm</div>
+          <div style="color:var(--muted); font-size:14px">2 free</div>
+        </div>
+        <button class="btn primary" style="width:100%; margin-top:8px">Suggest Session</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4) MODAL -->
+  <section id="modal" class="screen">
+    <div class="cols">
+      <div class="card friends" style="visibility:hidden; pointer-events:none"></div>
+      <div class="calendar card" style="visibility:hidden"></div>
+      <div class="card suggest" style="visibility:hidden"></div>
+    </div>
+    <div class="backdrop"></div>
+    <div class="modal">
+      <div style="font-weight:800; font-size:22px; margin-bottom:8px">Create Study Session</div>
+      <div class="field">
+        <label>Title</label>
+        <div class="input">CS3203 Midterm Review</div>
+      </div>
+      <div class="field">
+        <label>Date & Time</label>
+        <div class="input">Tue 6–8 pm</div>
+      </div>
+      <div class="field">
+        <label>Location</label>
+        <div class="input">Butler Library</div>
+      </div>
+      <div class="field">
+        <label>Participants</label>
+        <div class="input">Leo, Arnavi</div>
+      </div>
+      <button class="btn primary" style="width:100%; margin-top:8px">Book Room and Send Invite</button>
+    </div>
+  </section>
+
+  <!-- 5) CONFIRM -->
+  <section id="confirm" class="screen">
+    <div class="confirm">
+      <div class="bigcheck"></div>
+      <h1>Study Session Confirmed!</h1>
+      <p style="margin-top:4px">
+        CS3203 Midterm Review<br>
+        When: Tue Mar 4 • 6–8 pm<br>
+        Where: Butler Library Room 305
+      </p>
+      <div style="height:16px"></div>
+      <div style="display:flex; gap:10px; justify-content:center">
+        <button class="btn primary">Copy Invite Link</button>
+        <button class="btn secondary">View on Dashboard</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6) CHAT -->
+  <section id="chat" class="screen">
+    <div class="chat-title">
+      <h1>CS3203 Midterm Review</h1>
+      <p>3 Members • Starts in 2 days</p>
+    </div>
+    <div class="chatcols">
+      <div class="chatpanel" style="display:flex; flex-direction:column">
+        <div class="bubble">Leo: I’ll bring notes on recursion.</div>
+        <div class="bubble">Arnavi: Perfect! Let’s review at 6.</div>
+        <div class="bubble me">You: Sounds good!</div>
+        <div class="inputrow">
+          <div class="inputflex">Type a message…</div>
+          <button class="btn primary">Send</button>
+        </div>
+      </div>
+      <div class="listpanel">
+        <div style="font-weight:800; margin-bottom:8px">Checklist</div>
+        <div><input type="checkbox" /> Print slides</div>
+        <div style="margin-top:10px"><input type="checkbox" /> Bring charger</div>
+        <div style="margin-top:10px"><input type="checkbox" /> Submit homework</div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<script>
+  const screens = ["splash","connect","dashboard","modal","confirm","chat"];
+  function show(id){
+    screens.forEach(s => document.getElementById(s).classList.remove('active'));
+    document.getElementById(id).classList.add('active');
+    document.getElementById('navTitle').textContent = ({
+      splash:"Welcome", connect:"Calendar Sync", dashboard:"Dashboard",
+      modal:"Suggest Session", confirm:"Confirmation", chat:"Study Session"
+    })[id] || "Studyful";
+  }
+  function setTheme(themeClass){
+    const root = document.getElementById('root');
+    root.classList.remove('theme-light','theme-pastel');
+    root.classList.add(themeClass);
+  }
+</script>
+</body>
+</html>

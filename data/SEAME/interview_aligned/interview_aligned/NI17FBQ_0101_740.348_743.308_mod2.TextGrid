@@ -1,0 +1,81 @@
+File type = "ooTextFile"
+Object class = "TextGrid"
+
+xmin = 0 
+xmax = 2.96 
+tiers? <exists> 
+size = 3 
+item []: 
+    item [1]:
+        class = "IntervalTier" 
+        name = "silences" 
+        xmin = 0 
+        xmax = 2.96 
+        intervals: size = 7 
+        intervals [1]:
+            xmin = 0 
+            xmax = 0.24800000000000003 
+            text = "SIL" 
+        intervals [2]:
+            xmin = 0.24800000000000003 
+            xmax = 0.512 
+            text = "" 
+        intervals [3]:
+            xmin = 0.512 
+            xmax = 0.632 
+            text = "SIL" 
+        intervals [4]:
+            xmin = 0.632 
+            xmax = 1.2 
+            text = "" 
+        intervals [5]:
+            xmin = 1.2 
+            xmax = 2.224 
+            text = "SIL" 
+        intervals [6]:
+            xmin = 2.224 
+            xmax = 2.704 
+            text = "" 
+        intervals [7]:
+            xmin = 2.704 
+            xmax = 2.96 
+            text = "SIL" 
+    item [2]:
+        class = "TextTier" 
+        name = "peaks" 
+        xmin = 0 
+        xmax = 2.96 
+        points: size = 7 
+        points [1]:
+            number = 0.38576779983658954 
+            mark = "2{int=47,t_maxInt=-0.55,f0=200," 
+        points [2]:
+            number = 0.7106846452718955 
+            mark = "4{int=43,t_maxInt=-0.40,f0=191," 
+        points [3]:
+            number = 0.927492494326674 
+            mark = "4{int=32,t_maxInt=-0.19,f0=188," 
+        points [4]:
+            number = 1.2217640381147452 
+            mark = "5{int=28,t_maxInt=0.05,f0=31," 
+        points [5]:
+            number = 2.3203189429261943 
+            mark = "6{int=44,t_maxInt=-2.31,f0=93," 
+        points [6]:
+            number = 2.4106279096313044 
+            mark = "6{int=42,t_maxInt=-2.22,f0=92," 
+        points [7]:
+            number = 2.6763792569401406 
+            mark = "6{int=28,t_maxInt=-1.96,f0=202," 
+    item [3]:
+        class = "TextTier" 
+        name = "valleys" 
+        xmin = 0 
+        xmax = 2.96 
+        points: size = 2 
+        points [1]:
+            number = 1.0133640741188565 
+            mark = "4{z_int=-2.93,z_all=-0.46" 
+        points [2]:
+            number = 2.609471201615541 
+            mark = "6{z_int=-2.78,z_all=-0.97" 

@@ -1,0 +1,137 @@
+File type = "ooTextFile"
+Object class = "TextGrid"
+
+xmin = 0 
+xmax = 0.9179375 
+tiers? <exists> 
+size = 6 
+item []: 
+    item [1]:
+        class = "IntervalTier" 
+        name = "utterance(L1)" 
+        xmin = 0 
+        xmax = 0.9179375 
+        intervals: size = 1 
+        intervals [1]:
+            xmin = 0 
+            xmax = 0.9179375 
+            text = "{int(dB)=47,stdint(dB)=7.20,minInt(dB)=19,minIntT(norm)=0.96,maxInt(dB)=56,maxIntT(norm)=0.62,rangeInt(dB)=37,f0(Hz)=221,stdf0(Hz)=22.00,minF0(Hz)=202,minF0T(norm)=0.4,maxF0(Hz)=287,maxF0T(norm)=0.9,rangeF0(Hz)=85,dur(sec)=0.92}" 
+    item [2]:
+        class = "IntervalTier" 
+        name = "IP" 
+        xmin = 0 
+        xmax = 0.9179375 
+        intervals: size = 4 
+        intervals [1]:
+            xmin = 0 
+            xmax = 0.03 
+            text = "SIL" 
+        intervals [2]:
+            xmin = 0.03 
+            xmax = 0.86 
+            text = "{phone_mean=0.10,phone_std=0.09,n_phones=8}" 
+        intervals [3]:
+            xmin = 0.86 
+            xmax = 0.917937 
+            text = "SIL" 
+        intervals [4]:
+            xmin = 0.917937 
+            xmax = 0.9179375 
+            text = "" 
+    item [3]:
+        class = "TextTier" 
+        name = "peaks" 
+        xmin = 0 
+        xmax = 0.9179375 
+        points: size = 4 
+        points [1]:
+            number = 0.0788577171139731 
+            mark = "1{int=50,t_maxInt=0.08,f0=227,int=50,f0=227,z_int=0.39,z_f0=0.30,t_point=0.09,dist_p=0.08}" 
+        points [2]:
+            number = 0.2645667073337815 
+            mark = "1{int=55,t_maxInt=0.26,f0=223,int=55,f0=223,z_int=1.03,z_f0=0.11,t_point=0.29,dist_p=0.19}" 
+        points [3]:
+            number = 0.5680369100753555 
+            mark = "1{int=56,t_maxInt=0.57,f0=207,int=56,f0=207,z_int=1.26,z_f0=-0.63,t_point=0.62,dist_p=0.30}" 
+        points [4]:
+            number = 0.6798791847873222 
+            mark = "1{int=54,t_maxInt=0.68,f0=214,int=54,f0=214,z_int=0.99,z_f0=-0.28,t_point=0.74,dist_p=0.11}" 
+    item [4]:
+        class = "TextTier" 
+        name = "valleys" 
+        xmin = 0 
+        xmax = 0.9179375 
+        points: size = 3 
+        points [1]:
+            number = 0.17146713514682205 
+            mark = "1{z_int=-1.27,z_all=-1.27{t_point=0.19,z_f0=--undefined--,dist_p=0.17}" 
+        points [2]:
+            number = 0.4163109973185314 
+            mark = "1{z_int=-0.67,z_all=-0.67{t_point=0.45,z_f0=-0.82,dist_p=0.24}" 
+        points [3]:
+            number = 0.877842975361774 
+            mark = "1{z_int=-3.92,z_all=-3.92{t_point=0.96,z_f0=--undefined--,dist_p=0.46}" 
+    item [5]:
+        class = "IntervalTier" 
+        name = "words" 
+        xmin = 0 
+        xmax = 0.917937 
+        intervals: size = 3 
+        intervals [1]:
+            xmin = 0 
+            xmax = 0.03 
+            text = "" 
+        intervals [2]:
+            xmin = 0.03 
+            xmax = 0.86 
+            text = "australia{t_maxf0=0.97,z_f0=0,rangeF0=85,slope=14.30,t_min=1.00,z_int=0,dur=0.83,n_Phones=8}" 
+        intervals [3]:
+            xmin = 0.86 
+            xmax = 0.917937 
+            text = "" 
+    item [6]:
+        class = "IntervalTier" 
+        name = "phones" 
+        xmin = 0 
+        xmax = 0.917937 
+        intervals: size = 10 
+        intervals [1]:
+            xmin = 0 
+            xmax = 0.03 
+            text = "" 
+        intervals [2]:
+            xmin = 0.03 
+            xmax = 0.11 
+            text = "AA0{z_dur=-0.27}" 
+        intervals [3]:
+            xmin = 0.11 
+            xmax = 0.17 
+            text = "S{z_dur=-0.49}" 
+        intervals [4]:
+            xmin = 0.17 
+            xmax = 0.23 
+            text = "T{z_dur=-0.49}" 
+        intervals [5]:
+            xmin = 0.23 
+            xmax = 0.26 
+            text = "R{z_dur=-0.83}" 
+        intervals [6]:
+            xmin = 0.26 
+            xmax = 0.39 
+            text = "EY1{z_dur=0.30}" 
+        intervals [7]:
+            xmin = 0.39 
+            xmax = 0.42 
+            text = "L{z_dur=-0.83}" 
+        intervals [8]:
+            xmin = 0.42 
+            xmax = 0.54 
+            text = "Y{z_dur=0.18}" 
+        intervals [9]:
+            xmin = 0.54 
+            xmax = 0.86 
+            text = "AH0{z_dur=2.44}" 
+        intervals [10]:
+            xmin = 0.86 
+            xmax = 0.917937 
+            text = "" 

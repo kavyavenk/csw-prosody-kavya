@@ -1,0 +1,80 @@
+File type = "ooTextFile"
+Object class = "TextGrid"
+
+xmin = 0 
+xmax = 0.25 
+tiers? <exists> 
+size = 6 
+item []: 
+    item [1]:
+        class = "IntervalTier" 
+        name = "utterance(L1)" 
+        xmin = 0 
+        xmax = 0.25 
+        intervals: size = 1 
+        intervals [1]:
+            xmin = 0 
+            xmax = 0.25 
+            text = "{int(dB)=68,stdint(dB)=14.01,minInt(dB)=37,minIntT(norm)=0.87,maxInt(dB)=80,maxIntT(norm)=0.41,rangeInt(dB)=42,f0(Hz)=444,stdf0(Hz)=70.43,minF0(Hz)=362,minF0T(norm)=0.4,maxF0(Hz)=486,maxF0T(norm)=0.7,rangeF0(Hz)=123,dur(sec)=0.25}" 
+    item [2]:
+        class = "IntervalTier" 
+        name = "IP" 
+        xmin = 0 
+        xmax = 0.25 
+        intervals: size = 2 
+        intervals [1]:
+            xmin = 0 
+            xmax = 0.03 
+            text = "SIL" 
+        intervals [2]:
+            xmin = 0.03 
+            xmax = 0.25 
+            text = "" 
+    item [3]:
+        class = "TextTier" 
+        name = "peaks" 
+        xmin = 0 
+        xmax = 0.25 
+        points: size = 0 
+    item [4]:
+        class = "TextTier" 
+        name = "valleys" 
+        xmin = 0 
+        xmax = 0.25 
+        points: size = 0 
+    item [5]:
+        class = "IntervalTier" 
+        name = "words" 
+        xmin = 0 
+        xmax = 0.25 
+        intervals: size = 2 
+        intervals [1]:
+            xmin = 0 
+            xmax = 0.03 
+            text = "" 
+        intervals [2]:
+            xmin = 0.03 
+            xmax = 0.25 
+            text = "it's{t_maxf0=0.60,z_f0=0,rangeF0=123,slope=122.88,t_min=0.85,z_int=0,dur=0.22,n_Phones=3}" 
+    item [6]:
+        class = "IntervalTier" 
+        name = "phones" 
+        xmin = 0 
+        xmax = 0.25 
+        intervals: size = 4 
+        intervals [1]:
+            xmin = 0 
+            xmax = 0.03 
+            text = "" 
+        intervals [2]:
+            xmin = 0.03 
+            xmax = 0.09 
+            text = "IH0{z_dur=-0.32}" 
+        intervals [3]:
+            xmin = 0.09 
+            xmax = 0.12 
+            text = "T{z_dur=-1.03}" 
+        intervals [4]:
+            xmin = 0.12 
+            xmax = 0.25 
+            text = "S{z_dur=1.35}" 

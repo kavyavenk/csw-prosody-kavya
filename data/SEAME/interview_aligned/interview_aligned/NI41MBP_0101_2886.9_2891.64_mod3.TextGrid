@@ -1,0 +1,105 @@
+File type = "ooTextFile"
+Object class = "TextGrid"
+
+xmin = 0 
+xmax = 4.7399375 
+tiers? <exists> 
+size = 4 
+item []: 
+    item [1]:
+        class = "IntervalTier" 
+        name = "utterance(L1)" 
+        xmin = 0 
+        xmax = 4.7399375 
+        intervals: size = 1 
+        intervals [1]:
+            xmin = 0 
+            xmax = 4.7399375 
+            text = "{int(dB)=19,stdint(dB)=12.46,minInt(dB)=2,minIntT(norm)=0.32,maxInt(dB)=44,maxIntT(norm)=0.85,rangeInt(dB)=42,f0(Hz)=192,stdf0(Hz)=74.21,minF0(Hz)=135,minF0T(norm)=1.0,maxF0(Hz)=406,maxF0T(norm)=0.5,rangeF0(Hz)=271,dur(sec)=4.74}" 
+    item [2]:
+        class = "IntervalTier" 
+        name = "silences" 
+        xmin = 0 
+        xmax = 4.7399375 
+        intervals: size = 9 
+        intervals [1]:
+            xmin = 0 
+            xmax = 0.1379687500000001 
+            text = "{z_intpph=-0.03,f0pph=--undefined--,stdf0pph=--undefined--,z_f0pph=--undefined--,dur=0.14,rel_dur=0.03,pph_sil=1," 
+        intervals [2]:
+            xmin = 0.1379687500000001 
+            xmax = 0.3699687500000001 
+            text = "SIL" 
+        intervals [3]:
+            xmin = 0.3699687500000001 
+            xmax = 0.7139687500000002 
+            text = "{z_intpph=0.25,f0pph=--undefined--,stdf0pph=--undefined--,z_f0pph=--undefined--,dur=0.34,rel_dur=0.07,pph_sil=2," 
+        intervals [4]:
+            xmin = 0.7139687500000002 
+            xmax = 0.9059687500000001 
+            text = "SIL" 
+        intervals [5]:
+            xmin = 0.9059687500000001 
+            xmax = 1.3059687500000001 
+            text = "{z_intpph=0.83,f0pph=--undefined--,stdf0pph=--undefined--,z_f0pph=--undefined--,dur=0.40,rel_dur=0.08,pph_sil=3," 
+        intervals [6]:
+            xmin = 1.3059687500000001 
+            xmax = 2.00196875 
+            text = "SIL" 
+        intervals [7]:
+            xmin = 2.00196875 
+            xmax = 2.16196875 
+            text = "{z_intpph=0.45,f0pph=291.76,stdf0pph=87.80,z_f0pph=1.35,dur=0.16,rel_dur=0.03,pph_sil=4," 
+        intervals [8]:
+            xmin = 2.16196875 
+            xmax = 3.91396875 
+            text = "SIL" 
+        intervals [9]:
+            xmin = 3.91396875 
+            xmax = 4.7399375 
+            text = "{z_intpph=1.80,f0pph=140.66,stdf0pph=12.27,z_f0pph=-0.69,dur=0.83,rel_dur=0.17,pph_sil=5," 
+    item [3]:
+        class = "TextTier" 
+        name = "peaks" 
+        xmin = 0 
+        xmax = 4.7399375 
+        points: size = 11 
+        points [1]:
+            number = 2.028624443785281 
+            mark = "7{int=28,t_maxInt=-10.48,f0=242,int=28,f0=242,z_int=1.48,z_f0=-0.56,t_point=0.17,dist_p=0.03}" 
+        points [2]:
+            number = 2.130669218889283 
+            mark = "7{int=23,t_maxInt=-10.38,f0=406,int=23,f0=406,z_int=-0.45,z_f0=1.30,t_point=0.80,dist_p=0.10}" 
+        points [3]:
+            number = 2.297858306128182 
+            mark = "8{int=17,t_maxInt=1.06,f0=285,int=17,f0=285,z_int=1.50,z_f0=0.80,t_point=0.08,dist_p=0.17}" 
+        points [4]:
+            number = 2.398369441287785 
+            mark = "8{int=15,t_maxInt=1.16,f0=264,int=15,f0=264,z_int=1.20,z_f0=0.52,t_point=0.13,dist_p=0.10}" 
+        points [5]:
+            number = 2.553030963424979 
+            mark = "8{int=17,t_maxInt=1.32,f0=201,int=17,f0=201,z_int=1.67,z_f0=-0.32,t_point=0.22,dist_p=0.15}" 
+        points [6]:
+            number = 2.6751517340484856 
+            mark = "8{int=15,t_maxInt=1.44,f0=168,int=15,f0=168,z_int=1.26,z_f0=-0.75,t_point=0.29,dist_p=0.12}" 
+        points [7]:
+            number = 3.0280141266222556 
+            mark = "8{int=18,t_maxInt=1.79,f0=289,int=18,f0=289,z_int=1.89,z_f0=0.86,t_point=0.49,dist_p=0.35}" 
+        points [8]:
+            number = 4.051798691606889 
+            mark = "9{int=44,t_maxInt=-0.69,f0=142,int=44,f0=142,z_int=1.00,z_f0=0.12,t_point=0.17,dist_p=1.02}" 
+        points [9]:
+            number = 4.279902614200786 
+            mark = "9{int=42,t_maxInt=-0.46,f0=137,int=42,f0=137,z_int=0.39,z_f0=-0.28,t_point=0.44,dist_p=0.23}" 
+        points [10]:
+            number = 4.4213749474828 
+            mark = "9{int=41,t_maxInt=-0.32,f0=136,int=41,f0=136,z_int=0.12,z_f0=-0.37,t_point=0.61,dist_p=0.14}" 
+        points [11]:
+            number = 4.5330745462883115 
+            mark = "9{int=41,t_maxInt=-0.21,f0=136,int=41,f0=136,z_int=0.005,z_f0=-0.37,t_point=0.75,dist_p=0.11}" 
+    item [4]:
+        class = "TextTier" 
+        name = "valleys" 
+        xmin = 0 
+        xmax = 4.7399375 
+        points: size = 0 

@@ -1,0 +1,73 @@
+File type = "ooTextFile"
+Object class = "TextGrid"
+
+xmin = 0 
+xmax = 2.675 
+tiers? <exists> 
+size = 2 
+item []: 
+    item [1]:
+        class = "IntervalTier" 
+        name = "silences" 
+        xmin = 0 
+        xmax = 2.675 
+        intervals: size = 11 
+        intervals [1]:
+            xmin = 0 
+            xmax = 0.3455000000000001 
+            text = "" 
+        intervals [2]:
+            xmin = 0.3455000000000001 
+            xmax = 0.4735000000000001 
+            text = "SIL" 
+        intervals [3]:
+            xmin = 0.4735000000000001 
+            xmax = 1.0735000000000001 
+            text = "" 
+        intervals [4]:
+            xmin = 1.0735000000000001 
+            xmax = 1.4575 
+            text = "SIL" 
+        intervals [5]:
+            xmin = 1.4575 
+            xmax = 1.5775000000000001 
+            text = "" 
+        intervals [6]:
+            xmin = 1.5775000000000001 
+            xmax = 1.8655000000000002 
+            text = "SIL" 
+        intervals [7]:
+            xmin = 1.8655000000000002 
+            xmax = 2.1215 
+            text = "" 
+        intervals [8]:
+            xmin = 2.1215 
+            xmax = 2.3455 
+            text = "SIL" 
+        intervals [9]:
+            xmin = 2.3455 
+            xmax = 2.4655 
+            text = "" 
+        intervals [10]:
+            xmin = 2.4655 
+            xmax = 2.6015 
+            text = "SIL" 
+        intervals [11]:
+            xmin = 2.6015 
+            xmax = 2.675 
+            text = "" 
+    item [2]:
+        class = "TextTier" 
+        name = "peaks" 
+        xmin = 0 
+        xmax = 2.675 
+        points: size = 3 
+        points [1]:
+            number = 0.6461417982744505 
+            mark = "3{int=35,t_maxInt=-0.14,f0=213," 
+        points [2]:
+            number = 0.7730460134873537 
+            mark = "3{int=37,t_maxInt=-0.02,f0=202," 
+        points [3]:
+            number = 2.4156653736493814 
+            mark = "9{int=19,t_maxInt=-17.13,f0=110," 

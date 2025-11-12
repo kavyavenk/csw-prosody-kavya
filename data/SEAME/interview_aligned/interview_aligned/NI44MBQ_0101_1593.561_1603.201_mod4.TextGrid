@@ -1,0 +1,117 @@
+File type = "ooTextFile"
+Object class = "TextGrid"
+
+xmin = 0 
+xmax = 9.64 
+tiers? <exists> 
+size = 6 
+item []: 
+    item [1]:
+        class = "IntervalTier" 
+        name = "utterance(L1)" 
+        xmin = 0 
+        xmax = 9.64 
+        intervals: size = 1 
+        intervals [1]:
+            xmin = 0 
+            xmax = 9.64 
+            text = "{int(dB)=24,stdint(dB)=7.56,minInt(dB)=11,minIntT(norm)=0.58,maxInt(dB)=55,maxIntT(norm)=0.72,rangeInt(dB)=44,f0(Hz)=176,stdf0(Hz)=103.92,minF0(Hz)=73,minF0T(norm)=0.7,maxF0(Hz)=488,maxF0T(norm)=0.9,rangeF0(Hz)=416,dur(sec)=9.64}" 
+    item [2]:
+        class = "IntervalTier" 
+        name = "IP" 
+        xmin = 0 
+        xmax = 9.64 
+        intervals: size = 3 
+        intervals [1]:
+            xmin = 0 
+            xmax = 1.36 
+            text = "SIL" 
+        intervals [2]:
+            xmin = 1.36 
+            xmax = 1.7 
+            text = "" 
+        intervals [3]:
+            xmin = 1.7 
+            xmax = 9.64 
+            text = "SIL" 
+    item [3]:
+        class = "TextTier" 
+        name = "peaks" 
+        xmin = 0 
+        xmax = 9.64 
+        points: size = 9 
+        points [1]:
+            number = 1.4838472888751986 
+            mark = "2{int=51,t_maxInt=-4.29,f0=154,int=51,f0=154,z_int=0.68,z_f0=-0.17,t_point=0.21,dist_p=0.05}" 
+        points [2]:
+            number = 1.5966964992284176 
+            mark = "2{int=49,t_maxInt=-4.18,f0=154,int=49,f0=154,z_int=0.25,z_f0=-0.19,t_point=0.66,dist_p=0.11}" 
+        points [3]:
+            number = 3.1342504046837862 
+            mark = "5{int=27,t_maxInt=-0.27,f0=106,int=27,f0=106,z_int=1.33,z_f0=-0.62,t_point=0.47,dist_p=1.54}" 
+        points [4]:
+            number = 4.4989949136157 
+            mark = "8{int=30,t_maxInt=-107.70,f0=112,int=30,f0=112,z_int=0.68,z_f0=--undefined--,t_point=0.27,dist_p=1.36}" 
+        points [5]:
+            number = 6.488251136908852 
+            mark = "10{int=33,t_maxInt=-1.69,f0=175,int=33,f0=175,z_int=-0.36,z_f0=0.49,t_point=0.01,dist_p=1.99}" 
+        points [6]:
+            number = 8.113198633289798 
+            mark = "12{int=31,t_maxInt=-136.32,f0=199,int=31,f0=199,z_int=0.89,z_f0=--undefined--,t_point=0.45,dist_p=1.62}" 
+        points [7]:
+            number = 8.80716748817195 
+            mark = "14{int=38,t_maxInt=-4.09,f0=233,int=38,f0=233,z_int=1.77,z_f0=-0.05,t_point=0.21,dist_p=0.69}" 
+        points [8]:
+            number = 9.049206592981657 
+            mark = "14{int=35,t_maxInt=-3.84,f0=484,int=35,f0=484,z_int=1.19,z_f0=1.54,t_point=0.57,dist_p=0.24}" 
+        points [9]:
+            number = 9.23265771220629 
+            mark = "14{int=36,t_maxInt=-3.66,f0=104,int=36,f0=104,z_int=1.25,z_f0=-0.87,t_point=0.85,dist_p=0.18}" 
+    item [4]:
+        class = "TextTier" 
+        name = "valleys" 
+        xmin = 0 
+        xmax = 9.64 
+        points: size = 2 
+        points [1]:
+            number = 6.5772849208044555 
+            mark = "10{z_int=-1.84,z_all=-0.34{t_point=0.12,z_f0=--undefined--,dist_p=0.10}" 
+        points [2]:
+            number = 9.149162091281866 
+            mark = "14{z_int=-2.46,z_all=-0.35{t_point=0.72,z_f0=--undefined--,dist_p=2.57}" 
+    item [5]:
+        class = "IntervalTier" 
+        name = "words" 
+        xmin = 0 
+        xmax = 9.64 
+        intervals: size = 3 
+        intervals [1]:
+            xmin = 0 
+            xmax = 1.36 
+            text = "" 
+        intervals [2]:
+            xmin = 1.36 
+            xmax = 1.7 
+            text = "[bracketed]{t_maxf0=0.19,z_f0=0,rangeF0=31,slope=-6.80,t_min=0.11,z_int=0,dur=0.34,n_Phones=1}" 
+        intervals [3]:
+            xmin = 1.7 
+            xmax = 9.64 
+            text = "" 
+    item [6]:
+        class = "IntervalTier" 
+        name = "phones" 
+        xmin = 0 
+        xmax = 9.64 
+        intervals: size = 3 
+        intervals [1]:
+            xmin = 0 
+            xmax = 1.36 
+            text = "" 
+        intervals [2]:
+            xmin = 1.36 
+            xmax = 1.7 
+            text = "spn" 
+        intervals [3]:
+            xmin = 1.7 
+            xmax = 9.64 
+            text = "" 

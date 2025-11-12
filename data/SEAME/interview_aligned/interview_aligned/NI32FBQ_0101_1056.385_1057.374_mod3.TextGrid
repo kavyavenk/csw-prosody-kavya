@@ -1,0 +1,62 @@
+File type = "ooTextFile"
+Object class = "TextGrid"
+
+xmin = 0 
+xmax = 0.989 
+tiers? <exists> 
+size = 4 
+item []: 
+    item [1]:
+        class = "IntervalTier" 
+        name = "utterance(L1)" 
+        xmin = 0 
+        xmax = 0.989 
+        intervals: size = 1 
+        intervals [1]:
+            xmin = 0 
+            xmax = 0.989 
+            text = "{int(dB)=22,stdint(dB)=14.24,minInt(dB)=3,minIntT(norm)=0.21,maxInt(dB)=45,maxIntT(norm)=0.65,rangeInt(dB)=42,f0(Hz)=184,stdf0(Hz)=49.55,minF0(Hz)=77,minF0T(norm)=0.7,maxF0(Hz)=234,maxF0T(norm)=0.3,rangeF0(Hz)=157,dur(sec)=0.99}" 
+    item [2]:
+        class = "IntervalTier" 
+        name = "silences" 
+        xmin = 0 
+        xmax = 0.989 
+        intervals: size = 5 
+        intervals [1]:
+            xmin = 0 
+            xmax = 0.3145 
+            text = "SIL" 
+        intervals [2]:
+            xmin = 0.3145 
+            xmax = 0.4105 
+            text = "{z_intpph=0.45,f0pph=230.08,stdf0pph=3.80,z_f0pph=0.93,dur=0.10,rel_dur=0.10,pph_sil=1," 
+        intervals [3]:
+            xmin = 0.4105 
+            xmax = 0.5225 
+            text = "SIL" 
+        intervals [4]:
+            xmin = 0.5225 
+            xmax = 0.8825 
+            text = "{z_intpph=1.03,f0pph=160.80,stdf0pph=45.94,z_f0pph=-0.47,dur=0.36,rel_dur=0.36,pph_sil=2," 
+        intervals [5]:
+            xmin = 0.8825 
+            xmax = 0.989 
+            text = "SIL" 
+    item [3]:
+        class = "TextTier" 
+        name = "peaks" 
+        xmin = 0 
+        xmax = 0.989 
+        points: size = 2 
+        points [1]:
+            number = 0.3470711649369935 
+            mark = "2{int=33,t_maxInt=-2.93,f0=232,int=33,f0=232,z_int=0.72,z_f0=0.47,t_point=0.34,dist_p=0.03}" 
+        points [2]:
+            number = 0.6759149713575744 
+            mark = "4{int=44,t_maxInt=-0.78,f0=185,int=44,f0=185,z_int=0.93,z_f0=0.53,t_point=0.43,dist_p=0.33}" 
+    item [4]:
+        class = "TextTier" 
+        name = "valleys" 
+        xmin = 0 
+        xmax = 0.989 
+        points: size = 0 

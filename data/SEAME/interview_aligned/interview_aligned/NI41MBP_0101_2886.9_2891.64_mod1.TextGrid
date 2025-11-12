@@ -1,0 +1,89 @@
+File type = "ooTextFile"
+Object class = "TextGrid"
+
+xmin = 0 
+xmax = 4.7399375 
+tiers? <exists> 
+size = 2 
+item []: 
+    item [1]:
+        class = "IntervalTier" 
+        name = "silences" 
+        xmin = 0 
+        xmax = 4.7399375 
+        intervals: size = 9 
+        intervals [1]:
+            xmin = 0 
+            xmax = 0.1379687500000001 
+            text = "" 
+        intervals [2]:
+            xmin = 0.1379687500000001 
+            xmax = 0.3699687500000001 
+            text = "SIL" 
+        intervals [3]:
+            xmin = 0.3699687500000001 
+            xmax = 0.7139687500000002 
+            text = "" 
+        intervals [4]:
+            xmin = 0.7139687500000002 
+            xmax = 0.9059687500000001 
+            text = "SIL" 
+        intervals [5]:
+            xmin = 0.9059687500000001 
+            xmax = 1.3059687500000001 
+            text = "" 
+        intervals [6]:
+            xmin = 1.3059687500000001 
+            xmax = 2.00196875 
+            text = "SIL" 
+        intervals [7]:
+            xmin = 2.00196875 
+            xmax = 2.16196875 
+            text = "" 
+        intervals [8]:
+            xmin = 2.16196875 
+            xmax = 3.91396875 
+            text = "SIL" 
+        intervals [9]:
+            xmin = 3.91396875 
+            xmax = 4.7399375 
+            text = "" 
+    item [2]:
+        class = "TextTier" 
+        name = "peaks" 
+        xmin = 0 
+        xmax = 4.7399375 
+        points: size = 11 
+        points [1]:
+            number = 2.028624443785281 
+            mark = "7{int=28,t_maxInt=-10.48,f0=242," 
+        points [2]:
+            number = 2.130669218889283 
+            mark = "7{int=23,t_maxInt=-10.38,f0=406," 
+        points [3]:
+            number = 2.297858306128182 
+            mark = "8{int=17,t_maxInt=1.06,f0=285," 
+        points [4]:
+            number = 2.398369441287785 
+            mark = "8{int=15,t_maxInt=1.16,f0=264," 
+        points [5]:
+            number = 2.553030963424979 
+            mark = "8{int=17,t_maxInt=1.32,f0=201," 
+        points [6]:
+            number = 2.6751517340484856 
+            mark = "8{int=15,t_maxInt=1.44,f0=168," 
+        points [7]:
+            number = 3.0280141266222556 
+            mark = "8{int=18,t_maxInt=1.79,f0=289," 
+        points [8]:
+            number = 4.051798691606889 
+            mark = "9{int=44,t_maxInt=-0.69,f0=142," 
+        points [9]:
+            number = 4.279902614200786 
+            mark = "9{int=42,t_maxInt=-0.46,f0=137," 
+        points [10]:
+            number = 4.4213749474828 
+            mark = "9{int=41,t_maxInt=-0.32,f0=136," 
+        points [11]:
+            number = 4.5330745462883115 
+            mark = "9{int=41,t_maxInt=-0.21,f0=136," 
