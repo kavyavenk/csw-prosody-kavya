@@ -31,8 +31,9 @@ def run_compare(a_mask, b_mask, label):
     out = pd.DataFrame({"feature": feature_cols, "p": pvals, "p_adj": padj, "cohen_d": ds})
     out["sig"] = out["p_adj"] < 0.05
     out = out.sort_values("p_adj")
-    out.to_csv(f"features/first_contrast_{args.corpus}.csv", index=False)
-    print(f"[{args.corpus}] n_sig:", int(out["sig"].sum()), "/", len(out))
+    out_file = f"features/first_contrast_{args.corpus}_{label}.csv"
+    out.to_csv(out_file, index=False)
+    print(f"[{args.corpus}] {label}: n_sig:", int(out["sig"].sum()), "/", len(out))
     return out
 
 if args.corpus == "masac":

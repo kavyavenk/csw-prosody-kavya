@@ -1,0 +1,888 @@
+,model,hyperparameters,cross-val accuracy,test accuracy,feature importance,permutation importance,RFE features
+0,"LogisticRegression(class_weight='balanced', max_iter=1000)",{'C': 1.75},0.5132971506105835,0.5294117647058824,"                             Feature  Coefficient  Odds Ratio
+ID                                                           
+23    S2: Insertional code-switching     0.736654    2.088934
+40              S2: Affirmative cues     0.472328    1.603723
+37                 S2: Speaking rate     0.305293    1.357023
+2     S1: Insertional code-switching     0.269057    1.308730
+16                 S1: Speaking rate     0.234557    1.264349
+19              S1: Affirmative cues     0.195014    1.215328
+32             S2: Maximum intensity     0.155025    1.167687
+12             S1: Std Dev Intensity     0.117910    1.125143
+0        S1: Code-switching presence     0.108978    1.115138
+33             S2: Std Dev Intensity     0.107370    1.113347
+36                           S2: HNR     0.068778    1.071198
+22          S2: Code-switching ratio     0.065463    1.067653
+30             S2: Minimum intensity     0.063384    1.065436
+38                 S2: Top 100 words     0.029072    1.029499
+17                 S1: Top 100 words     0.027116    1.027487
+11             S1: Maximum intensity     0.021193    1.021419
+14                       S1: Shimmer     0.011913    1.011984
+1           S1: Code-switching ratio     0.007869    1.007900
+8                  S1: Std Dev Pitch     0.007281    1.007307
+5                  S1: Minimum pitch     0.005084    1.005097
+9              S1: Minimum intensity     0.002260    1.002262
+13                        S1: Jitter     0.001216    1.001217
+28                 S2: Maximum pitch     0.000105    1.000105
+7                  S1: Maximum pitch     0.000071    1.000071
+18                  S1: Top 25 words     0.000000    1.000000
+39                  S2: Top 25 words     0.000000    1.000000
+41                       S2: Fillers     0.000000    1.000000
+29                 S2: Std Dev Pitch    -0.001577    0.998424
+6                     S1: Mean pitch    -0.002330    0.997673
+27                    S2: Mean pitch    -0.003491    0.996515
+26                 S2: Minimum pitch    -0.005449    0.994566
+20                       S1: Fillers    -0.008706    0.991332
+34                        S2: Jitter    -0.012835    0.987247
+21       S2: Code-switching presence    -0.044215    0.956748
+3   S1: Alternational code-switching    -0.072237    0.930310
+4           S1: Other code-switching    -0.087842    0.915906
+35                       S2: Shimmer    -0.090085    0.913853
+10                S1: Mean intensity    -0.103880    0.901333
+15                           S1: HNR    -0.140518    0.868908
+31                S2: Mean intensity    -0.188541    0.828167
+24  S2: Alternational code-switching    -0.323309    0.723750
+25          S2: Other code-switching    -0.457560    0.632826","                             Feature  Importance Mean  Importance Std
+ID                                                                   
+2     S1: Insertional code-switching         0.004902        0.026398
+1           S1: Code-switching ratio         0.000000        0.000000
+8                  S1: Std Dev Pitch         0.000000        0.000000
+5                  S1: Minimum pitch         0.000000        0.000000
+7                  S1: Maximum pitch         0.000000        0.000000
+6                     S1: Mean pitch         0.000000        0.000000
+9              S1: Minimum intensity         0.000000        0.000000
+17                 S1: Top 100 words         0.000000        0.000000
+13                        S1: Jitter         0.000000        0.000000
+11             S1: Maximum intensity         0.000000        0.000000
+41                       S2: Fillers         0.000000        0.000000
+40              S2: Affirmative cues         0.000000        0.000000
+39                  S2: Top 25 words         0.000000        0.000000
+14                       S1: Shimmer         0.000000        0.000000
+25          S2: Other code-switching         0.000000        0.000000
+20                       S1: Fillers         0.000000        0.000000
+19              S1: Affirmative cues         0.000000        0.000000
+18                  S1: Top 25 words         0.000000        0.000000
+34                        S2: Jitter         0.000000        0.000000
+28                 S2: Maximum pitch         0.000000        0.000000
+27                    S2: Mean pitch         0.000000        0.000000
+38                 S2: Top 100 words         0.000000        0.000000
+29                 S2: Std Dev Pitch         0.000000        0.000000
+26                 S2: Minimum pitch         0.000000        0.000000
+4           S1: Other code-switching        -0.000980        0.009249
+35                       S2: Shimmer        -0.001961        0.016867
+30             S2: Minimum intensity        -0.002941        0.008824
+10                S1: Mean intensity        -0.002941        0.008824
+24  S2: Alternational code-switching        -0.003922        0.022442
+3   S1: Alternational code-switching        -0.003922        0.009998
+37                 S2: Speaking rate        -0.004902        0.041652
+31                S2: Mean intensity        -0.004902        0.015346
+21       S2: Code-switching presence        -0.008824        0.013478
+22          S2: Code-switching ratio        -0.009804        0.015808
+36                           S2: HNR        -0.016667        0.018104
+0        S1: Code-switching presence        -0.017647        0.017971
+12             S1: Std Dev Intensity        -0.018627        0.023386
+15                           S1: HNR        -0.020588        0.017234
+32             S2: Maximum intensity        -0.023529        0.020658
+33             S2: Std Dev Intensity        -0.032353        0.029753
+16                 S1: Speaking rate        -0.041176        0.025865
+23    S2: Insertional code-switching        -0.049020        0.077569","Index(['S1: Shimmer', 'S1: Affirmative cues', 'S2: Other code-switching',
+       'S2: Mean intensity', 'S2: Shimmer'],
+      dtype='object')"
+1,"SVC(class_weight='balanced', kernel='linear')","{'C': 1.75, 'gamma': 'scale'}",0.5435549525101764,0.4411764705882353,"                             Feature  Coefficient  Odds Ratio
+ID                                                           
+40              S2: Affirmative cues     1.908891    6.745600
+23    S2: Insertional code-switching     1.727884    5.628729
+19              S1: Affirmative cues     0.930860    2.536690
+16                 S1: Speaking rate     0.335363    1.398448
+37                 S2: Speaking rate     0.303514    1.354610
+32             S2: Maximum intensity     0.268227    1.307643
+3   S1: Alternational code-switching     0.201786    1.223587
+12             S1: Std Dev Intensity     0.155300    1.168009
+2     S1: Insertional code-switching     0.144937    1.155967
+33             S2: Std Dev Intensity     0.132330    1.141485
+0        S1: Code-switching presence     0.124879    1.133011
+38                 S2: Top 100 words     0.108396    1.114489
+30             S2: Minimum intensity     0.063295    1.065341
+1           S1: Code-switching ratio     0.046862    1.047978
+36                           S2: HNR     0.032143    1.032665
+9              S1: Minimum intensity     0.013581    1.013674
+7                  S1: Maximum pitch     0.003860    1.003868
+5                  S1: Minimum pitch     0.002796    1.002799
+29                 S2: Std Dev Pitch     0.001023    1.001023
+11             S1: Maximum intensity     0.000871    1.000871
+8                  S1: Std Dev Pitch     0.000842    1.000842
+20                       S1: Fillers     0.000000    1.000000
+41                       S2: Fillers     0.000000    1.000000
+39                  S2: Top 25 words     0.000000    1.000000
+18                  S1: Top 25 words     0.000000    1.000000
+28                 S2: Maximum pitch    -0.001124    0.998877
+26                 S2: Minimum pitch    -0.003073    0.996931
+6                     S1: Mean pitch    -0.004033    0.995975
+27                    S2: Mean pitch    -0.006155    0.993864
+22          S2: Code-switching ratio    -0.015865    0.984260
+13                        S1: Jitter    -0.039160    0.961596
+15                           S1: HNR    -0.137382    0.871637
+14                       S1: Shimmer    -0.140949    0.868533
+34                        S2: Jitter    -0.145707    0.864411
+10                S1: Mean intensity    -0.195092    0.822759
+4           S1: Other code-switching    -0.221845    0.801040
+31                S2: Mean intensity    -0.243018    0.784258
+17                 S1: Top 100 words    -0.245451    0.782352
+24  S2: Alternational code-switching    -0.512272    0.599133
+21       S2: Code-switching presence    -0.719850    0.486825
+35                       S2: Shimmer    -0.816604    0.441930
+25          S2: Other code-switching    -1.935462    0.144358","                             Feature  Importance Mean  Importance Std
+ID                                                                   
+8                  S1: Std Dev Pitch         0.000000        0.000000
+5                  S1: Minimum pitch         0.000000        0.000000
+7                  S1: Maximum pitch         0.000000        0.000000
+6                     S1: Mean pitch         0.000000        0.000000
+29                 S2: Std Dev Pitch         0.000000        0.000000
+40              S2: Affirmative cues         0.000000        0.000000
+41                       S2: Fillers         0.000000        0.000000
+20                       S1: Fillers         0.000000        0.000000
+18                  S1: Top 25 words         0.000000        0.000000
+11             S1: Maximum intensity         0.000000        0.000000
+39                  S2: Top 25 words         0.000000        0.000000
+26                 S2: Minimum pitch         0.000000        0.000000
+28                 S2: Maximum pitch         0.000000        0.000000
+4           S1: Other code-switching        -0.000980        0.017783
+3   S1: Alternational code-switching        -0.001961        0.007337
+19              S1: Affirmative cues        -0.001961        0.007337
+27                    S2: Mean pitch        -0.002941        0.008824
+13                        S1: Jitter        -0.007843        0.013006
+24  S2: Alternational code-switching        -0.012745        0.024822
+14                       S1: Shimmer        -0.013725        0.016522
+22          S2: Code-switching ratio        -0.015686        0.014673
+9              S1: Minimum intensity        -0.015686        0.014673
+32             S2: Maximum intensity        -0.018627        0.017783
+36                           S2: HNR        -0.030392        0.019336
+25          S2: Other code-switching        -0.030392        0.005280
+33             S2: Std Dev Intensity        -0.031373        0.022698
+34                        S2: Jitter        -0.031373        0.025110
+12             S1: Std Dev Intensity        -0.032353        0.023221
+1           S1: Code-switching ratio        -0.032353        0.017565
+0        S1: Code-switching presence        -0.040196        0.024588
+30             S2: Minimum intensity        -0.042157        0.016434
+2     S1: Insertional code-switching        -0.043137        0.023692
+23    S2: Insertional code-switching        -0.049020        0.038970
+31                S2: Mean intensity        -0.052941        0.029801
+16                 S1: Speaking rate        -0.056863        0.018498
+38                 S2: Top 100 words        -0.056863        0.016867
+17                 S1: Top 100 words        -0.059804        0.024588
+15                           S1: HNR        -0.064706        0.025641
+10                S1: Mean intensity        -0.065686        0.031018
+21       S2: Code-switching presence        -0.070588        0.041316
+37                 S2: Speaking rate        -0.071569        0.030074
+35                       S2: Shimmer        -0.075490        0.027045","Index(['S1: Shimmer', 'S2: Other code-switching', 'S2: Mean pitch',
+       'S2: Mean intensity', 'S2: Shimmer'],
+      dtype='object')"
+2,DecisionTreeClassifier(class_weight='balanced'),"{'criterion': 'entropy', 'max_depth': 30, 'min_samples_split': 2}",0.546540027137042,0.5588235294117647,"                             Feature  Importance
+0                  S2: Minimum pitch    0.075615
+1                  S1: Speaking rate    0.072010
+2                     S1: Mean pitch    0.068627
+3                  S2: Speaking rate    0.059322
+4                  S2: Maximum pitch    0.051034
+5                        S2: Shimmer    0.049895
+6              S2: Maximum intensity    0.045116
+7                  S1: Minimum pitch    0.043003
+8              S2: Std Dev Intensity    0.042042
+9                            S1: HNR    0.038945
+10          S2: Code-switching ratio    0.038064
+11             S1: Minimum intensity    0.035915
+12                        S2: Jitter    0.035908
+13                S2: Mean intensity    0.035178
+14                 S1: Maximum pitch    0.031273
+15                 S1: Std Dev Pitch    0.027084
+16          S2: Other code-switching    0.022414
+17             S2: Minimum intensity    0.021755
+18                 S1: Top 100 words    0.020679
+19             S1: Maximum intensity    0.020143
+20    S1: Insertional code-switching    0.017995
+21    S2: Insertional code-switching    0.017574
+22                 S2: Std Dev Pitch    0.017444
+23                           S2: HNR    0.016532
+24                    S2: Mean pitch    0.016267
+25                S1: Mean intensity    0.016068
+26       S2: Code-switching presence    0.013900
+27                 S2: Top 100 words    0.013141
+28          S1: Code-switching ratio    0.012645
+29             S1: Std Dev Intensity    0.012396
+30                       S1: Shimmer    0.012014
+31                  S2: Top 25 words    0.000000
+32                       S2: Fillers    0.000000
+33              S2: Affirmative cues    0.000000
+34              S1: Affirmative cues    0.000000
+35                  S1: Top 25 words    0.000000
+36                       S1: Fillers    0.000000
+37  S2: Alternational code-switching    0.000000
+38                        S1: Jitter    0.000000
+39          S1: Other code-switching    0.000000
+40  S1: Alternational code-switching    0.000000
+41       S1: Code-switching presence    0.000000","                             Feature  Importance Mean  Importance Std
+ID                                                                   
+0        S1: Code-switching presence              0.0             0.0
+1           S1: Code-switching ratio              0.0             0.0
+2     S1: Insertional code-switching              0.0             0.0
+3   S1: Alternational code-switching              0.0             0.0
+4           S1: Other code-switching              0.0             0.0
+5                  S1: Minimum pitch              0.0             0.0
+6                     S1: Mean pitch              0.0             0.0
+7                  S1: Maximum pitch              0.0             0.0
+8                  S1: Std Dev Pitch              0.0             0.0
+9              S1: Minimum intensity              0.0             0.0
+10                S1: Mean intensity              0.0             0.0
+11             S1: Maximum intensity              0.0             0.0
+12             S1: Std Dev Intensity              0.0             0.0
+13                        S1: Jitter              0.0             0.0
+14                       S1: Shimmer              0.0             0.0
+15                           S1: HNR              0.0             0.0
+16                 S1: Speaking rate              0.0             0.0
+17                 S1: Top 100 words              0.0             0.0
+18                  S1: Top 25 words              0.0             0.0
+19              S1: Affirmative cues              0.0             0.0
+20                       S1: Fillers              0.0             0.0
+21       S2: Code-switching presence              0.0             0.0
+22          S2: Code-switching ratio              0.0             0.0
+23    S2: Insertional code-switching              0.0             0.0
+24  S2: Alternational code-switching              0.0             0.0
+25          S2: Other code-switching              0.0             0.0
+26                 S2: Minimum pitch              0.0             0.0
+27                    S2: Mean pitch              0.0             0.0
+28                 S2: Maximum pitch              0.0             0.0
+29                 S2: Std Dev Pitch              0.0             0.0
+30             S2: Minimum intensity              0.0             0.0
+31                S2: Mean intensity              0.0             0.0
+32             S2: Maximum intensity              0.0             0.0
+33             S2: Std Dev Intensity              0.0             0.0
+34                        S2: Jitter              0.0             0.0
+35                       S2: Shimmer              0.0             0.0
+36                           S2: HNR              0.0             0.0
+37                 S2: Speaking rate              0.0             0.0
+38                 S2: Top 100 words              0.0             0.0
+39                  S2: Top 25 words              0.0             0.0
+40              S2: Affirmative cues              0.0             0.0
+41                       S2: Fillers              0.0             0.0","Index(['S1: Maximum intensity', 'S1: HNR', 'S2: Mean pitch',
+       'S2: Maximum pitch', 'S2: Jitter'],
+      dtype='object')"
+3,RandomForestClassifier(class_weight='balanced'),"{'criterion': 'log_loss', 'max_depth': 25, 'min_samples_split': 10}",0.5886024423337857,0.5,"                             Feature  Importance
+0                 S2: Mean intensity    0.042942
+1                     S1: Mean pitch    0.042477
+2                        S2: Shimmer    0.042298
+3                  S1: Speaking rate    0.041382
+4                        S1: Shimmer    0.041080
+5                  S2: Speaking rate    0.040111
+6                  S1: Std Dev Pitch    0.039625
+7              S1: Maximum intensity    0.039504
+8              S2: Minimum intensity    0.038253
+9                     S2: Mean pitch    0.037988
+10                S1: Mean intensity    0.035493
+11             S1: Minimum intensity    0.035031
+12             S2: Maximum intensity    0.034941
+13                 S2: Maximum pitch    0.034257
+14                 S1: Minimum pitch    0.033715
+15                        S1: Jitter    0.032765
+16                           S1: HNR    0.032228
+17                        S2: Jitter    0.032146
+18          S2: Code-switching ratio    0.031927
+19                 S2: Std Dev Pitch    0.031558
+20                           S2: HNR    0.031300
+21                 S2: Minimum pitch    0.030242
+22             S1: Std Dev Intensity    0.029372
+23                 S1: Maximum pitch    0.028432
+24             S2: Std Dev Intensity    0.027472
+25    S2: Insertional code-switching    0.020442
+26          S1: Code-switching ratio    0.018312
+27       S2: Code-switching presence    0.014323
+28       S1: Code-switching presence    0.012095
+29    S1: Insertional code-switching    0.011109
+30          S2: Other code-switching    0.008726
+31                 S1: Top 100 words    0.008439
+32                 S2: Top 100 words    0.007872
+33  S1: Alternational code-switching    0.005245
+34              S2: Affirmative cues    0.003946
+35  S2: Alternational code-switching    0.001755
+36          S1: Other code-switching    0.000752
+37              S1: Affirmative cues    0.000447
+38                  S2: Top 25 words    0.000000
+39                       S2: Fillers    0.000000
+40                  S1: Top 25 words    0.000000
+41                       S1: Fillers    0.000000","                             Feature  Importance Mean  Importance Std
+ID                                                                   
+35                       S2: Shimmer         0.060784        0.047989
+34                        S2: Jitter         0.031373        0.030313
+23    S2: Insertional code-switching         0.030392        0.039081
+24  S2: Alternational code-switching         0.027451        0.007337
+14                       S1: Shimmer         0.003922        0.034579
+38                 S2: Top 100 words         0.000980        0.005280
+6                     S1: Mean pitch         0.000000        0.000000
+7                  S1: Maximum pitch         0.000000        0.000000
+3   S1: Alternational code-switching         0.000000        0.013153
+2     S1: Insertional code-switching         0.000000        0.000000
+33             S2: Std Dev Intensity         0.000000        0.000000
+32             S2: Maximum intensity         0.000000        0.000000
+9              S1: Minimum intensity         0.000000        0.000000
+8                  S1: Std Dev Pitch         0.000000        0.000000
+5                  S1: Minimum pitch         0.000000        0.000000
+4           S1: Other code-switching         0.000000        0.000000
+16                 S1: Speaking rate         0.000000        0.000000
+10                S1: Mean intensity         0.000000        0.000000
+25          S2: Other code-switching         0.000000        0.000000
+20                       S1: Fillers         0.000000        0.000000
+18                  S1: Top 25 words         0.000000        0.000000
+19              S1: Affirmative cues         0.000000        0.000000
+26                 S2: Minimum pitch         0.000000        0.000000
+15                           S1: HNR         0.000000        0.000000
+12             S1: Std Dev Intensity         0.000000        0.000000
+11             S1: Maximum intensity         0.000000        0.000000
+37                 S2: Speaking rate         0.000000        0.000000
+39                  S2: Top 25 words         0.000000        0.000000
+31                S2: Mean intensity         0.000000        0.000000
+36                           S2: HNR         0.000000        0.000000
+30             S2: Minimum intensity         0.000000        0.000000
+27                    S2: Mean pitch         0.000000        0.000000
+28                 S2: Maximum pitch         0.000000        0.000000
+29                 S2: Std Dev Pitch         0.000000        0.000000
+40              S2: Affirmative cues         0.000000        0.000000
+41                       S2: Fillers         0.000000        0.000000
+0        S1: Code-switching presence        -0.004902        0.010961
+1           S1: Code-switching ratio        -0.004902        0.025282
+22          S2: Code-switching ratio        -0.021569        0.038673
+21       S2: Code-switching presence        -0.027451        0.022698
+17                 S1: Top 100 words        -0.043137        0.036996
+13                        S1: Jitter        -0.049020        0.038223","Index(['S1: Mean pitch', 'S1: Maximum intensity', 'S1: Speaking rate',
+       'S2: Std Dev Intensity', 'S2: Shimmer'],
+      dtype='object')"
+4,GaussianNB(),,0.46,0.4411764705882353,,"                             Feature  Importance Mean  Importance Std
+ID                                                                   
+0        S1: Code-switching presence              0.0             0.0
+1           S1: Code-switching ratio              0.0             0.0
+2     S1: Insertional code-switching              0.0             0.0
+3   S1: Alternational code-switching              0.0             0.0
+4           S1: Other code-switching              0.0             0.0
+5                  S1: Minimum pitch              0.0             0.0
+6                     S1: Mean pitch              0.0             0.0
+7                  S1: Maximum pitch              0.0             0.0
+8                  S1: Std Dev Pitch              0.0             0.0
+9              S1: Minimum intensity              0.0             0.0
+10                S1: Mean intensity              0.0             0.0
+11             S1: Maximum intensity              0.0             0.0
+12             S1: Std Dev Intensity              0.0             0.0
+13                        S1: Jitter              0.0             0.0
+14                       S1: Shimmer              0.0             0.0
+15                           S1: HNR              0.0             0.0
+16                 S1: Speaking rate              0.0             0.0
+17                 S1: Top 100 words              0.0             0.0
+18                  S1: Top 25 words              0.0             0.0
+19              S1: Affirmative cues              0.0             0.0
+20                       S1: Fillers              0.0             0.0
+21       S2: Code-switching presence              0.0             0.0
+22          S2: Code-switching ratio              0.0             0.0
+23    S2: Insertional code-switching              0.0             0.0
+24  S2: Alternational code-switching              0.0             0.0
+25          S2: Other code-switching              0.0             0.0
+26                 S2: Minimum pitch              0.0             0.0
+27                    S2: Mean pitch              0.0             0.0
+28                 S2: Maximum pitch              0.0             0.0
+29                 S2: Std Dev Pitch              0.0             0.0
+30             S2: Minimum intensity              0.0             0.0
+31                S2: Mean intensity              0.0             0.0
+32             S2: Maximum intensity              0.0             0.0
+33             S2: Std Dev Intensity              0.0             0.0
+34                        S2: Jitter              0.0             0.0
+35                       S2: Shimmer              0.0             0.0
+36                           S2: HNR              0.0             0.0
+37                 S2: Speaking rate              0.0             0.0
+38                 S2: Top 100 words              0.0             0.0
+39                  S2: Top 25 words              0.0             0.0
+40              S2: Affirmative cues              0.0             0.0
+41                       S2: Fillers              0.0             0.0",
+5,KNeighborsClassifier(),"{'algorithm': 'ball_tree', 'leaf_size': 5, 'n_neighbors': 35, 'weights': 'distance'}",0.5468113975576662,0.4411764705882353,,"                             Feature  Importance Mean  Importance Std
+ID                                                                   
+0        S1: Code-switching presence              0.0             0.0
+1           S1: Code-switching ratio              0.0             0.0
+2     S1: Insertional code-switching              0.0             0.0
+3   S1: Alternational code-switching              0.0             0.0
+4           S1: Other code-switching              0.0             0.0
+5                  S1: Minimum pitch              0.0             0.0
+6                     S1: Mean pitch              0.0             0.0
+7                  S1: Maximum pitch              0.0             0.0
+8                  S1: Std Dev Pitch              0.0             0.0
+9              S1: Minimum intensity              0.0             0.0
+10                S1: Mean intensity              0.0             0.0
+11             S1: Maximum intensity              0.0             0.0
+12             S1: Std Dev Intensity              0.0             0.0
+13                        S1: Jitter              0.0             0.0
+14                       S1: Shimmer              0.0             0.0
+15                           S1: HNR              0.0             0.0
+16                 S1: Speaking rate              0.0             0.0
+17                 S1: Top 100 words              0.0             0.0
+18                  S1: Top 25 words              0.0             0.0
+19              S1: Affirmative cues              0.0             0.0
+20                       S1: Fillers              0.0             0.0
+21       S2: Code-switching presence              0.0             0.0
+22          S2: Code-switching ratio              0.0             0.0
+23    S2: Insertional code-switching              0.0             0.0
+24  S2: Alternational code-switching              0.0             0.0
+25          S2: Other code-switching              0.0             0.0
+26                 S2: Minimum pitch              0.0             0.0
+27                    S2: Mean pitch              0.0             0.0
+28                 S2: Maximum pitch              0.0             0.0
+29                 S2: Std Dev Pitch              0.0             0.0
+30             S2: Minimum intensity              0.0             0.0
+31                S2: Mean intensity              0.0             0.0
+32             S2: Maximum intensity              0.0             0.0
+33             S2: Std Dev Intensity              0.0             0.0
+34                        S2: Jitter              0.0             0.0
+35                       S2: Shimmer              0.0             0.0
+36                           S2: HNR              0.0             0.0
+37                 S2: Speaking rate              0.0             0.0
+38                 S2: Top 100 words              0.0             0.0
+39                  S2: Top 25 words              0.0             0.0
+40              S2: Affirmative cues              0.0             0.0
+41                       S2: Fillers              0.0             0.0",
+6,MLPClassifier(max_iter=1000),"{'activation': 'identity', 'alpha': 0.0001, 'hidden_layer_sizes': 10, 'solver': 'lbfgs'}",0.5672546359113524,0.3529411764705882,,"                             Feature  Importance Mean  Importance Std
+ID                                                                   
+20                       S1: Fillers         0.000000        0.000000
+25          S2: Other code-switching         0.000000        0.000000
+18                  S1: Top 25 words         0.000000        0.000000
+41                       S2: Fillers         0.000000        0.000000
+40              S2: Affirmative cues         0.000000        0.000000
+39                  S2: Top 25 words         0.000000        0.000000
+19              S1: Affirmative cues         0.000000        0.000000
+4           S1: Other code-switching        -0.000980        0.009249
+3   S1: Alternational code-switching        -0.000980        0.009249
+36                           S2: HNR        -0.001961        0.033905
+24  S2: Alternational code-switching        -0.004902        0.017122
+12             S1: Std Dev Intensity        -0.007843        0.013006
+13                        S1: Jitter        -0.012745        0.018104
+22          S2: Code-switching ratio        -0.016667        0.018104
+26                 S2: Minimum pitch        -0.016667        0.036957
+29                 S2: Std Dev Pitch        -0.018627        0.020774
+38                 S2: Top 100 words        -0.020588        0.013478
+11             S1: Maximum intensity        -0.023529        0.019212
+35                       S2: Shimmer        -0.024510        0.018730
+10                S1: Mean intensity        -0.025490        0.019706
+21       S2: Code-switching presence        -0.025490        0.039992
+17                 S1: Top 100 words        -0.026471        0.023221
+23    S2: Insertional code-switching        -0.029412        0.021479
+34                        S2: Jitter        -0.029412        0.022782
+31                S2: Mean intensity        -0.031373        0.018498
+33             S2: Std Dev Intensity        -0.036275        0.031018
+15                           S1: HNR        -0.036275        0.033692
+27                    S2: Mean pitch        -0.036275        0.036168
+1           S1: Code-switching ratio        -0.036275        0.028091
+5                  S1: Minimum pitch        -0.036275        0.049029
+16                 S1: Speaking rate        -0.037255        0.042237
+0        S1: Code-switching presence        -0.037255        0.042237
+32             S2: Maximum intensity        -0.038235        0.022971
+14                       S1: Shimmer        -0.039216        0.035076
+37                 S2: Speaking rate        -0.039216        0.025565
+2     S1: Insertional code-switching        -0.040196        0.022119
+9              S1: Minimum intensity        -0.041176        0.023529
+30             S2: Minimum intensity        -0.043137        0.032869
+8                  S1: Std Dev Pitch        -0.046078        0.034537
+6                     S1: Mean pitch        -0.055882        0.024431
+7                  S1: Maximum pitch        -0.062745        0.037767
+28                 S2: Maximum pitch        -0.086275        0.067469",
+7,GradientBoostingClassifier(),"{'criterion': 'friedman_mse', 'learning_rate': 0.5, 'loss': 'log_loss', 'n_estimators': 400}",0.6154228855721392,0.5882352941176471,"                             Feature    Importance
+0                     S1: Mean pitch  7.205029e-02
+1                  S1: Speaking rate  6.284943e-02
+2                  S1: Std Dev Pitch  5.759436e-02
+3                     S2: Mean pitch  5.695689e-02
+4                  S2: Maximum pitch  4.872417e-02
+5              S1: Maximum intensity  4.661511e-02
+6              S2: Maximum intensity  4.632383e-02
+7                        S2: Shimmer  4.407251e-02
+8     S2: Insertional code-switching  4.350839e-02
+9              S1: Minimum intensity  4.122645e-02
+10                 S2: Speaking rate  4.031652e-02
+11                       S1: Shimmer  3.882159e-02
+12                S1: Mean intensity  3.796065e-02
+13                 S2: Std Dev Pitch  3.458758e-02
+14                        S1: Jitter  3.434861e-02
+15                S2: Mean intensity  3.194431e-02
+16                           S1: HNR  3.158521e-02
+17          S2: Other code-switching  2.695908e-02
+18          S1: Code-switching ratio  2.594967e-02
+19          S2: Code-switching ratio  2.589597e-02
+20             S2: Minimum intensity  1.862421e-02
+21                 S1: Maximum pitch  1.753534e-02
+22                        S2: Jitter  1.507986e-02
+23             S1: Std Dev Intensity  1.431023e-02
+24             S2: Std Dev Intensity  1.429249e-02
+25  S1: Alternational code-switching  1.412562e-02
+26                           S2: HNR  1.252800e-02
+27                 S2: Minimum pitch  9.677760e-03
+28              S2: Affirmative cues  9.347243e-03
+29                 S1: Top 100 words  8.879777e-03
+30       S2: Code-switching presence  8.256391e-03
+31                 S1: Minimum pitch  4.060097e-03
+32                 S2: Top 100 words  3.505876e-03
+33    S1: Insertional code-switching  7.397576e-04
+34              S1: Affirmative cues  6.067934e-04
+35       S1: Code-switching presence  1.377022e-04
+36  S2: Alternational code-switching  2.249704e-06
+37          S1: Other code-switching  2.238402e-14
+38                  S2: Top 25 words  0.000000e+00
+39                       S2: Fillers  0.000000e+00
+40                  S1: Top 25 words  0.000000e+00
+41                       S1: Fillers  0.000000e+00","                             Feature  Importance Mean  Importance Std
+ID                                                                   
+13                        S1: Jitter         0.061765        0.026688
+22          S2: Code-switching ratio         0.042157        0.036957
+0        S1: Code-switching presence         0.042157        0.027045
+17                 S1: Top 100 words         0.031373        0.031250
+34                        S2: Jitter         0.027451        0.036367
+1           S1: Code-switching ratio         0.016667        0.028091
+2     S1: Insertional code-switching         0.012745        0.014575
+21       S2: Code-switching presence         0.010784        0.035199
+3   S1: Alternational code-switching         0.003922        0.009998
+4           S1: Other code-switching         0.000980        0.005280
+25          S2: Other code-switching         0.000980        0.011967
+9              S1: Minimum intensity         0.000000        0.000000
+7                  S1: Maximum pitch         0.000000        0.000000
+6                     S1: Mean pitch         0.000000        0.000000
+5                  S1: Minimum pitch         0.000000        0.000000
+8                  S1: Std Dev Pitch         0.000000        0.000000
+11             S1: Maximum intensity         0.000000        0.000000
+12             S1: Std Dev Intensity         0.000000        0.000000
+20                       S1: Fillers         0.000000        0.000000
+16                 S1: Speaking rate         0.000000        0.000000
+15                           S1: HNR         0.000000        0.000000
+18                  S1: Top 25 words         0.000000        0.000000
+27                    S2: Mean pitch         0.000000        0.000000
+28                 S2: Maximum pitch         0.000000        0.000000
+26                 S2: Minimum pitch         0.000000        0.000000
+10                S1: Mean intensity         0.000000        0.000000
+33             S2: Std Dev Intensity         0.000000        0.000000
+36                           S2: HNR         0.000000        0.000000
+37                 S2: Speaking rate         0.000000        0.000000
+39                  S2: Top 25 words         0.000000        0.000000
+30             S2: Minimum intensity         0.000000        0.000000
+31                S2: Mean intensity         0.000000        0.000000
+32             S2: Maximum intensity         0.000000        0.000000
+29                 S2: Std Dev Pitch         0.000000        0.000000
+41                       S2: Fillers         0.000000        0.000000
+40              S2: Affirmative cues         0.000000        0.000000
+24  S2: Alternational code-switching        -0.000980        0.005280
+19              S1: Affirmative cues        -0.003922        0.009998
+23    S2: Insertional code-switching        -0.008824        0.017234
+35                       S2: Shimmer        -0.014706        0.035416
+14                       S1: Shimmer        -0.017647        0.059117
+38                 S2: Top 100 words        -0.032353        0.030707","Index(['S1: Maximum intensity', 'S1: Speaking rate', 'S2: Mean pitch',
+       'S2: Maximum pitch', 'S2: Std Dev Intensity'],
+      dtype='object')"
+8,"XGBClassifier(base_score=None, booster=None, callbacks=None,
+              colsample_bylevel=None, colsample_bynode=None,
+              colsample_bytree=None, device=None, early_stopping_rounds=None,
+              enable_categorical=False, eval_metric=None, feature_types=None,
+              feature_weights=None, gamma=None, grow_policy=None,
+              importance_type=None, interaction_constraints=None,
+              learning_rate=None, max_bin=None, max_cat_threshold=None,
+              max_cat_to_onehot=None, max_delta_step=1, max_depth=None,
+              max_leaves=None, min_child_weight=None, missing=nan,
+              monotone_constraints=None, multi_strategy=None, n_estimators=None,
+              n_jobs=None, num_parallel_tree=None, ...)","{'booster': 'gbtree', 'learning_rate': 0.01, 'max_depth': 5, 'n_estimators': 200}",0.5889190411578471,0.5294117647058824,"                             Feature  Mean Importance
+37                 S2: Speaking rate         0.337737
+10                S1: Mean intensity         0.205990
+30             S2: Minimum intensity         0.200361
+28                 S2: Maximum pitch         0.124573
+36                           S2: HNR         0.117289
+9              S1: Minimum intensity         0.106226
+6                     S1: Mean pitch         0.103692
+16                 S1: Speaking rate         0.090138
+31                S2: Mean intensity         0.081966
+35                       S2: Shimmer         0.072335
+26                 S2: Minimum pitch         0.054519
+5                  S1: Minimum pitch         0.051445
+15                           S1: HNR         0.050373
+0        S1: Code-switching presence         0.045457
+27                    S2: Mean pitch         0.038151
+29                 S2: Std Dev Pitch         0.034509
+7                  S1: Maximum pitch         0.028987
+14                       S1: Shimmer         0.024258
+1           S1: Code-switching ratio         0.023497
+11             S1: Maximum intensity         0.020625
+23    S2: Insertional code-switching         0.016934
+33             S2: Std Dev Intensity         0.013743
+13                        S1: Jitter         0.011804
+22          S2: Code-switching ratio         0.007710
+8                  S1: Std Dev Pitch         0.007193
+32             S2: Maximum intensity         0.005503
+25          S2: Other code-switching         0.004826
+34                        S2: Jitter         0.004765
+2     S1: Insertional code-switching         0.004084
+17                 S1: Top 100 words         0.001112
+12             S1: Std Dev Intensity         0.001052
+21       S2: Code-switching presence         0.000796
+38                 S2: Top 100 words         0.000218
+4           S1: Other code-switching         0.000000
+3   S1: Alternational code-switching         0.000000
+18                  S1: Top 25 words         0.000000
+19              S1: Affirmative cues         0.000000
+20                       S1: Fillers         0.000000
+24  S2: Alternational code-switching         0.000000
+39                  S2: Top 25 words         0.000000
+40              S2: Affirmative cues         0.000000
+41                       S2: Fillers         0.000000","                             Feature  Importance Mean  Importance Std
+ID                                                                   
+1           S1: Code-switching ratio         0.043137        0.053555
+0        S1: Code-switching presence         0.041176        0.030941
+23    S2: Insertional code-switching         0.020588        0.013478
+35                       S2: Shimmer         0.017647        0.051840
+2     S1: Insertional code-switching         0.000000        0.000000
+3   S1: Alternational code-switching         0.000000        0.000000
+6                     S1: Mean pitch         0.000000        0.000000
+7                  S1: Maximum pitch         0.000000        0.000000
+4           S1: Other code-switching         0.000000        0.000000
+5                  S1: Minimum pitch         0.000000        0.000000
+9              S1: Minimum intensity         0.000000        0.000000
+8                  S1: Std Dev Pitch         0.000000        0.000000
+12             S1: Std Dev Intensity         0.000000        0.000000
+10                S1: Mean intensity         0.000000        0.000000
+14                       S1: Shimmer         0.000000        0.000000
+15                           S1: HNR         0.000000        0.000000
+16                 S1: Speaking rate         0.000000        0.000000
+11             S1: Maximum intensity         0.000000        0.000000
+17                 S1: Top 100 words         0.000000        0.000000
+18                  S1: Top 25 words         0.000000        0.000000
+20                       S1: Fillers         0.000000        0.000000
+19              S1: Affirmative cues         0.000000        0.000000
+21       S2: Code-switching presence         0.000000        0.000000
+22          S2: Code-switching ratio         0.000000        0.000000
+24  S2: Alternational code-switching         0.000000        0.000000
+13                        S1: Jitter         0.000000        0.000000
+25          S2: Other code-switching         0.000000        0.000000
+26                 S2: Minimum pitch         0.000000        0.000000
+28                 S2: Maximum pitch         0.000000        0.000000
+27                    S2: Mean pitch         0.000000        0.000000
+30             S2: Minimum intensity         0.000000        0.000000
+31                S2: Mean intensity         0.000000        0.000000
+32             S2: Maximum intensity         0.000000        0.000000
+29                 S2: Std Dev Pitch         0.000000        0.000000
+33             S2: Std Dev Intensity         0.000000        0.000000
+34                        S2: Jitter         0.000000        0.000000
+36                           S2: HNR         0.000000        0.000000
+37                 S2: Speaking rate         0.000000        0.000000
+38                 S2: Top 100 words         0.000000        0.000000
+39                  S2: Top 25 words         0.000000        0.000000
+40              S2: Affirmative cues         0.000000        0.000000
+41                       S2: Fillers         0.000000        0.000000","Index(['S1: Mean pitch', 'S1: HNR', 'S1: Speaking rate',
+       'S2: Std Dev Intensity', 'S2: Shimmer'],
+      dtype='object')"
+9,TabTransformer-adapted,"{'emb_dim': 8, 'transformer_dim': 32, 'lr': 0.0005, 'batch_size': 32, 'epochs': 5}",0.42,0.4705882352941176,"                             Feature  Mean Importance
+5                  S1: Minimum pitch         0.093563
+26                 S2: Minimum pitch         0.037256
+27                    S2: Mean pitch         0.036510
+7                  S1: Maximum pitch         0.035954
+29                 S2: Std Dev Pitch         0.032236
+6                     S1: Mean pitch         0.029655
+8                  S1: Std Dev Pitch         0.024993
+30             S2: Minimum intensity         0.018626
+28                 S2: Maximum pitch         0.018266
+9              S1: Minimum intensity         0.010500
+32             S2: Maximum intensity         0.006796
+15                           S1: HNR         0.005856
+36                           S2: HNR         0.003248
+12             S1: Std Dev Intensity         0.003194
+31                S2: Mean intensity         0.002760
+11             S1: Maximum intensity         0.002017
+10                S1: Mean intensity         0.001891
+33             S2: Std Dev Intensity         0.001818
+23    S2: Insertional code-switching         0.001277
+38                 S2: Top 100 words         0.001028
+16                 S1: Speaking rate         0.000773
+2     S1: Insertional code-switching         0.000541
+0        S1: Code-switching presence         0.000423
+21       S2: Code-switching presence         0.000367
+22          S2: Code-switching ratio         0.000324
+37                 S2: Speaking rate         0.000157
+17                 S1: Top 100 words         0.000147
+1           S1: Code-switching ratio         0.000081
+14                       S1: Shimmer         0.000061
+4           S1: Other code-switching         0.000048
+35                       S2: Shimmer         0.000035
+3   S1: Alternational code-switching         0.000026
+25          S2: Other code-switching         0.000019
+19              S1: Affirmative cues         0.000010
+24  S2: Alternational code-switching         0.000009
+13                        S1: Jitter         0.000002
+34                        S2: Jitter         0.000001
+20                       S1: Fillers         0.000000
+18                  S1: Top 25 words         0.000000
+39                  S2: Top 25 words         0.000000
+40              S2: Affirmative cues         0.000000
+41                       S2: Fillers         0.000000",,
+10,FT-Transformer,"{'emb_dim': 8, 'depth': 4, 'heads': 4, 'lr': 0.001, 'dropout': 0.1, 'epochs': 10}",0.62,0.5588235294117647,"                             Feature  Mean Importance
+28                 S2: Maximum pitch     1.514617e-03
+7                  S1: Maximum pitch     1.491337e-03
+9              S1: Minimum intensity     4.275176e-04
+5                  S1: Minimum pitch     3.064989e-04
+6                     S1: Mean pitch     2.656097e-04
+0        S1: Code-switching presence     2.496359e-04
+27                    S2: Mean pitch     1.322332e-04
+32             S2: Maximum intensity     9.784438e-05
+11             S1: Maximum intensity     8.652119e-05
+17                 S1: Top 100 words     6.359013e-05
+8                  S1: Std Dev Pitch     6.296959e-05
+26                 S2: Minimum pitch     6.184285e-05
+30             S2: Minimum intensity     5.640103e-05
+14                       S1: Shimmer     2.994327e-05
+29                 S2: Std Dev Pitch     2.994295e-05
+31                S2: Mean intensity     2.159672e-05
+21       S2: Code-switching presence     2.048962e-05
+38                 S2: Top 100 words     1.219049e-05
+37                 S2: Speaking rate     1.214080e-05
+10                S1: Mean intensity     1.105752e-05
+23    S2: Insertional code-switching     1.102429e-05
+16                 S1: Speaking rate     6.027681e-06
+3   S1: Alternational code-switching     5.780237e-06
+36                           S2: HNR     5.222642e-06
+15                           S1: HNR     5.077639e-06
+33             S2: Std Dev Intensity     3.547471e-06
+22          S2: Code-switching ratio     3.394554e-06
+25          S2: Other code-switching     3.189383e-06
+12             S1: Std Dev Intensity     3.169152e-06
+19              S1: Affirmative cues     1.519530e-06
+24  S2: Alternational code-switching     1.355589e-06
+34                        S2: Jitter     1.350353e-06
+2     S1: Insertional code-switching     5.459419e-07
+1           S1: Code-switching ratio     1.845243e-07
+4           S1: Other code-switching     1.094728e-07
+35                       S2: Shimmer     2.583641e-08
+13                        S1: Jitter     1.136923e-08
+20                       S1: Fillers     0.000000e+00
+18                  S1: Top 25 words     0.000000e+00
+39                  S2: Top 25 words     0.000000e+00
+40              S2: Affirmative cues     0.000000e+00
+41                       S2: Fillers     0.000000e+00",,
+11,XLM-fusion classifier,"{'freeze_text': True, 'hidden_dim': 128, 'lr': 3e-05}",0.66,0.5588235294117647,"                             Feature  Mean Importance
+26                 S2: Minimum pitch     1.688642e-03
+5                  S1: Minimum pitch     9.428765e-04
+27                    S2: Mean pitch     6.168979e-04
+29                 S2: Std Dev Pitch     5.580841e-04
+8                  S1: Std Dev Pitch     5.106256e-04
+28                 S2: Maximum pitch     4.120193e-04
+7                  S1: Maximum pitch     3.754333e-04
+9              S1: Minimum intensity     3.452003e-04
+30             S2: Minimum intensity     3.399552e-04
+6                     S1: Mean pitch     3.156889e-04
+33             S2: Std Dev Intensity     1.379818e-04
+12             S1: Std Dev Intensity     1.334491e-04
+15                           S1: HNR     8.372765e-05
+36                           S2: HNR     7.780848e-05
+10                S1: Mean intensity     6.610396e-05
+11             S1: Maximum intensity     5.947641e-05
+31                S2: Mean intensity     5.454010e-05
+32             S2: Maximum intensity     4.822018e-05
+37                 S2: Speaking rate     2.814911e-05
+16                 S1: Speaking rate     2.717649e-05
+21       S2: Code-switching presence     1.184064e-05
+17                 S1: Top 100 words     1.177692e-05
+23    S2: Insertional code-switching     1.150767e-05
+2     S1: Insertional code-switching     1.066765e-05
+38                 S2: Top 100 words     1.048975e-05
+0        S1: Code-switching presence     9.951086e-06
+22          S2: Code-switching ratio     4.711452e-06
+1           S1: Code-switching ratio     3.676444e-06
+24  S2: Alternational code-switching     3.232738e-06
+3   S1: Alternational code-switching     2.584203e-06
+25          S2: Other code-switching     1.273723e-06
+4           S1: Other code-switching     1.062767e-06
+19              S1: Affirmative cues     7.808398e-07
+40              S2: Affirmative cues     7.639343e-07
+35                       S2: Shimmer     7.328588e-07
+14                       S1: Shimmer     7.056416e-07
+13                        S1: Jitter     2.055097e-07
+34                        S2: Jitter     1.994331e-07
+20                       S1: Fillers     1.490817e-07
+18                  S1: Top 25 words     0.000000e+00
+39                  S2: Top 25 words     0.000000e+00
+41                       S2: Fillers     0.000000e+00",,
+12,mBERT-fusion classifier,"{'freeze_text': True, 'hidden_dim': 64, 'lr': 0.0001}",0.64,0.6176470588235294,"                             Feature  Mean Importance
+26                 S2: Minimum pitch     1.745897e-03
+5                  S1: Minimum pitch     4.834106e-04
+7                  S1: Maximum pitch     4.813266e-04
+28                 S2: Maximum pitch     4.561009e-04
+9              S1: Minimum intensity     4.415325e-04
+27                    S2: Mean pitch     3.396029e-04
+30             S2: Minimum intensity     2.697150e-04
+29                 S2: Std Dev Pitch     2.215275e-04
+6                     S1: Mean pitch     1.827879e-04
+33             S2: Std Dev Intensity     1.816085e-04
+12             S1: Std Dev Intensity     1.709543e-04
+8                  S1: Std Dev Pitch     1.376491e-04
+15                           S1: HNR     1.028518e-04
+36                           S2: HNR     9.724645e-05
+37                 S2: Speaking rate     3.247815e-05
+16                 S1: Speaking rate     3.135930e-05
+10                S1: Mean intensity     2.700938e-05
+31                S2: Mean intensity     2.023778e-05
+11             S1: Maximum intensity     1.609882e-05
+17                 S1: Top 100 words     1.307976e-05
+21       S2: Code-switching presence     1.249250e-05
+38                 S2: Top 100 words     1.171823e-05
+23    S2: Insertional code-switching     1.156161e-05
+2     S1: Insertional code-switching     1.155910e-05
+0        S1: Code-switching presence     1.093274e-05
+32             S2: Maximum intensity     1.004583e-05
+22          S2: Code-switching ratio     5.049527e-06
+1           S1: Code-switching ratio     4.103585e-06
+24  S2: Alternational code-switching     3.772286e-06
+3   S1: Alternational code-switching     2.884714e-06
+25          S2: Other code-switching     1.656504e-06
+4           S1: Other code-switching     1.379916e-06
+35                       S2: Shimmer     8.196157e-07
+19              S1: Affirmative cues     7.988607e-07
+40              S2: Affirmative cues     7.899836e-07
+14                       S1: Shimmer     7.578694e-07
+34                        S2: Jitter     2.205474e-07
+13                        S1: Jitter     2.176789e-07
+20                       S1: Fillers     2.070407e-07
+18                  S1: Top 25 words     0.000000e+00
+39                  S2: Top 25 words     0.000000e+00
+41                       S2: Fillers     0.000000e+00",,
+13,ReMBERT-fusion classifier,"{'freeze_text': True, 'hidden_dim': 128, 'lr': 1e-05}",0.64,0.6470588235294118,"                             Feature  Mean Importance
+26                 S2: Minimum pitch     7.132919e-05
+8                  S1: Std Dev Pitch     6.983832e-05
+27                    S2: Mean pitch     6.806370e-05
+5                  S1: Minimum pitch     6.116646e-05
+29                 S2: Std Dev Pitch     5.526262e-05
+7                  S1: Maximum pitch     4.234963e-05
+6                     S1: Mean pitch     3.653732e-05
+28                 S2: Maximum pitch     3.398627e-05
+9              S1: Minimum intensity     2.632407e-05
+30             S2: Minimum intensity     2.604448e-05
+33             S2: Std Dev Intensity     9.371396e-06
+12             S1: Std Dev Intensity     8.992314e-06
+10                S1: Mean intensity     6.236004e-06
+11             S1: Maximum intensity     5.642749e-06
+15                           S1: HNR     5.521206e-06
+36                           S2: HNR     5.474881e-06
+31                S2: Mean intensity     5.406874e-06
+32             S2: Maximum intensity     4.915340e-06
+37                 S2: Speaking rate     2.091839e-06
+16                 S1: Speaking rate     2.071088e-06
+23    S2: Insertional code-switching     1.021500e-06
+21       S2: Code-switching presence     9.917614e-07
+17                 S1: Top 100 words     8.404963e-07
+38                 S2: Top 100 words     8.157940e-07
+2     S1: Insertional code-switching     8.028446e-07
+0        S1: Code-switching presence     7.404256e-07
+22          S2: Code-switching ratio     4.086855e-07
+1           S1: Code-switching ratio     2.742960e-07
+24  S2: Alternational code-switching     1.959137e-07
+3   S1: Alternational code-switching     1.612875e-07
+4           S1: Other code-switching     7.962333e-08
+25          S2: Other code-switching     7.590681e-08
+40              S2: Affirmative cues     7.016694e-08
+19              S1: Affirmative cues     6.624808e-08
+14                       S1: Shimmer     5.779897e-08
+35                       S2: Shimmer     5.716787e-08
+13                        S1: Jitter     1.642853e-08
+34                        S2: Jitter     1.547091e-08
+20                       S1: Fillers     7.487834e-09
+18                  S1: Top 25 words     0.000000e+00
+39                  S2: Top 25 words     0.000000e+00
+41                       S2: Fillers     0.000000e+00",NA,NA
