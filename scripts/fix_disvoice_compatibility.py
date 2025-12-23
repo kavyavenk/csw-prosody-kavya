@@ -41,13 +41,11 @@ try:
 except:
     pass
 
-# Patch 5: Patch parselmouth urllib issue
-try:
-    import parselmouth.adapters.dfp.interface as dfp_interface
-    if not hasattr(urllib, 'quote'):
-        dfp_interface.quote = urllib.parse.quote
-except:
-    pass
+# Patch 5: Patch parselmouth urllib issue BEFORE importing
+# This needs to happen before parselmouth is imported
+if not hasattr(urllib, 'quote'):
+    # Monkey patch urllib before parselmouth imports it
+    urllib.quote = urllib.parse.quote
 
 print("DisVoice compatibility patches applied")
 

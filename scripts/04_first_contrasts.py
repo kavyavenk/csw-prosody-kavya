@@ -1,4 +1,4 @@
-import argparse, pandas as pd, numpy as np
+import argparse, pandas as pd, numpy as np, pathlib
 from scipy.stats import ttest_ind
 import statsmodels.stats.multitest as smm
 
@@ -7,6 +7,8 @@ p.add_argument("--corpus", choices=["masac","seame"], required=True)
 args = p.parse_args()
 
 FEAT = f"features/{args.corpus}_disvoice_utt.csv"
+if not pathlib.Path(FEAT).exists():
+    raise SystemExit(f"Feature file not found: {FEAT}")
 df = pd.read_csv(FEAT)
 
 feature_cols = [c for c in df.columns if c not in ["utt_id","speaker","lang","condition"]]
