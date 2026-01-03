@@ -59,23 +59,60 @@ for r in tqdm.tqdm(df.itertuples(), total=len(df)):
     if wav_file and wav_file.exists():
         audio_path = str(wav_file)
     else:
-        # Fallback: try clips directory with utt_id
-        clip = (CLIPS / f"{r.utt_id}.wav")
-        if clip.exists():
-            audio_path = str(clip)
-        # For MASAC, also try file_id directly in subdirectories
-        elif args.corpus == "masac" and hasattr(r, 'file_id'):
-            file_id = r.file_id
-            possible_paths = [
-                CLIPS / f"{file_id}.wav",
-                CLIPS / "test" / "audios" / f"{file_id}.wav",
-                CLIPS / "train" / "audios" / f"{file_id}.wav",
-                CLIPS / "val" / "audios" / f"{file_id}.wav",
-            ]
-            for p in possible_paths:
-                if p.exists():
-                    audio_path = str(p)
-                    break
+        # For SEAME: extract filename from manifest path and check both directories
+        if args.corpus == "seame":
+            # Extract filename from the wav path in manifest
+            filename = None
+            if wav_file:
+                filename = wav_file.name if hasattr(wav_file, 'name') else str(wav_file).split('/')[-1]
+            elif hasattr(r, 'wav') and r.wav:
+                # Extract from string path
+                filename = str(r.wav).split('/')[-1]
+            
+            # Try multiple locations and filename formats
+            seame_dir = pathlib.Path("data/SEAME/interview_aligned/interview_aligned")
+            
+            # Try 1: clips directory with filename from manifest
+            if filename:
+                clip_path = CLIPS / filename
+                if clip_path.exists():
+                    audio_path = str(clip_path)
+            
+            # Try 2: SEAME directory with filename from manifest
+            if not audio_path and filename:
+                seame_path = seame_dir / filename
+                if seame_path.exists():
+                    audio_path = str(seame_path)
+            
+            # Try 3: clips directory with utt_id.wav (this is what worked for 52K files)
+            if not audio_path:
+                clip = (CLIPS / f"{r.utt_id}.wav")
+                if clip.exists():
+                    audio_path = str(clip)
+            
+            # Try 4: SEAME directory with utt_id.wav
+            if not audio_path:
+                seame_utt = seame_dir / f"{r.utt_id}.wav"
+                if seame_utt.exists():
+                    audio_path = str(seame_utt)
+        else:
+            # For MASAC: try clips directory with utt_id
+            clip = (CLIPS / f"{r.utt_id}.wav")
+            if clip.exists():
+                audio_path = str(clip)
+            # For MASAC, also try file_id directly in subdirectories
+            elif args.corpus == "masac" and hasattr(r, 'file_id'):
+                file_id = r.file_id
+                possible_paths = [
+                    CLIPS / f"{file_id}.wav",
+                    CLIPS / "test" / "audios" / f"{file_id}.wav",
+                    CLIPS / "train" / "audios" / f"{file_id}.wav",
+                    CLIPS / "val" / "audios" / f"{file_id}.wav",
+                ]
+                for p in possible_paths:
+                    if p.exists():
+                        audio_path = str(p)
+                        break
     
     if not audio_path:
         skipped += 1
