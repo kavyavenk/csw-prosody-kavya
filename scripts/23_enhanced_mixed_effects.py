@@ -20,6 +20,15 @@ from typing import List, Optional, Dict
 import warnings
 warnings.filterwarnings('ignore')
 
+_META_OVERLAP = ("speaker", "lang", "condition", "speaker_id", "speaker_raw", "text")
+
+
+def merge_features_and_manifest(feature_df: pd.DataFrame, manifest_df: pd.DataFrame) -> pd.DataFrame:
+    drop_cols = [c for c in _META_OVERLAP if c in feature_df.columns]
+    feat_trim = feature_df.drop(columns=drop_cols, errors="ignore")
+    return feat_trim.merge(manifest_df, on="utt_id", how="inner")
+
+
 def check_feature_distribution(feature_values: pd.Series) -> Dict[str, any]:
     """
     Check feature distribution to inform linear vs nonlinear modeling choice.
@@ -111,6 +120,9 @@ def build_linear_mixed_model(feature_df: pd.DataFrame, feature: str,
         # Interaction: condition × directionality (for CSW only)
         if 'condition' in predictors and 'is_l1_to_l2' in predictors:
             fixed_effects.append('condition:is_l1_to_l2')
+        for col in ["gender", "age_bucket", "nationality", "dialogue_act", "audience_proficiency_proxy"]:
+            if "condition" in predictors and col in predictors:
+                fixed_effects.append(f"C(condition):C({col})")
     
     formula = f"{feature} ~ {' + '.join(fixed_effects)}"
     
@@ -185,8 +197,7 @@ def run_pilot_analysis(feature_file: str, manifest_file: str,
     print(f"Loading manifest from: {manifest_file}")
     manifest_df = pd.read_csv(manifest_file, low_memory=False)
     
-    # Merge
-    df = feature_df.merge(manifest_df, on='utt_id', how='inner', suffixes=('', '_manifest'))
+    df = merge_features_and_manifest(feature_df, manifest_df)
     
     # Create balanced subset
     print(f"\nCreating balanced subset (n={subset_size})...")
@@ -212,6 +223,30 @@ def run_pilot_analysis(feature_file: str, manifest_file: str,
         info = check_feature_distribution(pilot_df[feat])
         dist_info[feat] = info
         print(f"  {feat}: {info['recommendation']} ({info['reason']})")
+
+    # Apply simple log-style transforms where recommended to stabilize distributions.
+    # We keep the original feature columns and add new log_*-style columns as needed.
+    transformed_features = []
+    for feat in key_features:
+        info = dist_info[feat]
+        rec = info.get("recommendation")
+        if rec in ("linear_with_transform", "nonlinear"):
+            series = pilot_df[feat]
+            min_val = series.min()
+            if pd.isna(min_val):
+                shifted = series.fillna(0) + 1e-3
+            elif min_val <= 0:
+                shift = (0 - min_val) + 1e-3
+                shifted = series + shift
+            else:
+                shifted = series
+            new_name = f"log_{feat}"
+            pilot_df[new_name] = np.log1p(shifted)
+            transformed_features.append(new_name)
+        else:
+            transformed_features.append(feat)
+
+    modeling_features = transformed_features
     
     # Prepare predictors
     predictors = ['condition']
@@ -219,19 +254,22 @@ def run_pilot_analysis(feature_file: str, manifest_file: str,
         predictors.append('has_discourse_marker')
     if 'has_repetition' in pilot_df.columns:
         predictors.append('has_repetition')
-    if 'switch_direction_class' in pilot_df.columns:
-        pilot_df['is_l1_to_l2'] = (pilot_df['switch_direction_class'] == 'L1→L2').astype(int)
-        pilot_df['is_l1_to_l2'] = pilot_df['is_l1_to_l2'].replace(0, np.nan)
-        if pilot_df['is_l1_to_l2'].notna().sum() > 5:
-            predictors.append('is_l1_to_l2')
+    for col in ["gender", "age_bucket", "nationality", "dialogue_act", "audience_proficiency_proxy"]:
+        if col in pilot_df.columns:
+            n_levels = pilot_df[col].dropna().astype(str).nunique()
+            if 1 < n_levels <= 20:
+                predictors.append(col)
+    # Do not add is_l1_to_l2 here: it is NaN for monolingual rows and makes dropna()
+    # remove all mono utterances (same singular-matrix issue as script 18). Use
+    # scripts/25_run_directionality_models.py for CS-only directionality.
     
-    # Random effects
     random_effects = []
     if use_random_effects:
-        if 'speaker' in pilot_df.columns and pilot_df['speaker'].nunique() > 1:
-            random_effects.append('speaker')
-        if 'file_id' in pilot_df.columns and pilot_df['file_id'].nunique() > 1:
-            random_effects.append('file_id')
+        sp_col = "speaker_id" if "speaker_id" in pilot_df.columns else "speaker"
+        if sp_col in pilot_df.columns:
+            bad = pilot_df[sp_col].astype(str).str.lower().isin(["unknown", "nan", ""])
+            if pilot_df[sp_col].nunique() > 1 and bad.mean() < 0.95:
+                random_effects.append(sp_col)
     
     print(f"\nPredictors: {', '.join(predictors)}")
     print(f"Random effects: {', '.join(random_effects) if random_effects else 'None'}")
@@ -241,14 +279,15 @@ def run_pilot_analysis(feature_file: str, manifest_file: str,
     print(f"\nBuilding models...")
     model_results = []
     
-    for feat in key_features:
-        print(f"  {feat}...", end=' ')
+    for raw_feat, model_feat in zip(key_features, modeling_features):
+        print(f"  {model_feat} (from {raw_feat})...", end=' ')
         result = build_model_with_options(
-            pilot_df, feat, predictors, random_effects,
+            pilot_df, model_feat, predictors, random_effects,
             use_random_effects, use_interactions
         )
-        result['feature'] = feat
-        result['distribution'] = dist_info[feat]
+        result['feature'] = model_feat
+        result['original_feature'] = raw_feat
+        result['distribution'] = dist_info[raw_feat]
         model_results.append(result)
         
         if result.get('success'):

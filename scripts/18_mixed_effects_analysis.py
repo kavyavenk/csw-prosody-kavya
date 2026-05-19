@@ -19,6 +19,53 @@ from typing import List
 import warnings
 warnings.filterwarnings('ignore')
 
+# Manifest is source of truth for metadata; feature CSV may duplicate speaker/lang/condition.
+_META_OVERLAP = ("speaker", "lang", "condition", "speaker_id", "speaker_raw", "text")
+
+
+def formula_lhs(column_name: str) -> str:
+    """Quote outcome name for patsy when not a valid identifier (e.g. 1F0max)."""
+    if column_name.isidentifier():
+        return column_name
+    esc = str(column_name).replace("\\", "\\\\").replace('"', '\\"')
+    return f'Q("{esc}")'
+
+
+def merge_features_and_manifest(feature_df: pd.DataFrame, manifest_df: pd.DataFrame) -> pd.DataFrame:
+    drop_cols = [c for c in _META_OVERLAP if c in feature_df.columns]
+    feat_trim = feature_df.drop(columns=drop_cols, errors="ignore")
+    return feat_trim.merge(manifest_df, on="utt_id", how="inner")
+
+
+def choose_predictors(df: pd.DataFrame) -> List[str]:
+    """Select available covariates while avoiding unstable high-cardinality factors."""
+    predictors = ["condition"]
+    optional_binary = ["has_discourse_marker", "has_repetition", "is_csw"]
+    for col in optional_binary:
+        if col in df.columns:
+            predictors.append(col)
+
+    categorical = [
+        "gender",
+        "age_bucket",
+        "nationality",
+        "dialogue_act",
+        "audience_proficiency_proxy",
+    ]
+    for col in categorical:
+        if col not in df.columns:
+            continue
+        non_null = df[col].dropna().astype(str)
+        n_levels = non_null.nunique()
+        if n_levels <= 1:
+            continue
+        if n_levels > 20:
+            print(f"Skipping {col}: high cardinality ({n_levels} levels)")
+            continue
+        predictors.append(col)
+    return predictors
+
+
 def select_key_features(feature_df: pd.DataFrame, n_features: int = 10) -> List[str]:
     """
     Select key features for modeling based on variance and significance.
@@ -49,8 +96,15 @@ def select_key_features(feature_df: pd.DataFrame, n_features: int = 10) -> List[
     
     # Sort by variance and take top N
     variances = feature_df[available_features].var().sort_values(ascending=False)
-    selected = variances.head(n_features).index.tolist()
-    
+    selected = []
+    seen = set()
+    for fname in variances.index:
+        if fname in seen:
+            continue
+        seen.add(fname)
+        selected.append(fname)
+        if len(selected) >= n_features:
+            break
     return selected
 
 def build_mixed_effects_model(feature_df: pd.DataFrame, feature: str, 
@@ -80,40 +134,40 @@ def build_mixed_effects_model(feature_df: pd.DataFrame, feature: str,
     
     # Build formula
     # Fixed effects
-    fixed_effects = ' + '.join([f'C({p})' if feature_df[p].dtype == 'object' 
-                                else p for p in predictors])
-    formula = f"{feature} ~ {fixed_effects}"
+    fixed_terms = [f'C({p})' if feature_df[p].dtype == 'object' else p for p in predictors]
+    # Core interactions to test modulation of CS effects by speaker/interaction factors.
+    interaction_terms = []
+    interaction_bases = ["gender", "age_bucket", "nationality", "dialogue_act", "audience_proficiency_proxy"]
+    for col in interaction_bases:
+        if col in predictors and "condition" in predictors:
+            interaction_terms.append(f"C(condition):C({col})")
+    fixed_effects = " + ".join(fixed_terms + interaction_terms)
+    formula = f"{formula_lhs(feature)} ~ {fixed_effects}"
     
-    # Random effects (use first available)
-    groups = random_effects[0] if random_effects else 'speaker'
-    
+    # Random effects: first grouping variable, or OLS if none
+    groups = random_effects[0] if random_effects else None
+
     try:
-        # Fit model
-        model = smf.mixedlm(formula, model_df, groups=model_df[groups])
-        
-        # Try different fitting methods
-        try:
-            result = model.fit(method=['lbfgs', 'powell'])
-        except:
+        if groups:
+            model = smf.mixedlm(formula, model_df, groups=model_df[groups])
             try:
-                result = model.fit(method='lbfgs')
-            except:
-                result = model.fit()
+                result = model.fit(method=['lbfgs', 'powell'])
+            except Exception:
+                try:
+                    result = model.fit(method='lbfgs')
+                except Exception:
+                    result = model.fit()
+        else:
+            model = smf.ols(formula, model_df)
+            result = model.fit()
         
-        # Extract results
         summary = result.summary()
-        
-        # Get fixed effects
-        fixed_effects_table = result.summary().tables[1]
-        
-        # Calculate model fit statistics
-        aic = result.aic
-        bic = result.bic
-        llf = result.llf
-        
-        # Extract p-values for fixed effects
+        aic = getattr(result, "aic", np.nan)
+        bic = getattr(result, "bic", np.nan)
+        llf = getattr(result, "llf", np.nan)
         pvalues = result.pvalues
-        
+        n_groups = model_df[groups].nunique() if groups else None
+
         return {
             'success': True,
             'feature': feature,
@@ -125,7 +179,8 @@ def build_mixed_effects_model(feature_df: pd.DataFrame, feature: str,
             'fixed_effects': result.params.to_dict(),
             'summary': str(summary),
             'n_observations': len(model_df),
-            'n_groups': model_df[groups].nunique()
+            'n_groups': n_groups,
+            'group_var': groups,
         }
     
     except Exception as e:
@@ -167,9 +222,9 @@ def run_mixed_effects_analysis(feature_file: str, manifest_file: str,
     print(f"Loading manifest from: {manifest_file}")
     manifest_df = pd.read_csv(manifest_file, low_memory=False)
     
-    # Merge features with manifest
+    # Merge features with manifest (manifest wins for speaker / condition / lang)
     print("\nMerging features with manifest...")
-    df = feature_df.merge(manifest_df, on='utt_id', how='inner', suffixes=('', '_manifest'))
+    df = merge_features_and_manifest(feature_df, manifest_df)
     
     print(f"Total observations: {len(df)}")
     
@@ -178,34 +233,19 @@ def run_mixed_effects_analysis(feature_file: str, manifest_file: str,
     key_features = select_key_features(df, n_features)
     print(f"Selected features: {', '.join(key_features[:5])}...")
     
-    # Prepare predictors
-    predictors = ['condition']  # Base predictor
+    # Prepare predictors (speaker/interaction covariates included when available)
+    predictors = choose_predictors(df)
     
-    # Add discourse marker predictor if available
-    if 'has_discourse_marker' in df.columns:
-        predictors.append('has_discourse_marker')
-    
-    # Add repetition predictor if available
-    if 'has_repetition' in df.columns:
-        predictors.append('has_repetition')
-    
-    # Add directionality predictor for CSW utterances
-    if 'switch_direction_class' in df.columns:
-        # Create binary: L1→L2 vs L2→L1
-        df['is_l1_to_l2'] = (df['switch_direction_class'] == 'L1→L2').astype(int)
-        df['is_l1_to_l2'] = df['is_l1_to_l2'].replace(0, np.nan)  # Only for CSW
-        if df['is_l1_to_l2'].notna().sum() > 10:
-            predictors.append('is_l1_to_l2')
-    
-    # Determine random effects
+    # Determine random effects (speaker-only random intercepts when IDs are usable)
     random_effects = []
-    if 'speaker' in df.columns:
-        random_effects.append('speaker')
-    if 'file_id' in df.columns:
-        random_effects.append('file_id')  # Use as conversation proxy
-    
+    sp_col = "speaker_id" if "speaker_id" in df.columns else "speaker"
+    if sp_col in df.columns:
+        n_sp = df[sp_col].nunique()
+        bad = df[sp_col].astype(str).str.lower().isin(["unknown", "nan", ""])
+        if n_sp > 1 and bad.mean() < 0.95:
+            random_effects.append(sp_col)
     print(f"\nPredictors: {', '.join(predictors)}")
-    print(f"Random effects: {', '.join(random_effects)}")
+    print(f"Random effects: {', '.join(random_effects) if random_effects else 'None (OLS)'}")
     
     # Build models for each feature
     print(f"\nBuilding models for {len(key_features)} features...")
@@ -256,11 +296,13 @@ def run_mixed_effects_analysis(feature_file: str, manifest_file: str,
         f.write("MODEL SUMMARIES\n")
         f.write("=" * 80 + "\n\n")
         
-        for res in successful[:5]:  # Show first 5 successful models
+        for res in successful:
             f.write(f"\nFeature: {res['feature']}\n")
             f.write("-" * 80 + "\n")
             f.write(f"Formula: {res['formula']}\n")
-            f.write(f"AIC: {res['aic']:.2f}, BIC: {res['bic']:.2f}\n")
+            aic_s = f"{res['aic']:.2f}" if res.get("aic") == res.get("aic") else "nan"
+            bic_s = f"{res['bic']:.2f}" if res.get("bic") == res.get("bic") else "nan"
+            f.write(f"AIC: {aic_s}, BIC: {bic_s}\n")
             f.write(f"N observations: {res['n_observations']}, N groups: {res['n_groups']}\n")
             f.write(f"\nFixed Effects:\n")
             for param, value in res['fixed_effects'].items():

@@ -1,0 +1,67 @@
+Pilot Analysis Summary: MASAC
+================================================================================
+
+Subset size: 1200
+Features tested: 8
+Random effects: speaker_id
+Interactions: Yes
+
+Successful models: 0/8
+
+Feature Distribution Analysis:
+  F0msemax:
+    Recommendation: linear_with_transform
+    Reason: moderate_non_normal (skew=1.26, kurt=2.17)
+    Skewness: 1.258, Kurtosis: 2.167
+
+  F0tiltmin:
+    Recommendation: linear_with_transform
+    Reason: moderate_non_normal (skew=-1.48, kurt=4.60)
+    Skewness: -1.480, Kurtosis: 4.601
+
+  F0tiltmax:
+    Recommendation: linear_with_transform
+    Reason: moderate_non_normal (skew=1.40, kurt=3.68)
+    Skewness: 1.405, Kurtosis: 3.677
+
+  F0msestd:
+    Recommendation: nonlinear
+    Reason: strong_non_normal (skew=1.54, kurt=5.02)
+    Skewness: 1.541, Kurtosis: 5.022
+
+  F0mseavg:
+    Recommendation: nonlinear
+    Reason: strong_non_normal (skew=2.30, kurt=10.22)
+    Skewness: 2.304, Kurtosis: 10.225
+
+  F0tiltstd:
+    Recommendation: linear_with_transform
+    Reason: moderate_non_normal (skew=1.11, kurt=3.32)
+    Skewness: 1.106, Kurtosis: 3.322
+
+
+Model Results:
+
+log_F0msemax:
+  Error: Singular matrix
+
+log_F0tiltmin:
+  Error: Singular matrix
+
+log_F0tiltmax:
+  Error: Singular matrix
+
+log_F0msestd:
+  Error: Singular matrix
+
+log_F0msestd:
+  Error: Singular matrix
+
+log_F0mseavg:
+  Error: Singular matrix
+
+log_F0mseavg:
+  Error: Singular matrix
+
+log_F0tiltstd:
+  Error: Singular matrix

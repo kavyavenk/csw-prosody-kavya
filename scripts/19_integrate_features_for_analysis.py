@@ -12,6 +12,10 @@ This script combines:
 import argparse
 import pathlib
 import pandas as pd
+import numpy as np
+
+_META_OVERLAP = ("speaker", "lang", "condition", "speaker_id", "speaker_raw", "text")
+
 
 def integrate_features(feature_file: str, manifest_file: str, 
                       output_file: str, corpus: str):
@@ -27,9 +31,11 @@ def integrate_features(feature_file: str, manifest_file: str,
     print(f"\nFeatures shape: {features_df.shape}")
     print(f"Manifest shape: {manifest_df.shape}")
     
-    # Merge on utt_id
+    # Merge on utt_id (manifest wins for speaker / condition / lang)
     print("\nMerging features with manifest...")
-    df = features_df.merge(manifest_df, on='utt_id', how='inner', suffixes=('', '_manifest'))
+    drop_cols = [c for c in _META_OVERLAP if c in features_df.columns]
+    feat_trim = features_df.drop(columns=drop_cols, errors="ignore")
+    df = feat_trim.merge(manifest_df, on="utt_id", how="inner")
     
     print(f"Integrated dataset shape: {df.shape}")
     
@@ -105,8 +111,6 @@ def integrate_features(feature_file: str, manifest_file: str,
     return df
 
 if __name__ == '__main__':
-    import numpy as np
-    
     p = argparse.ArgumentParser(
         description='Integrate all features for analysis'
     )

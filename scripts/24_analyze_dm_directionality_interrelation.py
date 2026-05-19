@@ -8,11 +8,13 @@ switch directions? Do they modulate prosodic differences differently by directio
 
 import argparse
 import pathlib
-import pandas as pd
+from typing import Dict
+
 import numpy as np
+import pandas as pd
 from scipy import stats
 from scipy.stats import chi2_contingency
-from typing import Dict
+
 
 def analyze_dm_directionality_association(df: pd.DataFrame) -> Dict:
     """

@@ -1,0 +1,18 @@
+Mixed-Effects Modeling Results: MASAC
+================================================================================
+
+Successful models: 0/5
+Failed models: 5
+
+Failed Models:
+  F0msemax: Singular matrix
+  F0tiltmin: Singular matrix
+  F0tiltmax: Singular matrix
+  F0msestd: Singular matrix
+  F0msestd: Singular matrix
+
+
+================================================================================
+MODEL SUMMARIES
+================================================================================
+

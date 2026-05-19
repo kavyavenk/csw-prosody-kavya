@@ -36,7 +36,44 @@ def get_audio_duration(wav_path):
         print(f"Warning: Could not get duration for {wav_path}: {e}")
         return None
 
-def build_masac_manifest(csv_file, clips_dir, output_manifest, get_durations=True):
+def load_speaker_resolution(
+    annotations_path: pathlib.Path,
+    mapping_path: pathlib.Path,
+):
+    """Return name.wav -> canonical speaker_id."""
+    ann = pd.read_csv(annotations_path, low_memory=False)
+    m = pd.read_csv(mapping_path, low_memory=False)
+    name_to_raw = dict(
+        zip(ann["name"].astype(str), ann["Speaker"].astype(str).str.strip())
+    )
+    raw_to_id = {}
+    for _, r in m.iterrows():
+        raw = str(r["raw_speaker"]).strip()
+        canon = r["suggested_canonical"]
+        if pd.isna(canon) or str(canon).strip() == "":
+            canon = raw
+        else:
+            canon = str(canon).strip()
+        raw_to_id[raw] = canon
+        raw_to_id[raw.upper()] = canon
+
+    def resolve(file_name: str):
+        raw = name_to_raw.get(file_name, "UNKNOWN")
+        if raw in ("", "nan", "None"):
+            raw = "UNKNOWN"
+        return raw_to_id.get(raw, raw_to_id.get(raw.upper() if raw else "", raw))
+
+    return resolve, name_to_raw
+
+
+def build_masac_manifest(
+    csv_file,
+    clips_dir,
+    output_manifest,
+    get_durations=True,
+    annotations_path=None,
+    mapping_path=None,
+):
     """
     Build MASAC manifest from compiled CSV.
     
@@ -48,6 +85,17 @@ def build_masac_manifest(csv_file, clips_dir, output_manifest, get_durations=Tru
     """
     print(f"Reading MASAC data from: {csv_file}")
     df = pd.read_csv(csv_file, low_memory=False)
+
+    resolve_speaker = None
+    name_to_raw_map = None
+    if annotations_path and mapping_path:
+        ap = pathlib.Path(annotations_path)
+        mp = pathlib.Path(mapping_path)
+        if ap.exists() and mp.exists():
+            print(f"Loading speaker resolution from:\n  {ap}\n  {mp}")
+            resolve_speaker, name_to_raw_map = load_speaker_resolution(ap, mp)
+        else:
+            print("WARNING: Speaker annotation/mapping files missing; speaker will be 'unknown'.")
     
     print(f"Total utterances in CSV: {len(df)}")
     
@@ -123,13 +171,21 @@ def build_masac_manifest(csv_file, clips_dir, output_manifest, get_durations=Tru
         else:
             utt_id = file_id
         
+        sp_raw = "unknown"
+        sp_id = "unknown"
+        if resolve_speaker is not None and name_to_raw_map is not None:
+            sp_id = resolve_speaker(file_name)
+            sp_raw = name_to_raw_map.get(file_name, "UNKNOWN")
+
         rows.append({
             'utt_id': utt_id,
             'file_id': file_id,
             'wav': wav_path,
             'start': start_sec,
             'end': end_sec if end_sec else -1.0,
-            'speaker': 'unknown',  # MASAC may not have speaker info
+            'speaker_raw': sp_raw if resolve_speaker is not None else "",
+            'speaker_id': sp_id,
+            'speaker': sp_id,
             'lang': lang,
             'condition': condition,
             'text': transcript,
@@ -177,6 +233,12 @@ if __name__ == '__main__':
                    help='Output manifest CSV')
     p.add_argument('--no-durations', action='store_true',
                    help='Skip computing audio durations')
+    p.add_argument('--annotations', type=str,
+                   default='data/masac_raw/fixed_with_automated_annotations.csv',
+                   help='CSV with columns name, Speaker (optional)')
+    p.add_argument('--speaker-mapping', type=str,
+                   default='data/masac_raw/masac_speaker_mapping.csv',
+                   help='raw_speaker -> suggested_canonical (optional)')
     
     args = p.parse_args()
     
@@ -192,5 +254,12 @@ if __name__ == '__main__':
         print(f"ERROR: Clips directory not found: {clips_dir}")
         exit(1)
     
-    build_masac_manifest(csv_file, clips_dir, output_file, get_durations=not args.no_durations)
+    build_masac_manifest(
+        csv_file,
+        clips_dir,
+        output_file,
+        get_durations=not args.no_durations,
+        annotations_path=args.annotations,
+        mapping_path=args.speaker_mapping,
+    )
 

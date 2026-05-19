@@ -1,0 +1,75 @@
+Pilot Analysis Summary: MASAC
+================================================================================
+
+Subset size: 800
+Features tested: 8
+Random effects: speaker_id
+Interactions: No
+
+Successful models: 8/8
+
+Feature Distribution Analysis:
+  F0msemax:
+    Recommendation: linear_with_transform
+    Reason: moderate_non_normal (skew=1.21, kurt=1.88)
+    Skewness: 1.210, Kurtosis: 1.879
+
+  F0tiltmin:
+    Recommendation: linear_with_transform
+    Reason: moderate_non_normal (skew=-1.31, kurt=2.63)
+    Skewness: -1.306, Kurtosis: 2.632
+
+  F0tiltmax:
+    Recommendation: linear_with_transform
+    Reason: moderate_non_normal (skew=1.25, kurt=2.95)
+    Skewness: 1.252, Kurtosis: 2.953
+
+  F0msestd:
+    Recommendation: nonlinear
+    Reason: strong_non_normal (skew=1.77, kurt=6.96)
+    Skewness: 1.765, Kurtosis: 6.960
+
+  F0mseavg:
+    Recommendation: nonlinear
+    Reason: strong_non_normal (skew=2.65, kurt=13.44)
+    Skewness: 2.646, Kurtosis: 13.435
+
+  F0tiltstd:
+    Recommendation: linear_with_transform
+    Reason: moderate_non_normal (skew=1.27, kurt=4.48)
+    Skewness: 1.266, Kurtosis: 4.478
+
+
+Model Results:
+
+log_F0msemax:
+  AIC: nan, BIC: nan
+  Formula: log_F0msemax ~ C(condition) + has_discourse_marker + has_repetition
+
+log_F0tiltmin:
+  AIC: nan, BIC: nan
+  Formula: log_F0tiltmin ~ C(condition) + has_discourse_marker + has_repetition
+
+log_F0tiltmax:
+  AIC: nan, BIC: nan
+  Formula: log_F0tiltmax ~ C(condition) + has_discourse_marker + has_repetition
+
+log_F0msestd:
+  AIC: nan, BIC: nan
+  Formula: log_F0msestd ~ C(condition) + has_discourse_marker + has_repetition
+
+log_F0msestd:
+  AIC: nan, BIC: nan
+  Formula: log_F0msestd ~ C(condition) + has_discourse_marker + has_repetition
+
+log_F0mseavg:
+  AIC: nan, BIC: nan
+  Formula: log_F0mseavg ~ C(condition) + has_discourse_marker + has_repetition
+
+log_F0mseavg:
+  AIC: nan, BIC: nan
+  Formula: log_F0mseavg ~ C(condition) + has_discourse_marker + has_repetition
+
+log_F0tiltstd:
+  AIC: nan, BIC: nan
+  Formula: log_F0tiltstd ~ C(condition) + has_discourse_marker + has_repetition
