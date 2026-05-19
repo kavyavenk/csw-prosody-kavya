@@ -1,0 +1,72 @@
+Pilot Analysis Summary: SEAME
+================================================================================
+
+Subset size: 1200
+Features tested: 8
+Random effects: speaker
+Interactions: Yes
+
+Successful models: 0/8
+
+Feature Distribution Analysis:
+  F0msemax:
+    Recommendation: nonlinear
+    Reason: strong_non_normal (skew=2.40, kurt=5.48)
+    Skewness: 2.395, Kurtosis: 5.482
+
+  F0mseavg:
+    Recommendation: nonlinear
+    Reason: strong_non_normal (skew=3.07, kurt=9.84)
+    Skewness: 3.071, Kurtosis: 9.842
+
+  F0msemin:
+    Recommendation: nonlinear
+    Reason: strong_non_normal (skew=3.39, kurt=11.55)
+    Skewness: 3.392, Kurtosis: 11.545
+
+  F0tiltmin:
+    Recommendation: nonlinear
+    Reason: strong_non_normal (skew=2.81, kurt=24.40)
+    Skewness: 2.806, Kurtosis: 24.395
+
+  F0tiltmax:
+    Recommendation: nonlinear
+    Reason: strong_non_normal (skew=4.84, kurt=33.21)
+    Skewness: 4.844, Kurtosis: 33.212
+
+  F0tiltavg:
+    Recommendation: nonlinear
+    Reason: strong_non_normal (skew=5.78, kurt=48.91)
+    Skewness: 5.777, Kurtosis: 48.909
+
+  F0tiltstd:
+    Recommendation: nonlinear
+    Reason: strong_non_normal (skew=2.24, kurt=4.53)
+    Skewness: 2.243, Kurtosis: 4.534
+
+
+Model Results:
+
+log_F0msemax:
+  Error: Singular matrix
+
+log_F0mseavg:
+  Error: Singular matrix
+
+log_F0mseavg:
+  Error: Singular matrix
+
+log_F0msemin:
+  Error: Singular matrix
+
+log_F0tiltmin:
+  Error: Singular matrix
+
+log_F0tiltmax:
+  Error: Singular matrix
+
+log_F0tiltavg:
+  Error: Singular matrix
+
+log_F0tiltstd:
+  Error: Singular matrix

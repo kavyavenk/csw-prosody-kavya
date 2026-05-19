@@ -2,6 +2,9 @@
 """
 Extract code-switch directionality (EN→ZH vs ZH→EN, EN→HI vs HI→EN).
 
+For SEAME, when no LID_tags or --words file is available, tokens in manifest
+`text` are labeled EN if the token matches a Latin word pattern, else ZH.
+
 This script analyzes word-level language tags to determine:
 1. Switch direction (L1→L2 vs L2→L1)
 2. Switch position in utterance
@@ -11,9 +14,44 @@ This script analyzes word-level language tags to determine:
 
 import argparse
 import pathlib
+import re
 import pandas as pd
 import ast
 from typing import List, Tuple, Optional
+
+# Latin-token heuristic for SEAME when word-level LID is unavailable: manifest `text` word list.
+_SEAME_LATIN_TOKEN = re.compile(r"^[a-zA-Z][a-zA-Z0-9.'\-]*$")
+
+
+def infer_seame_lid_tags_from_text(text_val) -> Optional[List[str]]:
+    """
+    Build EN/ZH tag sequences from manifest `text` (list or string repr of list).
+    Used only for SEAME when no LID_tags / word CSV is present.
+    """
+    if text_val is None or (isinstance(text_val, float) and pd.isna(text_val)):
+        return None
+    words = None
+    if isinstance(text_val, str):
+        try:
+            words = ast.literal_eval(text_val)
+        except Exception:
+            return None
+    elif isinstance(text_val, list):
+        words = text_val
+    else:
+        return None
+    if not words:
+        return None
+    tags: List[str] = []
+    for w in words:
+        s = str(w).strip()
+        if not s:
+            tags.append("OTHER")
+        elif _SEAME_LATIN_TOKEN.match(s):
+            tags.append("EN")
+        else:
+            tags.append("ZH")
+    return tags
 
 def extract_directionality_from_lid_tags(lid_tags: List[str], 
                                           l1_lang: str = 'ZH') -> dict:
@@ -214,6 +252,10 @@ def process_manifest_with_words(manifest_file: str, word_file: Optional[str],
             file_id = str(row.get('file_id', '')).replace('.wav', '')
             if file_id in word_lookup:
                 lid_tags = word_lookup[file_id]
+        
+        # SEAME: infer EN vs ZH from utterance word list in manifest `text` (no word CSV / LID_tags)
+        if not lid_tags and corpus == "seame" and "text" in row.index:
+            lid_tags = infer_seame_lid_tags_from_text(row.get("text"))
         
         if not lid_tags:
             continue

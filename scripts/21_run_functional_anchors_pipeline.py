@@ -79,35 +79,52 @@ def run_pipeline(corpus: str, manifest_file: str, feature_file: str,
         print("Pipeline stopped at Step 2")
         return False
     
-    # Step 3: Integrate all features
-    integrated_file = output_path / f"{corpus}_integrated_features.csv"
+    # Step 3: Preprocess speaker/interaction metadata
+    manifest_with_metadata = output_path / f"{corpus}_manifest_with_metadata.csv"
     if not run_step(
-        '19_integrate_features_for_analysis.py',
-        ['--features', feature_file, '--manifest', str(manifest_with_direction),
-         '--output', str(integrated_file), '--corpus', corpus],
-        'Integrating all features'
+        "28_preprocess_speaker_interaction_metadata.py",
+        [
+            "--manifest-in",
+            str(manifest_with_direction),
+            "--manifest-out",
+            str(manifest_with_metadata),
+            "--corpus",
+            corpus,
+        ],
+        "Preprocessing speaker and interaction metadata",
     ):
         print("Pipeline stopped at Step 3")
         return False
+
+    # Step 4: Integrate all features
+    integrated_file = output_path / f"{corpus}_integrated_features.csv"
+    if not run_step(
+        '19_integrate_features_for_analysis.py',
+        ['--features', feature_file, '--manifest', str(manifest_with_metadata),
+         '--output', str(integrated_file), '--corpus', corpus],
+        'Integrating all features'
+    ):
+        print("Pipeline stopped at Step 4")
+        return False
     
-    # Step 4: Run mixed-effects modeling
+    # Step 5: Run mixed-effects modeling
     me_output_dir = output_path / 'mixed_effects'
     if not run_step(
         '18_mixed_effects_analysis.py',
-        ['--features', feature_file, '--manifest', str(manifest_with_direction),
+        ['--features', feature_file, '--manifest', str(manifest_with_metadata),
          '--output-dir', str(me_output_dir), '--corpus', corpus, '--n-features', '10'],
         'Running mixed-effects modeling'
     ):
-        print("Pipeline stopped at Step 4 (non-fatal, continuing...)")
+        print("Pipeline stopped at Step 5 (non-fatal, continuing...)")
     
-    # Step 5: Generate functional anchors report
+    # Step 6: Generate functional anchors report
     report_file = output_path / f"{corpus}_functional_anchors_report.md"
     if not run_step(
         '20_generate_functional_anchors_report.py',
         ['--integrated', str(integrated_file), '--output', str(report_file), '--corpus', corpus],
         'Generating functional anchors report'
     ):
-        print("Pipeline stopped at Step 5")
+        print("Pipeline stopped at Step 6")
         return False
     
     print(f"\n{'='*80}")
@@ -117,6 +134,7 @@ def run_pipeline(corpus: str, manifest_file: str, feature_file: str,
     print(f"\nGenerated files:")
     print(f"  - Annotated manifest: {manifest_annotated}")
     print(f"  - Manifest with directionality: {manifest_with_direction}")
+    print(f"  - Manifest with metadata: {manifest_with_metadata}")
     print(f"  - Integrated features: {integrated_file}")
     print(f"  - Functional anchors report: {report_file}")
     if me_output_dir.exists():

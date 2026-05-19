@@ -1,0 +1,236 @@
+Mixed-Effects Modeling Results: SEAME
+================================================================================
+
+Successful models: 15/15
+Failed models: 0
+
+
+================================================================================
+MODEL SUMMARIES
+================================================================================
+
+
+Feature: F0msemax
+--------------------------------------------------------------------------------
+Formula: F0msemax ~ C(condition) + has_discourse_marker + has_repetition
+AIC: nan, BIC: nan
+N observations: 52313, N groups: 65
+
+Fixed Effects:
+  Intercept: 360.8538 (p=0.0000)***
+  C(condition)[T.monolingual_EN]: 12.3822 (p=0.0011)**
+  C(condition)[T.monolingual_ZH]: -12.5772 (p=0.0004)***
+  has_discourse_marker[T.True]: 21.3165 (p=0.0000)***
+  has_repetition[T.True]: -2.1362 (p=0.4661)
+  Group Var: 3.0477 (p=0.0000)***
+
+
+Feature: F0tiltmin
+--------------------------------------------------------------------------------
+Formula: F0tiltmin ~ C(condition) + has_discourse_marker + has_repetition
+AIC: nan, BIC: nan
+N observations: 52313, N groups: 65
+
+Fixed Effects:
+  Intercept: -134.9242 (p=0.0587)
+  C(condition)[T.monolingual_EN]: 25.7572 (p=0.0000)***
+  C(condition)[T.monolingual_ZH]: -31.1748 (p=0.0000)***
+  has_discourse_marker[T.True]: 5.2323 (p=0.0117)*
+  has_repetition[T.True]: -19.1228 (p=0.0000)***
+  Group Var: 6.2299 (p=0.0000)***
+
+
+Feature: F0mseavg
+--------------------------------------------------------------------------------
+Formula: F0mseavg ~ C(condition) + has_discourse_marker + has_repetition
+AIC: nan, BIC: nan
+N observations: 52313, N groups: 65
+
+Fixed Effects:
+  Intercept: 254.9662 (p=0.0000)***
+  C(condition)[T.monolingual_EN]: 11.0569 (p=0.0003)***
+  C(condition)[T.monolingual_ZH]: -11.9175 (p=0.0000)***
+  has_discourse_marker[T.True]: 17.5972 (p=0.0000)***
+  has_repetition[T.True]: -2.5241 (p=0.2818)
+  Group Var: 3.4495 (p=0.0000)***
+
+
+Feature: F0msemin
+--------------------------------------------------------------------------------
+Formula: F0msemin ~ C(condition) + has_discourse_marker + has_repetition
+AIC: nan, BIC: nan
+N observations: 52313, N groups: 65
+
+Fixed Effects:
+  Intercept: 190.7670 (p=0.0006)***
+  C(condition)[T.monolingual_EN]: 10.1443 (p=0.0003)***
+  C(condition)[T.monolingual_ZH]: -12.0660 (p=0.0000)***
+  has_discourse_marker[T.True]: 13.8962 (p=0.0000)***
+  has_repetition[T.True]: -3.6014 (p=0.0935)
+  Group Var: 4.0000 (p=0.0000)***
+
+
+Feature: F0tiltmax
+--------------------------------------------------------------------------------
+Formula: F0tiltmax ~ C(condition) + has_discourse_marker + has_repetition
+AIC: nan, BIC: nan
+N observations: 52313, N groups: 65
+
+Fixed Effects:
+  Intercept: 146.8303 (p=0.0248)*
+  C(condition)[T.monolingual_EN]: -1.5385 (p=0.4000)
+  C(condition)[T.monolingual_ZH]: -7.2838 (p=0.0000)***
+  has_discourse_marker[T.True]: 0.9339 (p=0.4810)
+  has_repetition[T.True]: -3.8206 (p=0.0067)**
+  Group Var: 12.8518 (p=0.0000)***
+
+
+Feature: F0tiltavg
+--------------------------------------------------------------------------------
+Formula: F0tiltavg ~ C(condition) + has_discourse_marker + has_repetition
+AIC: nan, BIC: nan
+N observations: 52313, N groups: 65
+
+Fixed Effects:
+  Intercept: 15.1513 (p=0.8000)
+  C(condition)[T.monolingual_EN]: 7.2329 (p=0.0001)***
+  C(condition)[T.monolingual_ZH]: -18.9988 (p=0.0000)***
+  has_discourse_marker[T.True]: 2.3042 (p=0.0759)
+  has_repetition[T.True]: -10.5099 (p=0.0000)***
+  Group Var: 11.1943 (p=0.0000)***
+
+
+Feature: F0tiltstd
+--------------------------------------------------------------------------------
+Formula: F0tiltstd ~ C(condition) + has_discourse_marker + has_repetition
+AIC: nan, BIC: nan
+N observations: 52313, N groups: 65
+
+Fixed Effects:
+  Intercept: 108.6652 (p=0.0000)***
+  C(condition)[T.monolingual_EN]: -9.9601 (p=0.0000)***
+  C(condition)[T.monolingual_ZH]: 12.1362 (p=0.0000)***
+  has_discourse_marker[T.True]: -1.4595 (p=0.1422)
+  has_repetition[T.True]: 6.9827 (p=0.0000)***
+  Group Var: 2.2503 (p=0.0000)***
+
+
+Feature: F0msestd
+--------------------------------------------------------------------------------
+Formula: F0msestd ~ C(condition) + has_discourse_marker + has_repetition
+AIC: nan, BIC: nan
+N observations: 52313, N groups: 65
+
+Fixed Effects:
+  Intercept: 70.8673 (p=0.0001)***
+  C(condition)[T.monolingual_EN]: 1.3352 (p=0.3208)
+  C(condition)[T.monolingual_ZH]: -0.3001 (p=0.8123)
+  has_discourse_marker[T.True]: 3.8439 (p=0.0001)***
+  has_repetition[T.True]: 0.8249 (p=0.4263)
+  Group Var: 1.7134 (p=0.0000)***
+
+
+Feature: 1F0max
+--------------------------------------------------------------------------------
+Formula: Q("1F0max") ~ C(condition) + has_discourse_marker + has_repetition
+AIC: nan, BIC: nan
+N observations: 52313, N groups: 65
+
+Fixed Effects:
+  Intercept: 203.1751 (p=0.0000)***
+  C(condition)[T.monolingual_EN]: -1.6203 (p=0.0029)**
+  C(condition)[T.monolingual_ZH]: -2.3187 (p=0.0000)***
+  has_discourse_marker[T.True]: -0.2789 (p=0.4793)
+  has_repetition[T.True]: -2.9349 (p=0.0000)***
+  Group Var: 2.2160 (p=0.0000)***
+
+
+Feature: F0max
+--------------------------------------------------------------------------------
+Formula: F0max ~ C(condition) + has_discourse_marker + has_repetition
+AIC: nan, BIC: nan
+N observations: 52313, N groups: 65
+
+Fixed Effects:
+  Intercept: 220.5488 (p=0.0000)***
+  C(condition)[T.monolingual_EN]: 0.0176 (p=0.9751)
+  C(condition)[T.monolingual_ZH]: -1.8927 (p=0.0004)***
+  has_discourse_marker[T.True]: -0.1629 (p=0.6902)
+  has_repetition[T.True]: -2.7682 (p=0.0000)***
+  Group Var: 1.9634 (p=0.0000)***
+
+
+Feature: lastF0max
+--------------------------------------------------------------------------------
+Formula: lastF0max ~ C(condition) + has_discourse_marker + has_repetition
+AIC: nan, BIC: nan
+N observations: 52313, N groups: 65
+
+Fixed Effects:
+  Intercept: 208.7653 (p=0.0000)***
+  C(condition)[T.monolingual_EN]: 1.1259 (p=0.0432)*
+  C(condition)[T.monolingual_ZH]: -0.7795 (p=0.1364)
+  has_discourse_marker[T.True]: -0.7095 (p=0.0789)
+  has_repetition[T.True]: -2.9949 (p=0.0000)***
+  Group Var: 1.9838 (p=0.0000)***
+
+
+Feature: lastF0avg
+--------------------------------------------------------------------------------
+Formula: lastF0avg ~ C(condition) + has_discourse_marker + has_repetition
+AIC: nan, BIC: nan
+N observations: 52313, N groups: 65
+
+Fixed Effects:
+  Intercept: 176.2405 (p=0.0000)***
+  C(condition)[T.monolingual_EN]: -2.1591 (p=0.0000)***
+  C(condition)[T.monolingual_ZH]: -0.6967 (p=0.1135)
+  has_discourse_marker[T.True]: -1.0713 (p=0.0016)**
+  has_repetition[T.True]: -2.3161 (p=0.0000)***
+  Group Var: 1.8216 (p=0.0000)***
+
+
+Feature: 1F0mean
+--------------------------------------------------------------------------------
+Formula: Q("1F0mean") ~ C(condition) + has_discourse_marker + has_repetition
+AIC: nan, BIC: nan
+N observations: 52313, N groups: 65
+
+Fixed Effects:
+  Intercept: 167.8586 (p=0.0000)***
+  C(condition)[T.monolingual_EN]: -2.5703 (p=0.0000)***
+  C(condition)[T.monolingual_ZH]: -1.8524 (p=0.0000)***
+  has_discourse_marker[T.True]: -0.4944 (p=0.1209)
+  has_repetition[T.True]: -2.3283 (p=0.0000)***
+  Group Var: 2.0913 (p=0.0000)***
+
+
+Feature: F0avg
+--------------------------------------------------------------------------------
+Formula: F0avg ~ C(condition) + has_discourse_marker + has_repetition
+AIC: nan, BIC: nan
+N observations: 52313, N groups: 65
+
+Fixed Effects:
+  Intercept: 170.4000 (p=0.0000)***
+  C(condition)[T.monolingual_EN]: -1.2039 (p=0.0065)**
+  C(condition)[T.monolingual_ZH]: -1.1612 (p=0.0052)**
+  has_discourse_marker[T.True]: -0.7317 (p=0.0227)*
+  has_repetition[T.True]: -2.5901 (p=0.0000)***
+  Group Var: 1.7614 (p=0.0000)***
+
+
+Feature: lastF0min
+--------------------------------------------------------------------------------
+Formula: lastF0min ~ C(condition) + has_discourse_marker + has_repetition
+AIC: nan, BIC: nan
+N observations: 52313, N groups: 65
+
+Fixed Effects:
+  Intercept: 154.9338 (p=0.0000)***
+  C(condition)[T.monolingual_EN]: -3.8194 (p=0.0000)***
+  C(condition)[T.monolingual_ZH]: -0.9507 (p=0.0170)*
+  has_discourse_marker[T.True]: -1.2535 (p=0.0000)***
+  has_repetition[T.True]: -1.7413 (p=0.0000)***
+  Group Var: 2.1023 (p=0.0000)***
+

@@ -1,0 +1,181 @@
+corpus,feature,term,coef,p_value
+masac,F0msemax,Intercept,1525.0346,0.0
+masac,F0msemax,C(condition)[T.monolingual_EN],-536.8027,0.0
+masac,F0msemax,C(condition)[T.monolingual_HI],-446.5897,0.0
+masac,F0msemax,has_discourse_marker[T.True],222.3378,0.0
+masac,F0msemax,has_repetition[T.True],368.4669,0.0
+masac,F0msemax,Group Var,0.1205,0.0009
+masac,F0tiltmin,Intercept,-677.1348,0.0
+masac,F0tiltmin,C(condition)[T.monolingual_EN],299.335,0.0
+masac,F0tiltmin,C(condition)[T.monolingual_HI],250.3912,0.0
+masac,F0tiltmin,has_discourse_marker[T.True],-181.9022,0.0
+masac,F0tiltmin,has_repetition[T.True],-135.2031,0.0
+masac,F0tiltmin,Group Var,0.1298,0.0013
+masac,F0tiltmax,Intercept,580.8033,0.0
+masac,F0tiltmax,C(condition)[T.monolingual_EN],-253.5768,0.0
+masac,F0tiltmax,C(condition)[T.monolingual_HI],-169.6322,0.0
+masac,F0tiltmax,has_discourse_marker[T.True],64.1112,0.0002
+masac,F0tiltmax,has_repetition[T.True],156.2084,0.0
+masac,F0tiltmax,Group Var,0.071,0.0063
+masac,F0msestd,Intercept,490.8059,0.0
+masac,F0msestd,C(condition)[T.monolingual_EN],-109.0687,0.0
+masac,F0msestd,C(condition)[T.monolingual_HI],-67.6789,0.0
+masac,F0msestd,has_discourse_marker[T.True],25.2891,0.0371
+masac,F0msestd,has_repetition[T.True],52.2081,0.0
+masac,F0msestd,Group Var,0.1271,0.0009
+masac,F0mseavg,Intercept,392.0573,0.0
+masac,F0mseavg,C(condition)[T.monolingual_EN],-6.6933,0.6297
+masac,F0mseavg,C(condition)[T.monolingual_HI],-0.8058,0.9358
+masac,F0mseavg,has_discourse_marker[T.True],-30.4089,0.0021
+masac,F0mseavg,has_repetition[T.True],8.5635,0.3476
+masac,F0mseavg,Group Var,0.1577,0.0009
+masac,F0tiltstd,Intercept,368.1128,0.0
+masac,F0tiltstd,C(condition)[T.monolingual_EN],-82.3252,0.0
+masac,F0tiltstd,C(condition)[T.monolingual_HI],-46.4215,0.0
+masac,F0tiltstd,has_discourse_marker[T.True],18.3033,0.0034
+masac,F0tiltstd,has_repetition[T.True],19.204,0.0009
+masac,F0tiltstd,Group Var,0.1256,0.0027
+masac,F0tiltavg,Intercept,-42.7977,0.0
+masac,F0tiltavg,C(condition)[T.monolingual_EN],22.3555,0.0078
+masac,F0tiltavg,C(condition)[T.monolingual_HI],36.277,0.0
+masac,F0tiltavg,has_discourse_marker[T.True],-30.0233,0.0
+masac,F0tiltavg,has_repetition[T.True],5.2272,0.3436
+masac,F0tiltavg,Group Var,0.0445,0.0332
+masac,F0msemin,Intercept,38.8676,0.0
+masac,F0msemin,C(condition)[T.monolingual_EN],32.2533,0.0
+masac,F0msemin,C(condition)[T.monolingual_HI],14.8448,0.0001
+masac,F0msemin,has_discourse_marker[T.True],-26.7652,0.0
+masac,F0msemin,has_repetition[T.True],-5.4161,0.1149
+masac,F0msemin,Group Var,0.0266,0.0234
+masac,1F0max,Intercept,243.9914,0.0
+masac,1F0max,C(condition)[T.monolingual_EN],1.751,0.5829
+masac,1F0max,C(condition)[T.monolingual_HI],-3.561,0.1215
+masac,1F0max,has_discourse_marker[T.True],1.2111,0.5943
+masac,1F0max,has_repetition[T.True],3.7002,0.0774
+masac,1F0max,Group Var,0.0847,0.0061
+masac,lastF0max,Intercept,241.5976,0.0
+masac,lastF0max,C(condition)[T.monolingual_EN],-1.4443,0.6458
+masac,lastF0max,C(condition)[T.monolingual_HI],2.3586,0.2983
+masac,lastF0max,has_discourse_marker[T.True],-2.1417,0.3399
+masac,lastF0max,has_repetition[T.True],0.8316,0.6875
+masac,lastF0max,Group Var,0.0065,0.2031
+masac,1F0mean,Intercept,209.6809,0.0
+masac,1F0mean,C(condition)[T.monolingual_EN],1.6504,0.5393
+masac,1F0mean,C(condition)[T.monolingual_HI],-2.7072,0.1625
+masac,1F0mean,has_discourse_marker[T.True],2.6279,0.1703
+masac,1F0mean,has_repetition[T.True],4.5868,0.0094
+masac,1F0mean,Group Var,0.0916,0.0052
+masac,lastF0avg,Intercept,211.3867,0.0
+masac,lastF0avg,C(condition)[T.monolingual_EN],-3.3483,0.2192
+masac,lastF0avg,C(condition)[T.monolingual_HI],0.1719,0.9303
+masac,lastF0avg,has_discourse_marker[T.True],-1.7258,0.3752
+masac,lastF0avg,has_repetition[T.True],2.7924,0.1193
+masac,lastF0avg,Group Var,0.0074,0.2543
+masac,1F0min,Intercept,175.1082,0.0
+masac,1F0min,C(condition)[T.monolingual_EN],0.6939,0.7945
+masac,1F0min,C(condition)[T.monolingual_HI],-2.8417,0.1391
+masac,1F0min,has_discourse_marker[T.True],1.8487,0.3304
+masac,1F0min,has_repetition[T.True],4.2297,0.0157
+masac,1F0min,Group Var,0.0603,0.0156
+masac,lastF0min,Intercept,177.6606,0.0
+masac,lastF0min,C(condition)[T.monolingual_EN],-3.1788,0.2414
+masac,lastF0min,C(condition)[T.monolingual_HI],-1.8073,0.3559
+masac,lastF0min,has_discourse_marker[T.True],2.0971,0.2792
+masac,lastF0min,has_repetition[T.True],4.0896,0.022
+masac,lastF0min,Group Var,0.0087,0.2334
+masac,F0max,Intercept,312.7754,0.0
+masac,F0max,C(condition)[T.monolingual_EN],-20.1463,0.0
+masac,F0max,C(condition)[T.monolingual_HI],-12.0144,0.0
+masac,F0max,has_discourse_marker[T.True],9.3189,0.0
+masac,F0max,has_repetition[T.True],8.6515,0.0
+masac,F0max,Group Var,0.2379,0.0003
+seame,F0msemax,Intercept,360.8538,0.0
+seame,F0msemax,C(condition)[T.monolingual_EN],12.3822,0.0011
+seame,F0msemax,C(condition)[T.monolingual_ZH],-12.5772,0.0004
+seame,F0msemax,has_discourse_marker[T.True],21.3165,0.0
+seame,F0msemax,has_repetition[T.True],-2.1362,0.4661
+seame,F0msemax,Group Var,3.0477,0.0
+seame,F0tiltmin,Intercept,-134.9242,0.0587
+seame,F0tiltmin,C(condition)[T.monolingual_EN],25.7572,0.0
+seame,F0tiltmin,C(condition)[T.monolingual_ZH],-31.1748,0.0
+seame,F0tiltmin,has_discourse_marker[T.True],5.2323,0.0117
+seame,F0tiltmin,has_repetition[T.True],-19.1228,0.0
+seame,F0tiltmin,Group Var,6.2299,0.0
+seame,F0mseavg,Intercept,254.9662,0.0
+seame,F0mseavg,C(condition)[T.monolingual_EN],11.0569,0.0003
+seame,F0mseavg,C(condition)[T.monolingual_ZH],-11.9175,0.0
+seame,F0mseavg,has_discourse_marker[T.True],17.5972,0.0
+seame,F0mseavg,has_repetition[T.True],-2.5241,0.2818
+seame,F0mseavg,Group Var,3.4495,0.0
+seame,F0msemin,Intercept,190.767,0.0006
+seame,F0msemin,C(condition)[T.monolingual_EN],10.1443,0.0003
+seame,F0msemin,C(condition)[T.monolingual_ZH],-12.066,0.0
+seame,F0msemin,has_discourse_marker[T.True],13.8962,0.0
+seame,F0msemin,has_repetition[T.True],-3.6014,0.0935
+seame,F0msemin,Group Var,4.0,0.0
+seame,F0tiltmax,Intercept,146.8303,0.0248
+seame,F0tiltmax,C(condition)[T.monolingual_EN],-1.5385,0.4
+seame,F0tiltmax,C(condition)[T.monolingual_ZH],-7.2838,0.0
+seame,F0tiltmax,has_discourse_marker[T.True],0.9339,0.481
+seame,F0tiltmax,has_repetition[T.True],-3.8206,0.0067
+seame,F0tiltmax,Group Var,12.8518,0.0
+seame,F0tiltavg,Intercept,15.1513,0.8
+seame,F0tiltavg,C(condition)[T.monolingual_EN],7.2329,0.0001
+seame,F0tiltavg,C(condition)[T.monolingual_ZH],-18.9988,0.0
+seame,F0tiltavg,has_discourse_marker[T.True],2.3042,0.0759
+seame,F0tiltavg,has_repetition[T.True],-10.5099,0.0
+seame,F0tiltavg,Group Var,11.1943,0.0
+seame,F0tiltstd,Intercept,108.6652,0.0
+seame,F0tiltstd,C(condition)[T.monolingual_EN],-9.9601,0.0
+seame,F0tiltstd,C(condition)[T.monolingual_ZH],12.1362,0.0
+seame,F0tiltstd,has_discourse_marker[T.True],-1.4595,0.1422
+seame,F0tiltstd,has_repetition[T.True],6.9827,0.0
+seame,F0tiltstd,Group Var,2.2503,0.0
+seame,F0msestd,Intercept,70.8673,0.0001
+seame,F0msestd,C(condition)[T.monolingual_EN],1.3352,0.3208
+seame,F0msestd,C(condition)[T.monolingual_ZH],-0.3001,0.8123
+seame,F0msestd,has_discourse_marker[T.True],3.8439,0.0001
+seame,F0msestd,has_repetition[T.True],0.8249,0.4263
+seame,F0msestd,Group Var,1.7134,0.0
+seame,1F0max,Intercept,203.1751,0.0
+seame,1F0max,C(condition)[T.monolingual_EN],-1.6203,0.0029
+seame,1F0max,C(condition)[T.monolingual_ZH],-2.3187,0.0
+seame,1F0max,has_discourse_marker[T.True],-0.2789,0.4793
+seame,1F0max,has_repetition[T.True],-2.9349,0.0
+seame,1F0max,Group Var,2.216,0.0
+seame,F0max,Intercept,220.5488,0.0
+seame,F0max,C(condition)[T.monolingual_EN],0.0176,0.9751
+seame,F0max,C(condition)[T.monolingual_ZH],-1.8927,0.0004
+seame,F0max,has_discourse_marker[T.True],-0.1629,0.6902
+seame,F0max,has_repetition[T.True],-2.7682,0.0
+seame,F0max,Group Var,1.9634,0.0
+seame,lastF0max,Intercept,208.7653,0.0
+seame,lastF0max,C(condition)[T.monolingual_EN],1.1259,0.0432
+seame,lastF0max,C(condition)[T.monolingual_ZH],-0.7795,0.1364
+seame,lastF0max,has_discourse_marker[T.True],-0.7095,0.0789
+seame,lastF0max,has_repetition[T.True],-2.9949,0.0
+seame,lastF0max,Group Var,1.9838,0.0
+seame,lastF0avg,Intercept,176.2405,0.0
+seame,lastF0avg,C(condition)[T.monolingual_EN],-2.1591,0.0
+seame,lastF0avg,C(condition)[T.monolingual_ZH],-0.6967,0.1135
+seame,lastF0avg,has_discourse_marker[T.True],-1.0713,0.0016
+seame,lastF0avg,has_repetition[T.True],-2.3161,0.0
+seame,lastF0avg,Group Var,1.8216,0.0
+seame,1F0mean,Intercept,167.8586,0.0
+seame,1F0mean,C(condition)[T.monolingual_EN],-2.5703,0.0
+seame,1F0mean,C(condition)[T.monolingual_ZH],-1.8524,0.0
+seame,1F0mean,has_discourse_marker[T.True],-0.4944,0.1209
+seame,1F0mean,has_repetition[T.True],-2.3283,0.0
+seame,1F0mean,Group Var,2.0913,0.0
+seame,F0avg,Intercept,170.4,0.0
+seame,F0avg,C(condition)[T.monolingual_EN],-1.2039,0.0065
+seame,F0avg,C(condition)[T.monolingual_ZH],-1.1612,0.0052
+seame,F0avg,has_discourse_marker[T.True],-0.7317,0.0227
+seame,F0avg,has_repetition[T.True],-2.5901,0.0
+seame,F0avg,Group Var,1.7614,0.0
+seame,lastF0min,Intercept,154.9338,0.0
+seame,lastF0min,C(condition)[T.monolingual_EN],-3.8194,0.0
+seame,lastF0min,C(condition)[T.monolingual_ZH],-0.9507,0.017
+seame,lastF0min,has_discourse_marker[T.True],-1.2535,0.0
+seame,lastF0min,has_repetition[T.True],-1.7413,0.0
+seame,lastF0min,Group Var,2.1023,0.0

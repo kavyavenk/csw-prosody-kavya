@@ -1,0 +1,53 @@
+Pilot Analysis Summary: MASAC
+================================================================================
+
+Subset size: 500
+Features tested: 5
+Random effects: None
+Interactions: Yes
+
+Successful models: 5/5
+
+Feature Distribution Analysis:
+  F0msemax:
+    Recommendation: linear_with_transform
+    Reason: moderate_non_normal (skew=1.34, kurt=2.47)
+    Skewness: 1.342, Kurtosis: 2.474
+
+  F0tiltmin:
+    Recommendation: linear_with_transform
+    Reason: moderate_non_normal (skew=-1.24, kurt=2.44)
+    Skewness: -1.235, Kurtosis: 2.441
+
+  F0tiltmax:
+    Recommendation: linear_with_transform
+    Reason: moderate_non_normal (skew=1.32, kurt=4.23)
+    Skewness: 1.321, Kurtosis: 4.228
+
+  F0msestd:
+    Recommendation: nonlinear
+    Reason: strong_non_normal (skew=2.07, kurt=8.55)
+    Skewness: 2.067, Kurtosis: 8.550
+
+
+Model Results:
+
+log_F0msemax:
+  AIC: 478.89, BIC: 488.19
+  Formula: log_F0msemax ~ C(condition) + has_discourse_marker + has_repetition + is_l1_to_l2 + has_discourse_marker:is_l1_to_l2 + condition:has_discourse_marker + condition:is_l1_to_l2
+
+log_F0tiltmin:
+  AIC: 13.87, BIC: 23.17
+  Formula: log_F0tiltmin ~ C(condition) + has_discourse_marker + has_repetition + is_l1_to_l2 + has_discourse_marker:is_l1_to_l2 + condition:has_discourse_marker + condition:is_l1_to_l2
+
+log_F0tiltmax:
+  AIC: -76.12, BIC: -66.82
+  Formula: log_F0tiltmax ~ C(condition) + has_discourse_marker + has_repetition + is_l1_to_l2 + has_discourse_marker:is_l1_to_l2 + condition:has_discourse_marker + condition:is_l1_to_l2
+
+log_F0msestd:
+  AIC: 477.13, BIC: 486.43
+  Formula: log_F0msestd ~ C(condition) + has_discourse_marker + has_repetition + is_l1_to_l2 + has_discourse_marker:is_l1_to_l2 + condition:has_discourse_marker + condition:is_l1_to_l2
+
+log_F0msestd:
+  AIC: 477.13, BIC: 486.43
+  Formula: log_F0msestd ~ C(condition) + has_discourse_marker + has_repetition + is_l1_to_l2 + has_discourse_marker:is_l1_to_l2 + condition:has_discourse_marker + condition:is_l1_to_l2

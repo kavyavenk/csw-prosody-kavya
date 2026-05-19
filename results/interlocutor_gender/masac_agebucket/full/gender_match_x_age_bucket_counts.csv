@@ -1,0 +1,8 @@
+gender_match,age_bucket,count
+different,Older,1348
+same,Older,1156
+unknown,Older,1030
+different,Younger,1021
+unknown,Younger,973
+same,Younger,937
+unknown,unknown,11
